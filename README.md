@@ -21,7 +21,6 @@ Ce livre est destiné à un double public:
 * A tous les développeurs .Net qui sont amenés à travailler sur des applications critiques, qui sont pilotés par les délais, qui doivent fournir du code simple à comprendre, facile à lire, facile à maintenir, facile à faire évoluer;
 
 * A tous les responsables qui ont les ojectifs suivants pour leur équipe :
-*
  * Augmenter la vélocité de l'équipe, 
  * Faire en sorte que n'importe quel développeur puisse enrichir, modifier, maintenir le code d'un autre sans qu'on puisse distinguer qui à écrit quoi, 
  * autrement dit que l'équipe de N développeurs agisse comme unn seul développeur à la puissance N
