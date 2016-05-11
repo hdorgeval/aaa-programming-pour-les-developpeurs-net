@@ -29,7 +29,7 @@ Ce livre est destiné à un double public:
 # A propos des exemples de code montrés dans ce livre
 
 Ce livre contient des exemples de code qui sont tous tirés d'applications réelles. 
-Toutefois, ces exemples ont été retravaillé de façon à apparaître comme des "codes snippets" sans lien avec l'application et le développeur d'origine.
+Toutefois, ces exemples ont été retravaillés de façon à apparaître comme des "codes snippets" sans lien avec l'application et le développeur d'origine.
 Votre feedback est très important : je suis toujours à la recherche d'exemples de code réel à partir desquels je peux montrer comment appliquer les techniques décrites dans ce livre. 
 
 
