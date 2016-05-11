@@ -8,10 +8,10 @@ Au fil des années j'ai mis au point un ensemble de techniques de programmation 
 
 Puis en tant que consultant, j'ai partagé ces techniques avec d'autres développeurs lors des missions que j'ai menées à bien.
 A chaque fois j'ai été étonné de l'impact positif lié à l'application de ces méthodes:
-* Amélioration de la lisibilité du code
-* Convergence plus rapide vers le zéro bug
-* Augmentation de la vélocité de l'équipe
-* Accroissement de la qualité du produit livré
+* Amélioration de la lisibilité du code;
+* Convergence plus rapide vers le zéro bug;
+* Augmentation de la vélocité de l'équipe;
+* Accroissement de la qualité du produit livré.
 
 Partager ces techniques avec d'autres programmeurs m'a aider à les formaliser et à les présenter  de façon à pouvoir les diffuser auprès du plus grand nombre au travers de cet ouvrage.
 
