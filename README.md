@@ -26,5 +26,18 @@ Ce livre est destiné à un double public:
  * autrement dit faire en sorte que l'équipe de N développeurs agisse comme un seul développeur à la puissance N.
 
 
+# A propos des exemples de code montrés dans ce livre
+
+Ce livre contient des exemples de code qui sont tous tirés d'applications réelles. 
+Toutefois, ces exemples ont été retravaillé de façon à apparaître comme des "codes snippets" sans lien avec l'application et le développeur d'origine.
+Votre feedback est très important : je suis toujours à la recherche d'exemples de code réel à partir desquels je peux montrer comment appliquer les techniques décrites dans ce livre. 
+
+
+# Pré-requis
+
+Tous les exemples de code sont écrits en .Net CSharp. Si vous souhaitez expérimenter vous mêmes les techniques montrées dans ce livre, je vous invite à installer [Visual Studio 2015 Community Edition](https://www.visualstudio.com) sur votre poste.
+
+
+
 
 
