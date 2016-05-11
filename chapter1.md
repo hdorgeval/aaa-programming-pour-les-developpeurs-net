@@ -1,3 +1,3 @@
-# Règle 1 : nommer correctement les choses
+# Règle 1 : Nommer correctement les choses
 
 A compléter
