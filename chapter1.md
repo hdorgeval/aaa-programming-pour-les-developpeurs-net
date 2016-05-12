@@ -12,7 +12,7 @@
   
   Autrement dit nommer correctement les choses a une vertu inédite : détecter très rapidement si un choix technique ou un choix de conception est pertinent.
   
-  Si vous êtes responsable d'équipe
+  Si vous êtes responsable d'équipe, je vous recommande d'être à l'écoute des difficultés rencontrées par un développeur quand il doit donner un nom expressif aux différents éléments de son code : c'est un signal très fort de la présence d'un choix de conception ou d'un choix technique qui doit être retravaillé avec l'équipe.
   
   
   
