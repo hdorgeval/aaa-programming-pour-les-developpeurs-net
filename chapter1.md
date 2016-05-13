@@ -37,6 +37,7 @@ En tant que développeur .Net, vous allez utiliser bon nombre d'outils mis à vo
 Si vous utilisez les conventions décrites dans l'ouvrage *Framework Design Guidelines*, votre propre code semblera être une extension naturelle du Framework .Net. Vous allez pouvoir écrire votre application sous la forme d'une histoire en vous appuyant sur les mots et les verbes du Framework .Net.
 
 La première règle à suivre concerne les conventions de nommage.
+
 Nommer correctement les choses passe par la connaissance et la mise en pratique des conventions de nom existantes dans le Framework .Net.
 
 Ces conventions de nom sont au nombre de deux: 
