@@ -40,8 +40,8 @@ La première règle à suivre concerne les conventions de nommage.
 Nommer correctement les choses passe par la connaissance et la mise en pratique des conventions de nom existantes dans le Framework .Net.
 
 Ces conventions de nom sont au nombre de deux: 
-* Pascal Casing
-* Camel Casing
+* Pascal Casing;
+* Camel Casing.
 
 
 ### Pascal Casing
