@@ -1,5 +1,5 @@
-# Table des matières
+# Summary
 
 * [Introduction](README.md)
-* [Chapitre 1](chapter1.md)
+* [Règle 1 : nommer correctement les choses](chapter1.md)
 
