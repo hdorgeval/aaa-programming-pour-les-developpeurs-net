@@ -44,3 +44,22 @@ Ces conventions de nom sont au nombre de deux:
 * Camel Casing
 
 
+### Pascal Casing
+
+A compléter
+
+### Camel Casing
+
+A compléter
+
+### Quant utiliser Pascal Casing
+
+A compléter
+
+### Quant utiliser Camel Casing
+
+A compléter
+
+### Cas spécial des membres privés associés à une propriété
+
+A compléter
