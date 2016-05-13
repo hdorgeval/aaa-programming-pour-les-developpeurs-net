@@ -26,9 +26,9 @@ L'ensemble du Framework .Net a été écrit en suivant les techniques décrites 
 
 [Framework Design Guidelines : Conventions, Idioms and Patterns for Reusable .NET libraries](https://www.amazon.fr/Framework-Design-Guidelines-Conventions-Libraries/dp/0321545613)
 
-Je recommande fortement la lecture de ce livre.
-
 Une partie de cet ouvrage est également disponible en ligne sur [MSDN](https://msdn.microsoft.com/en-us/library/ms229042.aspx).
+
+Je recommande fortement la lecture de ce livre en préambule à l'application des méthodes décrites plus loin dans cet ouvrage.
 
 Chez Microsoft, tous les développeurs suivent les conventions décrites dans ce *Framework Design Guidelines*.
 
