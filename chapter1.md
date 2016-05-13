@@ -4,9 +4,8 @@
   
   Cette activité de nommage permet de rendre son code expressif. Un code expressif raconte une histoire. 
   
-  L'intérêt de raconter une histoire est qu'une relecture rapide permet de détecter très tôt les éventuelles incohérences, les éventuelles erreurs de conception , permet de se poser très rapidement les bonnes questions, permet d'échanger plus facilement avec les autres développeurs de son équipe.
+  L'intérêt de raconter une histoire est qu'une relecture rapide permet de détecter très tôt les éventuelles incohérences, les éventuelles erreurs de conception , permet de se poser très rapidement les bonnes questions et permet d'échanger plus facilement avec les autres développeurs de son équipe.
     
-  
   L'objectif de ce chapitre est de vous montrer les méthodes qui vous permettront de trouver le nom le plus évocateur possible pour définir une variable, une méthode ou une propriété.
   
   Trouvez le bon nom peut se révéler être une activité difficile ou chronophage. 
