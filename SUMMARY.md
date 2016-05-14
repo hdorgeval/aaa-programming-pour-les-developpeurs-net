@@ -4,4 +4,6 @@
 * [Règle 1 : nommer correctement les choses](NameThingsCorrectly/README.md)
   * [Les conventions de nom du Framework .Net](NamingConventionsInFrameworkDotNet/README.md)
     * [Pascal Casing](NamingConventionsInFrameworkDotNet/PascalCasing.md)
+    * [Camel Casing](NamingConventionsInFrameworkDotNet/CamelCasing.md)
+    
 
