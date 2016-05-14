@@ -1,5 +1,5 @@
 # Summary
 
 * [Introduction](README.md)
-* [Règle 1 : nommer correctement les choses](chapter1.md)
+* [Règle 1 : nommer correctement les choses](Chapter1/NamingConventionsInFrameworkDotNet/README.md)
 
