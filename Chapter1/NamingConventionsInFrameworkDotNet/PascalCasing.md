@@ -1,3 +1,0 @@
-### Pascal Casing
-
-A compléter

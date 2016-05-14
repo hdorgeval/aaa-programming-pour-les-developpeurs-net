@@ -1,3 +1,0 @@
-### Camel Casing
-
-A compléter
