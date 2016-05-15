@@ -6,4 +6,8 @@ La deuxième convention de nom était utilisé, en 1996, pour donner un nom aux 
 * Le nom est une concaténation de mots;
 * La première lettre de chaque mot est en majuscule sauf pour le premier mot ( par exemple backColor ).
 
+L'équipe de développement du Framework .Net a eu beaucoup de mal pour trouver un nom à cette convention qui soit en même temps une référence à un homme exceptionnel ou à une technique connue de tout le monde.
+
+Par contre si, vous dessiner une ligne au dessus d'un nom écrit avec cette convention, la forme obtenu fait penser à la bosse d'un chameau
+
 A compléter
