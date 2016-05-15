@@ -8,7 +8,7 @@ La première convention de nom était utilisée pour nommer les méthodes et les
 Aujourd'hui, le nom d'une méthode ou d'une propriété suit toujours le même pattern au sein du Framework .Net:
 
 * Le nom est une concaténation de mots;
-* La première lettre de chaque mot est en majuscule ( par exemple ToString() ).
+* La première lettre de chaque mot est en majuscule (par exemple ToString).
 
 
 En 1996, Anders Hejlsberg rejoint Microsoft. Il est le père fondateur du Framework .Net et du langage CSharp. C'est également le père fondateur de Typescript.
