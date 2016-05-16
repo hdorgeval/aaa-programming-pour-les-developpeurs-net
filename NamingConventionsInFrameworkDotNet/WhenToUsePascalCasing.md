@@ -17,7 +17,8 @@ L'interface est un cas particulier dans la mesure où, par convention, le nom do
 * IQueryable;
 * IDisposable.
 
-Voici un certains nombre d'exemples d'application de la convention de nom Pascal Casing.
+Je vous propose, ci-dessous, d'étudier quelques exemples d'application de la convention de nom Pascal Casing.
+L'objectif de ces exemples est de vous amenez à découvrir comment déterminer si un nom est correct.  
 
 #### Exemple 1
 ```Csharp
