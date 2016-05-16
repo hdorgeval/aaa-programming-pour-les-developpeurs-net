@@ -32,3 +32,4 @@ public class Class1
  
  >A mes yeux, le nom *Class1*, bien que conforme à la convention de nom Pascal Casing, ne véhicule rien de spécifique quant à l'usage ou l'objectif de cette classe. *Class1* est un nom qui manque d'expressivité, il contribue à rendre plus difficile l'usage et la compréhension de cette classe pour un développeur externe qui serait amené à co-développer votre projet. 
   
+  A compléter
