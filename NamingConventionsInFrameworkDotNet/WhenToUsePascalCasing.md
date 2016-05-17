@@ -39,14 +39,14 @@ public class BasePage : System.Web.UI.Page
   ...
 }
 ```
-  La classe BasePage a été définie dans un projet Web ASP.NET WebForm.
+  La classe *BasePage* a été définie dans un projet Web ASP.NET WebForm.
   
   Ce nom est conforme à la convention de nom Pascal Casing.
-  Il est aussi suffisamment évocateur pour qu'on comprenne que la classe BasePage sera utilisée comme classe de base pour toutes les nouvelles pages qui seront définies dans le projet Web.
+  Il est aussi suffisamment évocateur pour qu'on comprenne que la classe *BasePage* sera utilisée comme classe de base pour toutes les nouvelles pages qui seront définies dans le projet Web.
   
   Cependant, ce nom pose problème pour deux raisons :
-  * la classe System.Web.UI.Page est elle même la classe de base par défaut pour toutes les pages Web d'un projet Web ASP.NET web form.
-  Le nom choisi, BasePage, semble plus générique que Page, ce qui est contradictoire avec la notion d'héritage.
+  * la classe *System.Web.UI.Page* est elle même la classe de base par défaut pour toutes les pages Web d'un projet Web ASP.NET Web Form.
+  Le nom choisi, *BasePage*, semble plus générique que *Page*, ce qui est contradictoire avec la notion d'héritage.
   
   En effet, l'héritage permet de spécialiser de plus en plus une classe, par conséquent d'un point de vue sémantique on s'attend plutôt à avoir ce type de déclaration:
   
@@ -57,7 +57,7 @@ public class Page : BasePage
 }
 ```
   
-  Voici quelques exemples de classes du Framework .Net qui illustrent la relation qui existe entre une classe nommée Xyz et la classe nommée XyzBase:
+  Voici quelques exemples de classes du Framework .Net qui illustrent la relation qui existe entre une classe nommée *Xyz* et la classe nommée *XyzBase*:
   
  ```Csharp
 public class Attachment : AttachmentBase
@@ -84,7 +84,7 @@ public class Button : ButtonBase
 }
 ```
   
-  * Le nom BasePage diffère de la convention communément établie au sein du Framework .Net, à savoir que le mot Base doit être le dernier mot à être concaténé, comme l'illustre les quelques classes ci-dessous du Framework .Net:
+  * Le nom *BasePage* diffère de la convention communément établie au sein du Framework .Net, à savoir que le mot *Base* doit être le dernier mot à être concaténé, comme l'illustre les quelques classes ci-dessous du Framework .Net:
     * System.Collections.DictionaryBase
     * System.Configuration.Settingsbase
     * System.Web.HttpContextBase
@@ -92,11 +92,11 @@ public class Button : ButtonBase
     * System.Windows.Controls.Primitives.ButtonBase
   
   
- > A mes yeux, le nom BasePage est un nom de classe suffisamment évocateur. Cependant ce nom aurait pu être parfaitement correct si :
-   > * sa sémantique avait été conforme à son usage (car si vous demandez à un développeur du Framework .Net de classer BasePage par rapport à Page, il vous dira tout de suite: Page hérite de BasePage) 
-   > * La façon de concaténer les mots avait été conforme à une concaténation similaire au sein du Framework .Net
+ > A mes yeux, le nom *BasePage* est un nom de classe suffisamment évocateur. Cependant ce nom aurait pu être parfaitement correct si :
+   > * Sa sémantique avait été conforme à son usage (car si vous demandez à un développeur du Framework .Net de classer *BasePage* par rapport à Page, il vous dira tout de suite: *Page* hérite de *BasePage*); 
+   > * La façon de concaténer les mots avait été conforme à une concaténation similaire au sein du Framework .Net.
 
-
+Autrement dit quand vous donnez un nom à une classe, une propriété ou une méthode, cherchez à savoir si il existe des noms similaires dans le Framework .Net et comparez toujours avec ce qui existe dans le Framework .Net pour déterminer la pertinence de votre choix. 
 
  
  A compléter
