@@ -106,9 +106,10 @@ Autrement dit quand vous donnez un nom à une classe, une propriété ou une mé
  * Le nom est expressif
  * Le nom est conforme à ce qui existe déjà dans le Framework .Net
 
-validez toujours votre choix de la façon suivante:
+Validez toujours votre choix de la façon suivante:
  * Obtenez le consensus au sein de l'équipe;
  * Appliquer la méthode TDD (Test Development Driven) à votre nouvelle classe, méthode ou propriété pour vérifier que le code est facile à écrire, facile à comprendre, facile à modifier avec le nom que vous avez choisi.
+ 
  
  Si vous rencontrez la moindre difficulté pour obtenir le consensus ou pour écrire simplement des test unitaires, je vous recommande fortement de changer de nom.
  
