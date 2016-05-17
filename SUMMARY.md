@@ -6,5 +6,6 @@
     * [Pascal Casing](NamingConventionsInFrameworkDotNet/PascalCasing.md)
     * [Camel Casing](NamingConventionsInFrameworkDotNet/CamelCasing.md)
     * [Quand utiliser Pascal Casing](NamingConventionsInFrameworkDotNet/WhenToUsePascalCasing.md)
+    * [Quand utiliser Camel Casing](NamingConventionsInFrameworkDotNet/WhenToUseCamelCasing.md)
     
 
