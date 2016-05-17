@@ -95,8 +95,23 @@ public class Button : ButtonBase
  > A mes yeux, le nom *BasePage* est un nom de classe suffisamment évocateur. Cependant ce nom aurait pu être parfaitement correct si :
    > * Sa sémantique avait été conforme à son usage (car si vous demandez à un développeur du Framework .Net de classer *BasePage* par rapport à Page, il vous dira tout de suite: *Page* hérite de *BasePage*); 
    > * La façon de concaténer les mots avait été conforme à une concaténation similaire au sein du Framework .Net.
+   > 
+   > Pour que le nom soit correct il faudrait le remplacer par un nom comme *MyAppPageBase* où *MyApp* serait le nom interne de votre application.
 
 Autrement dit quand vous donnez un nom à une classe, une propriété ou une méthode, cherchez à savoir si il existe des noms similaires dans le Framework .Net et comparez toujours avec ce qui existe dans le Framework .Net pour déterminer la pertinence de votre choix. 
 
+[IlSpy](https://github.com/icsharpcode/ILSpy) est un outil qui peut vous aider dans cette démarche d'analyse.
  
- A compléter
+ Quand vous estimez que le nom choisi rempli tous les critères à savoir:
+ * Le nom est expressif
+ * Le nom est conforme à ce qui existe déjà dans le Framework .Net
+
+validez toujours votre choix de la façon suivante:
+ * Obtenez le consensus au sein de l'équipe;
+ * Appliquer la méthode TDD (Test Development Driven) à votre nouvelle classe, méthode ou propriété pour vérifier que le code est facile à écrire, facile à comprendre, facile à modifier avec le nom que vous avez choisi.
+ 
+ Si vous rencontrez la moindre difficulté pour obtenir le consensus ou pour écrire simplement des test unitaires, je vous recommande fortement de changer de nom.
+ 
+   Si a la troisième itération, le nom choisi cause toujours des difficultés, il convient de s'arrêter et de réfléchir, avec l'ensemble de l'équipe, à la pertinence du ou des choix techniques qui ont amené à la création de la classe, de la méthode ou de la propriété en question.
+ 
+ 
