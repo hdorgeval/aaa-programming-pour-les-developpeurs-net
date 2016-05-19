@@ -2,15 +2,15 @@
 
 
 La convention de nom Pascal Casing doit être utilisée pour nommer les éléments suivants:
-* Une classe;
-* Une énumération;
-* La valeur d'une énumération;
-* Un événement;
-* Un membre public static et read-only;
-* Une méthode;
-* Une propriété;
-* Un namespace;
-* Une interface.
+* Classe;
+* Énumération;
+* Valeur d'une énumération;
+* Événement;
+* Membre public static et read-only;
+* Méthode;
+* Propriété;
+* Namespace;
+* Interface.
 
 >L'interface est un cas particulier dans la mesure où, par convention, le nom doit être préfixé par la lettre **I** comme c'est le cas pour les interfaces disponibles dans le Framework .Net comme par exemple:
 * IEnumerable;
@@ -96,7 +96,7 @@ public class Button : ButtonBase
    > * Sa sémantique avait été conforme à son usage (car si vous demandez à un développeur du Framework .Net de classer *BasePage* par rapport à Page, il vous dira tout de suite: *Page* hérite de *BasePage*); 
    > * La façon de concaténer les mots avait été conforme à une concaténation similaire au sein du Framework .Net.
    > 
-   > Pour que le nom soit correct il faudrait le remplacer par un nom comme *MyAppPageBase* où *MyApp* serait le nom interne de votre application.
+   > Pour que le nom soit correct il faudrait le remplacer par un nom comme *MyAppPageBase, ou plus simplement par un nom comme MyAppPage,* où *MyApp* serait le nom interne de votre application.
 
 Autrement dit quand vous donnez un nom à une classe, une propriété ou une méthode, cherchez à savoir si il existe des noms similaires dans le Framework .Net et comparez toujours avec ce qui existe dans le Framework .Net pour déterminer la pertinence de votre choix. 
 
