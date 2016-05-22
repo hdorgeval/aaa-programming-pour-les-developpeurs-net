@@ -1,4 +1,4 @@
-### Cas particulier des variables qui sont associées aux propriétés
+### Cas particulier des variables qui sont associées à une propriété
 
 Les membres privés d'une classe sont par définition des variables locales à la classe où ils sont définis.
 
