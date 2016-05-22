@@ -51,3 +51,18 @@ Cependant cela accroît le risque d'utiliser dans d'autre partie du code la vari
 
 L'intelliSense étant un outil de productivité, il est vraisemblable que vous choisissiez, sans même vous en apercevoir, la variable locale en lieu et place de la propriété.
 C'est ce que j'appelle le bug de productivité : vous introduisez un bug dans votre application parce que vous avez choisi trop rapidement l'option proposée par l'IntelliSense.
+
+Comment résoudre ce problème posé par l'usage intensif de l'IntelliSense?
+
+Il suffit de réécrire la propriété ci-dessus de la façon suivante:
+
+```Csharp
+private int _myProperty;
+public int MyProperty
+{
+    get { return _myProperty; }
+    set { _myProperty = value; }
+}
+```
+En ajoutant simplement le caractère _ devant le nom de la variable locale, l'Intellisense apporte les deux avantages suivants:
+Quand vous commencez à taper le nom de la propriété, l'Intellisense ne vous donne pas accès à la variable locale:
