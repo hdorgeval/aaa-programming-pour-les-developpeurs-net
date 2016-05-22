@@ -33,3 +33,21 @@ Le nom de la propriété, *MyProperty*, est conforme à la convention de nom Pas
 Le nom myVar pose cependant un problème. En effet le nom myVar est très éloigné sémantiquement du nom MyProperty laissant ainsi penser que l'un peut être modifié indépendamment de l'autre. 
 Un autre développeur, qui serait amené à modifier ou à faire évoluer votre code, pourrait parfaitement modifier la variable myVar au lieu de la propriété MyProperty (et vice versa) entraînant ainsi un comportement erroné de l'objet modifié. Cela peut avoir pour conséquence un dysfonctionnement de l'interface graphique de l'application notamment quand les objets doivent être observables comme par exemple dans une application WPF.
 
+Pour résoudre ce problème une première approche consiste à réécrire la propriété ci-dessus de la façon suivante:
+
+```Csharp
+private int myProperty;
+public int MyProperty
+{
+    get { return myProperty; }
+    set { myProperty = value; }
+}
+```
+
+Le nom de la variable et le nom de la propriété sont identiques d'un point de vues sémantique puisqu'ils ne diffèrent que la par la casse de la première lettre.
+
+Cependant cela accroît le risque d'utiliser dans d'autre partie du code la variable au lieu de la propriété (et vice versa). En effet l'IntelliSense propose maintenant les choix suivants quand vous commencez à taper le nom de la propriété:
+![](MyProperty.PNG)
+
+L'intelliSense étant un outil de productivité, il est vraisemblable que vous choisissiez, sans même vous en apercevoir, la variable locale en lieu et place de la propriété.
+C'est ce que j'appelle le bug de productivité : vous introduisez un bug dans votre application parce que vous avez choisi trop rapidement l'option proposée par l'IntelliSense.
