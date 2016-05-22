@@ -65,4 +65,10 @@ public int MyProperty
 }
 ```
 En ajoutant simplement le caractère _ devant le nom de la variable locale, l'Intellisense apporte les deux avantages suivants:
-Quand vous commencez à taper le nom de la propriété, l'Intellisense ne vous donne pas accès à la variable locale:
+* Quand vous commencez à taper le nom de la propriété, l'Intellisense masque l'accès à la variable locale:
+
+  ![](MyProperty2.PNG)
+
+* Quand vous commencez à taper le caractère _, l'Intellisense vous donne accès uniquement aux variables locales qui sont associées à des propriétés:
+
+  ![](MyProperty3.PNG)
