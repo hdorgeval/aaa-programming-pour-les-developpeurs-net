@@ -23,4 +23,13 @@ Il existe plein de code snippets disponibles pour le language CSharp. Pour déco
 
 ![](CodeSnippetManager.PNG)
 
-A compléter.
+Naviguez dans les dossiers proposés et découvrez les code snippets fournis par Microsoft.
+
+La propriété fournie par le code snippet *propfull* déclare une variable locale à la classe et une propriété dont le getter et le setter s’appuient sur cette variable locale.
+
+Le nom de la variable locale, *myVar*, est conforme à la convention de nom Camel Casing.
+Le nom de la propriété, *MyProperty*, est conforme à la convention de nom Pascal Casing.
+
+Le nom myVar pose cependant un problème. En effet le nom myVar est très éloigné sémantiquement du nom MyProperty laissant ainsi penser que l'un peut être modifié indépendamment de l'autre. 
+Un autre développeur, qui serait amené à modifier ou à faire évoluer votre code, pourrait parfaitement modifier la variable myVar au lieu de la propriété MyProperty (et vice versa) entraînant ainsi un comportement erroné de l'objet modifié. Cela peut avoir pour conséquence un dysfonctionnement de l'interface graphique de l'application notamment quand les objets doivent être observables comme par exemple dans une application WPF.
+
