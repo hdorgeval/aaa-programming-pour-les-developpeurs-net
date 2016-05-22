@@ -15,5 +15,12 @@ public int MyProperty
 }
 ```
 
+Un code snippet est un mot clé qui permet d’insérer un bloc de code prédéfini. 
+Pour mettre en action un code snippet, il suffit de cliquer à l'endroit où on souhaite ajouter le bloc de code prédéfini, de taper ensuite le mot clé associé au code snippet, comme par exemple *propfull*, puis de cliquer deux fois sur la touche TAB.
+
+L'objectif du code snippet est de favoriser l'insertion rapide de code. Il s'agit donc d'un outil de productivité.
+Il existe plein de code snippets disponibles pour le language CSharp. Pour découvrir les codes snippets disponibles dans Visual Studio, allez dans le menu *Tools* de Visual Studio puis sélectionnez l'option *Code Snippets Manager...* :
+
+![](CodeSnippetManager.PNG)
 
 A compléter.
