@@ -96,5 +96,99 @@ public int MyProperty
 
 Pour vous aider à insérer automatiquement une nouvelle propriété en suivant la syntaxe proposée ci-dessus, vous pouvez substituer le code snippet propfull par votre propre version.
 
+Pour cela, ouvrez la fenêtre "Code Snippets Manager", ouvrez le dossier Visual CSharp puis cliquez sur *propfull*. Le champs *Location* vous montre l'emplacement du fichier associé au code snippet *propfull*:
+![](CodeSnippetManager2.PNG)
 
 
+Allez dans le dossier indiqué:
+```Csharp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC#\Snippets\1033\Visual C#
+```
+
+et copiez le fichier propfull.snippet dans le dossier :
+```Csharp
+Documents\Visual Studio 2015\Code Snippets\Visual C#\My Code Snippets.
+```
+
+Ouvrez le fichier ainsi copié dans Visual Studio et remplacez son contenu par:
+
+```Xml
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>propf</Title>
+			<Shortcut>propf</Shortcut>
+			<Description>AAAProgramming - Code snippet for property and backing field</Description>
+			<Author>My Company</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Property type</ToolTip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>property</ID>
+					<ToolTip>Property name</ToolTip>
+					<Default>MyProperty</Default>
+				</Literal>
+				<Literal>
+					<ID>field</ID>
+					<ToolTip>The variable backing this property</ToolTip>
+					<Default>_myProperty</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[
+      private $type$ $field$;
+	public $type$ $property$
+	{
+		get 
+    { 
+      return this.$field$;
+    }
+		set 
+    { 
+      this.$field$ = value;
+    }
+	}
+	$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
+```
+
+Enregistrez le fichier propfull.
+Retournez dans le code source de votre classe et tapez *propf*:
+
+![](propf.PNG)
+
+Si vous appuyez immédiatement deux fois sur la touche Tab, vous insérer dynamiquement la propriété:
+
+
+```Csharp
+private int _myProperty;
+public int MyProperty
+{
+    get
+    {
+        return this._myProperty;
+    }
+    set
+    {
+        this._myProperty = value;
+    }
+}
+```
+
+En résumé, une variable locale qui est associée à une propriété doit répondre aux règles suivantes:
+
+>Régle 1 : le nom d'une variable locale associée à une propriété est constitué d'un préfixe, le caractère _, suivi d'un nom conforme à la convention Camel Casing
+
+
+En combinant ce code snippet avec les deux règles d'usage ci-dessous, vous serez certain 
