@@ -64,11 +64,32 @@ public int MyProperty
     set { _myProperty = value; }
 }
 ```
-En ajoutant simplement le caractère _ devant le nom de la variable locale, l'IntelliSense apporte les deux avantages suivants:
-* Quand vous commencez à taper le nom de la propriété, l'IntelliSense masque l'accès à la variable locale:
-
+En ajoutant simplement le caractère _ devant le nom de la variable locale, l'IntelliSense apporte les avantages suivants:
+* Quand vous commencez à taper les trois premières lettres de la propriété, l'IntelliSense masque l'accès à la variable locale:
   ![](MyProperty2.PNG)
+
+* Quand vous commencer à taper seulement les deux premières lettres de la propriété, l'IntelliSense vous positionne par défaut sur la propriété et non sur la variable locale:
+![](MyProperty4.PNG)
 
 * Quand vous commencez à taper le caractère _, l'Intellisense vous donne accès uniquement aux variables locales qui sont associées à des propriétés:
 
   ![](MyProperty3.PNG)
+  
+    
+    
+ Pour être certain que l'IntelliSense fasse correctement son travail et vous évite de sélectionner la variable au lieu de la propriété, celle ci peut être réécrite de la façon suivante:
+ 
+```Csharp
+private int _myProperty;
+public int MyProperty
+{
+    get
+    {
+        return this._myProperty;
+    }
+    set
+    {
+        this._myProperty = value;
+    }
+}
+```
