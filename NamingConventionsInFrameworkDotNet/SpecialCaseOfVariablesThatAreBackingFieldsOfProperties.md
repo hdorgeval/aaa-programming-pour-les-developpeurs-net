@@ -94,5 +94,7 @@ public int MyProperty
 }
 ```
 
-Pour vous aider à insérer automatiquement une nouvelle propriété en suivant la syntaxe proposée ci-dessus, vous pouvez subsituer le code snippet propfull par votre propre version.
+Pour vous aider à insérer automatiquement une nouvelle propriété en suivant la syntaxe proposée ci-dessus, vous pouvez substituer le code snippet propfull par votre propre version.
+
+
 
