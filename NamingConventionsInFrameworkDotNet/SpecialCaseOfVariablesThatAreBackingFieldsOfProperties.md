@@ -46,10 +46,14 @@ public int MyProperty
 
 Le nom de la variable et le nom de la propriété sont identiques d'un point de vues sémantique puisqu'ils ne diffèrent que la par la casse de la première lettre.
 
-Cependant cela accroît le risque d'utiliser dans d'autre partie du code la variable au lieu de la propriété (et vice versa). En effet l'IntelliSense propose maintenant les choix suivants quand vous commencez à taper le nom de la propriété:
+Cependant cela accroît le risque d'utiliser dans d'autre partie du code la variable au lieu de la propriété (et vice versa). 
+
+En effet l'IntelliSense propose maintenant les choix suivants quand vous commencez à taper le nom de la propriété:
+
 ![](MyProperty.PNG)
 
 L'intelliSense étant un outil de productivité, il est vraisemblable que vous choisissiez, sans même vous en apercevoir, la variable locale en lieu et place de la propriété.
+
 C'est ce que j'appelle le bug de productivité : vous introduisez un bug dans votre application parce que vous avez choisi trop rapidement l'option proposée par l'IntelliSense.
 
 Comment résoudre ce problème posé par l'usage intensif de l'IntelliSense?
@@ -66,16 +70,17 @@ public int MyProperty
 ```
 En ajoutant simplement le caractère _ devant le nom de la variable locale, l'IntelliSense apporte les avantages suivants:
 * Quand vous commencez à taper les trois premières lettres de la propriété, l'IntelliSense masque l'accès à la variable locale:
+
   ![](MyProperty2.PNG)
 
 * Quand vous commencer à taper seulement les deux premières lettres de la propriété, l'IntelliSense vous positionne par défaut sur la propriété et non sur la variable locale:
-![](MyProperty4.PNG)
+
+  ![](MyProperty4.PNG)
 
 * Quand vous commencez à taper le caractère _, l'Intellisense vous donne accès uniquement aux variables locales qui sont associées à des propriétés:
 
   ![](MyProperty3.PNG)
   
-    
     
  Pour être certain que l'IntelliSense fasse correctement son travail et vous évite de sélectionner la variable au lieu de la propriété, celle ci peut être réécrite de la façon suivante:
  
@@ -94,7 +99,7 @@ public int MyProperty
 }
 ```
 
-Pour vous aider à insérer automatiquement une nouvelle propriété en suivant la syntaxe proposée ci-dessus, vous pouvez substituer le code snippet propfull par votre propre version.
+Pour vous aider à insérer automatiquement une nouvelle propriété en suivant la syntaxe proposée ci-dessus, vous pouvez substituer le code snippet *propfull* par votre propre version.
 
 Pour cela, ouvrez la fenêtre "Code Snippets Manager", ouvrez le dossier Visual CSharp puis cliquez sur *propfull*. Le champs *Location* vous montre l'emplacement du fichier associé au code snippet *propfull*:
 ![](CodeSnippetManager2.PNG)
@@ -163,7 +168,7 @@ Ouvrez le fichier ainsi copié dans Visual Studio et remplacez son contenu par:
 </CodeSnippets>
 ```
 
-Enregistrez le fichier propfull.
+Enregistrez le fichier *propfull.snippet*.
 Retournez dans le code source de votre classe et tapez *propf*:
 
 ![](propf.PNG)
@@ -186,7 +191,7 @@ public int MyProperty
 }
 ```
 
-En modifiant la section Code du code snippet propf de la façon suivante:
+En modifiant la section Code du code snippet *propf* de la façon suivante:
 
 ```Xml
 <Code Language="csharp"><![CDATA[
@@ -213,7 +218,7 @@ En modifiant la section Code du code snippet propf de la façon suivante:
 			</Code>
 ```
 
-Vous obtiendrez le résultat suivant chaque fois que vous utiliserez le code snippet propf:
+Vous obtiendrez le résultat suivant chaque fois que vous utiliserez le code snippet *propf*:
 
 ```CSharp
 #region MyProperty
@@ -245,6 +250,7 @@ En résumé, une variable locale qui est associée à une propriété doit répo
 > 
 > La variable doit être utilisée exclusivement au sein du getter ou du setter de la propriété. 
 > >Cette règle est fondamentale: l'état d'un objet doit être consulté ou modifié exclusivement au travers de la propriété associée, y compris dans le code que vous écrivez au sein de la classe où est définie cette propriété. J'aime appeler cette règle : protect yourself from yourself.
-  > >Déroger à cette règle, c'est prendre le risque de modifier un objet métier d'une façon non attendue, ou pire, de provoquer une modification erronée des données métiers au moment de leur persistence par la couche d'accès aux données. 
+> >
+  > >Déroger à cette règle, c'est prendre le risque de modifier un objet métier d'une façon inattendue, ou pire, de provoquer une modification erronée des données métier au moment de leur persistance par la couche d'accès aux données. 
 
 
