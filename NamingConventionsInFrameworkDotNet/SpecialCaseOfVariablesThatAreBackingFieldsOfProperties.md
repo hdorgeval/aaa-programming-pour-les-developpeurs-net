@@ -186,9 +186,65 @@ public int MyProperty
 }
 ```
 
+En modifiant la section Code du code snippet propf de la façon suivante:
+
+```Xml
+<Code Language="csharp"><![CDATA[
+      #region $property$
+      
+  private $type$ $field$;
+  /// <summary>
+  /// 
+  /// </summary>
+	public $type$ $property$
+	{
+		get 
+    { 
+      return this.$field$;
+    }
+		set 
+    { 
+      this.$field$ = value;
+    }
+	}
+  
+  #endregion
+	$end$]]>
+			</Code>
+```
+
+Vous obtiendrez le résultat suivant chaque fois que vous utiliserez le code snippet propf:
+
+```CSharp
+#region MyProperty
+
+private int _myProperty;
+/// <summary>
+/// 
+/// </summary>
+public int MyProperty
+{
+    get
+    {
+        return this._myProperty;
+    }
+    set
+    {
+        this._myProperty = value;
+    }
+}
+
+#endregion
+```
+
 En résumé, une variable locale qui est associée à une propriété doit répondre aux règles suivantes:
 
->Régle 1 : le nom d'une variable locale associée à une propriété est constitué d'un préfixe, le caractère _, suivi d'un nom conforme à la convention Camel Casing
+>Le nom d'une variable locale associée à une propriété est constitué d'un préfixe, le caractère _, suivi d'un nom conforme à la convention Camel Casing.
+
+> La variable doit être déclarée au plus près de la définition de la propriété.
+> 
+> La variable doit être utilisée exclusivement au sein du getter ou du setter de la propriété. 
+> >Cette règle est fondamentale: l'état d'un objet doit être consulté ou modifié exclusivement au travers de la propriété associée, y compris dans le code que vous écrivez au sein de la classe où est définie cette propriété. J'aime appeler cette règle : protect yourself from yourself.
+  > >Déroger à cette règle, c'est prendre le risque de modifier un objet métier d'une façon non attendue, ou pire, de provoquer une modification erronée des données métiers au moment de leur persistence par la couche d'accès aux données. 
 
 
-En combinant ce code snippet avec les deux règles d'usage ci-dessous, vous serez certain 
