@@ -4,4 +4,4 @@ La convention de nom Camel Casing doit être utilisée pour nommer les élément
 * Variable locale;
 * Paramètre de méthode;
 
-A compléter
+A compléter.
