@@ -37,10 +37,6 @@ Propriété avec membre privé associé:
 ```
 
 
-```Csharp
-public bool IsEnabled { get; set; }
-```
-
 Méthode d'instance développée sous la forme d'une méthode d'extension
 ```Csharp
 public static class MyclassExtenions
