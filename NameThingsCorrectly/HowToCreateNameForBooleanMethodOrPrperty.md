@@ -1,7 +1,7 @@
 ## Comment nommer une méthode ou une propriété qui renvoie un booléen
 
 
-Une méthode ou une propriété qui renvoie un boolean doit être nommée en utilisant l'une des trois options ci-dessous:
+Une méthode ou une propriété qui renvoie un booléen doit être nommée en utilisant l'une des trois options ci-dessous:
 * le préfixe :
   * Is; 
   * Has; 
@@ -10,7 +10,7 @@ Une méthode ou une propriété qui renvoie un boolean doit être nommée en uti
 * Un verbe à la troisième personne du singulier comme :
   * Exists;
   * Allows.
-* Une séquence de mots qui représente une phrase en langage naturel.
+* Une séquence de mots qui représente une phrase en langage naturel dont on a supprimé les espaces entre les mots.
 
 Voici ci-après quelques exemples d'application.
 
@@ -66,3 +66,4 @@ public class Myclass
 
 ```
 
+A compléter
