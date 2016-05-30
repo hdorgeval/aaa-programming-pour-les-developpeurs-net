@@ -1,7 +1,18 @@
 ## Comment nommer une méthode ou une propriété qui renvoie un boolean
 
 
-Une méthode ou une propriété qui renvoie un boolean doit être nommée en utilisant le préfixe Is, Has ou Can comme dans les exemples suivants:
+Une méthode ou une propriété qui renvoie un boolean doit être nommée en utilisant l'une des trois options ci-dessous:
+* le préfixe :
+  * Is; 
+  * Has; 
+  * Can;
+  * Should.
+* Un verbe à la troisième personne du singulier comme :
+  * Exist;
+  * Allows.
+* Une séquence de mots qui représente une phrase en langage naturel.
+
+Voici quelques exemples d'application.
 
 #### Propriété automatique
 ```Csharp
