@@ -3,7 +3,7 @@
 
 Une méthode ou une propriété qui renvoie un boolean doit être nommée en utilisant le préfixe Is, Has ou Can comme dans les exemples suivants:
 
-Propriété automatique:
+#### Propriété automatique
 ```Csharp
 public class Myclass
 {
@@ -13,7 +13,7 @@ public class Myclass
 }
 ```
 
-Propriété avec membre privé associé:
+#### Propriété avec membre privé associé
 ```Csharp
 #region IsReadOnly
 
@@ -37,7 +37,7 @@ Propriété avec membre privé associé:
 ```
 
 
-Méthode d'instance développée sous la forme d'une méthode d'extension
+#### Méthode d'instance développée sous la forme d'une méthode d'extension
 ```Csharp
 public static class MyclassExtenions
 {
