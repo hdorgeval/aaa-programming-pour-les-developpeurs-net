@@ -8,7 +8,7 @@ Une méthode ou une propriété qui renvoie un boolean doit être nommée en uti
   * Can;
   * Should.
 * Un verbe à la troisième personne du singulier comme :
-  * Exist;
+  * Exists;
   * Allows.
 * Une séquence de mots qui représente une phrase en langage naturel.
 
