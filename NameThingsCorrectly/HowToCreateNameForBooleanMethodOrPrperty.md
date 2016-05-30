@@ -12,7 +12,7 @@ Une méthode ou une propriété qui renvoie un boolean doit être nommée en uti
   * Allows.
 * Une séquence de mots qui représente une phrase en langage naturel.
 
-Voici quelques exemples d'application.
+Voici ci-après quelques exemples d'application.
 
 #### Propriété automatique
 ```Csharp
