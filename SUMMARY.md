@@ -8,5 +8,7 @@
     * [Quand utiliser Pascal Casing](NamingConventionsInFrameworkDotNet/WhenToUsePascalCasing.md)
     * [Quand utiliser Camel Casing](NamingConventionsInFrameworkDotNet/WhenToUseCamelCasing.md)
     * [Le cas particulier des variables associées à une propriété](NamingConventionsInFrameworkDotNet/SpecialCaseOfVariablesThatAreBackingFieldsOfProperties.md)
+
+  * [Les conventions de nom du Framework .Net](NamingConventionsInFrameworkDotNet/README.md)
     
 
