@@ -1,4 +1,4 @@
-## Comment nommer une méthode ou une propriété qui renvoie un boolean
+## Comment nommer une méthode ou une propriété qui renvoie un booléen
 
 
 Une méthode ou une propriété qui renvoie un boolean doit être nommée en utilisant l'une des trois options ci-dessous:
