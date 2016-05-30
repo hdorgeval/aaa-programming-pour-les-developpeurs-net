@@ -9,6 +9,6 @@
     * [Quand utiliser Camel Casing](NamingConventionsInFrameworkDotNet/WhenToUseCamelCasing.md)
     * [Le cas particulier des variables associées à une propriété](NamingConventionsInFrameworkDotNet/SpecialCaseOfVariablesThatAreBackingFieldsOfProperties.md)
 
-  * [Comment nommer une méthode ou une propriété qui renvoie un booléen](NamingConventionsInFrameworkDotNet/README.md)
+  * [Comment nommer une méthode ou une propriété qui renvoie un booléen](NameThingsCorrectly/HowToCreateNameForBooleanMethodOrPrperty.md)
     
 
