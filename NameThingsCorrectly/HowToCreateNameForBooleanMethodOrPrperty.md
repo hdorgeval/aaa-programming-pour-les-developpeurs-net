@@ -84,8 +84,8 @@ La méthode *ToBooleanOrDefault()* décrite ci-dessous permet par exemple d'éte
 
 L'avantage apporté par la méthode d’extension vient du fait que : 
 * il est parfaitement valide d'invoquer cette méthode sur un objet nul : le traitement du cas nul peut ainsi être complètement encapsulé à l'intérieur de la méthode d'extension;
-* La classe contient principalement des propriétés qui décrivent l'état de l’objet;
-* Les méthodes d'extensions décrivent séparément toutes les actions qu'il est possible de réaliser sur un objet issu de cette classe;
+* La classe qui est étendue contient principalement des propriétés qui décrivent l'état de l’objet; Ce type de classe peut ainsi être utilisée pour transférer un objet d'une couche à une autre de l'application (de la couche business à la couche de présentation, ou bien de la couche data à la couche business). Ce type d'objet est appelé un DTO object (Data Transfer Object);
+* Les méthodes d'extension décrivent séparément toutes les actions qu'il est possible de réaliser sur un objet issu de cette classe;
 * Une méthode d'extension est testable unitairement.
 
 
