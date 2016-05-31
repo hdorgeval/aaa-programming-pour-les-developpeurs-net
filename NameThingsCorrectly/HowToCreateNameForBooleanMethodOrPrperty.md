@@ -65,6 +65,28 @@ public class Myclass
 
 
 ```
+Plutôt que de développer les méthodes publiques d'instance sous la forme:
+```Csharp
+public class Myclass
+{
+  public bool IsEqualTo(Myclass value)
+  {
+      //code omitted for brevity
+  }
+}
+```
+
+Il convient de coder toutes les méthodes publiques d’instance en utilisant la technique des méthodes d'extension. 
+
+En effet, les méthodes d'extension permettent d'étendre le code d'une classe sans avoir accès au code source de cette classe. Il est donc possible d'enrichir n'importe quelle classe du Framework .Net avec ses propres méthodes. Par conséquent il est possible d’enrichir également ses propres classes sans avoir à modifier leur code source.
+
+La méthode *ToBooleanOrDefault()* décrite ci-dessous permet par exemple d'étendre la classe System.String en lui ajoutant la méthode *ToBooleanOrDefault()*, d'où le terme méthode d’extension. L'extension se fait en effet sous la forme d'une méthode et non d'une propriété.
+
+L'avantage apporté par la méthode d’extension vient du fait que : 
+* il est parfaitement valide d'invoquer cette méthode sur un objet nul : le traitement du cas nul peut ainsi être complètement encapsulé à l'intérieur de la méthode d'extension;
+* La classe contient principalement des propriétés qui décrivent l'état de l’objet;
+* Les méthodes d'extensions décrivent séparément toutes les actions qu'il est possible de réaliser sur un objet issu de cette classe;
+* Une méthode d'extension est testable unitairement.
 
 
 #### Projection développée sous la forme d'une méthode d'extension
