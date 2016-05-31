@@ -66,6 +66,7 @@ public class Myclass
 
 ```
 
+
 #### Projection développée sous la forme d'une méthode d'extension
 ```Csharp
 public static class StringExtensions
