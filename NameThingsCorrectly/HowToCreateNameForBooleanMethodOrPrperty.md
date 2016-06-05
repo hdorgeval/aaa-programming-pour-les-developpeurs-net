@@ -8,7 +8,6 @@ Une méthode ou une propriété qui renvoie un booléen doit être nommée en ut
   * *Can*.
 * Un verbe à la troisième personne du singulier comme :
   * *Exists*;
-  * *Allows*.
 * Une séquence de mots qui représente une phrase en langage naturel dont on a supprimé les espaces entre les mots.
 * *ToBooleanOrDefault()* dans le cas d'une méthode qui projette un objet vers un booléen.
 
@@ -78,7 +77,7 @@ public class Myclass
 
 Il convient de coder toutes les méthodes publiques d’instance en utilisant la technique des méthodes d'extension. 
 
-En effet, les méthodes d'extension permettent d'étendre le code d'une classe sans avoir accès au code source de cette classe. Il est donc possible d'enrichir n'importe quelle classe du Framework .Net avec ses propres méthodes. Par conséquent il est possible d’enrichir également ses propres classes sans avoir à modifier leur code source.
+En effet, les méthodes d'extension permettent d'étendre le code d'une classe sans avoir accès au code source de cette classe. Il est donc possible d'enrichir n'importe quelle classe du Framework .Net avec ses propres méthodes. Par conséquent il est également possible d’enrichir ses propres classes sans avoir à modifier leur code source.
 
 La méthode *ToBooleanOrDefault()* décrite ci-dessous permet par exemple d'étendre la classe System.String en lui ajoutant la méthode *ToBooleanOrDefault()*, d'où le terme méthode d’extension. L'extension se fait en effet sous la forme d'une méthode et non d'une propriété.
 
