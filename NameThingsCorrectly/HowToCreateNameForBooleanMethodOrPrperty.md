@@ -109,4 +109,8 @@ public static class StringExtensions
 
 ```
 
+#### Séquence de mots qui représente une phrase
+
+Pour déterminer le nom d’une méthode sous la forme d’une séquence de mots qui représente une phrase, commencez par créer un projet de test.
+
 A compléter
