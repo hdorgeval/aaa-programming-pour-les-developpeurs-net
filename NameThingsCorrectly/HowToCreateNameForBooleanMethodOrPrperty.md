@@ -154,7 +154,7 @@ La phase *Arrange* est la phase dans laquelle vous allez préparer tous les obje
 
 La phase *Act* est la phase pendant laquelle vous allez exécuter votre méthode et en récupérer le résultat.
 
-La phase *Assert* est la phase pendant laquelle vous allez comparer le résultat obtenu dans la phase *Act* avec le résultat attendu; en cas de différence vous signaler l'échec du test.
+La phase *Assert* est la phase pendant laquelle vous allez comparer le résultat obtenu dans la phase *Act* avec le résultat attendu; en cas de différence vous signalez l'échec du test.
 
 En appliquant ces principes pour créer un test de la méthode d'extension *ToBooleanOrDefault()* décrite ci-dessus, vous devriez obtenir un code de test semblable au code ci-dessous:
 
