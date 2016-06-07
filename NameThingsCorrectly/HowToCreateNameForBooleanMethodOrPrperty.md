@@ -113,4 +113,68 @@ public static class StringExtensions
 
 Pour déterminer le nom d’une méthode sous la forme d’une séquence de mots qui représente une phrase, commencez par créer un projet de test.
 
+Ce projet de test va vous permettre d'utiliser en situation réelle le nom que vous allez choisir. Il va vous permettre de vérifier que le nom choisi est suffisamment intuitif et que le code induit est suffisamment expressif.
+
+Le projet de test que vous avez crée contient une méthode de test par défaut :
+
+```Csharp
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace UnitTestProject1
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        [TestMethod]
+        public void TestMethod1()
+        {
+        }
+    }
+}
+```
+
+L'écriture du code dans une méthode de test se fait en trois phases nommées *Arrange*, *Act*, *Assert*. 
+
+Mettez en évidence ces trois phases de la façon suivante à l'intérieure de la méthode de test:
+
+```Csharp
+[TestMethod]
+public void TestMethod1()
+{
+    //Arrange
+
+    //Act
+
+    //Assert
+}
+```
+
+La phase *Arrange* est la phase dans laquelle vous allez préparer tous les objets nécessaires pour exécuter votre future méthode.
+
+La phase *Act* est la phase pendant laquelle vous allez exécuter votre méthode et en récupérer le résultat.
+
+La phase *Assert* est la phase pendant laquelle vous allez comparer le résultat obtenu dans la phase *Act* avec le résultat attendu; en cas de différence vous signaler l'échec du test.
+
+En appliquant ces principes pour créer un test de la méthode d'extension *ToBooleanOrDefault()* décrite ci-dessus, vous devriez obtenir un code de test semblable au code ci-dessous:
+
+```Csharp
+[TestMethod]
+public void TestMethod1()
+{
+    //Arrange
+    var input = "1";
+
+    //Act
+    var result = input.ToBooleanOrDefault();
+
+    //Assert
+    var expected = true;
+    if (result != expected)
+    {
+        Assert.Fail();
+    }
+}
+```
+
 A compléter
