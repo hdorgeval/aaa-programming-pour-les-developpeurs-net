@@ -177,7 +177,7 @@ public void TestMethod1()
 }
 ```
 
-Pour créer le premier test unitaire de votre future méthode, il faut mettre en œuvre les étapes dans l'ordre indiqué: 
+Pour créer le premier test unitaire de votre future méthode, il faut mettre en œuvre les étapes ci-dessous dans l'ordre indiqué: 
 1. Décrire brièvement ce que doit faire cette méthode sous la forme d'une seule phrase la plus synthétique possible; cette phrase doit être si possible en anglais;
 2. Supprimer ensuite tous les mots inutiles;
 3. Concaténer les mots restants pour former un nom conforme à la convention Pascal Casing;
