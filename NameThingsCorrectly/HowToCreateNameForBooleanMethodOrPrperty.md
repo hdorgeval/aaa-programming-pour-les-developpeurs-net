@@ -184,12 +184,12 @@ Pour créer le premier test unitaire de votre future méthode, il faut mettre en
 4. Définir le nom obtenu sous la forme d'une méthode d'extension à l'extérieur du projet de test (c'est à dire dans le projet de votre application);
 5. Commenter la méthode sous la forme de [commentaires XML](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx);
 6. Écrire les spécifications de cette nouvelle méthode sous la forme d'exemples en commençant par les cas les plus simples;
-7. Prendre le premier exemple de la spécification pour écrire la partie Arrange du test unitaire;
-8. Mettre en place le code d'exécution de la nouvelle méthode dans la partie Act de la méthode de test en vérifiant que :
+7. Prendre le premier exemple de la spécification pour écrire la partie *Arrange* du test unitaire;
+8. Mettre en place le code d'exécution de la nouvelle méthode dans la partie *Act* de la méthode de test en vérifiant que :
   * l'IntelliSense ramène bien le commentaire XML
   * Le commentaire affiché est cohérent avec le nom choisi
   * L'IntelliSense permet de découvrir et de manipuler rapidement cette nouvelle méthode
-9. Valider le résultat dans la partie Assert de la méthode de test;
+9. Valider le résultat dans la partie *Assert* de la méthode de test;
 10. Vérifier que le test échoue;
 11. Montrer l'intégralité de ce premier test unitaire aux autres membres de l' équipe pour vérifier qu'ils comprennent le code;
 12. Vérifier que le nom choisi fait l'unanimité au sein de l'équipe.
