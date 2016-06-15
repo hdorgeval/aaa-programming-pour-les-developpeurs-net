@@ -195,5 +195,4 @@ Pour créer le premier test unitaire de votre future méthode, il faut mettre en
 12. Vérifier que le nom choisi fait l'unanimité au sein de l'équipe.
 
 
-
-A compléter
+Je vous propose de détailler ces 12 étapes en développant une méthode qui permet de déterminer si une chaîne de caractères est présente dans un tableau de chaînes de caractères
