@@ -179,20 +179,41 @@ public void TestMethod1()
 
 Pour créer le premier test unitaire de votre future méthode, il faut mettre en œuvre les étapes ci-dessous dans l'ordre indiqué: 
 1. Décrire brièvement ce que doit faire cette méthode sous la forme d'une seule phrase la plus synthétique possible; cette phrase doit être si possible en anglais;
-2. Supprimer ensuite tous les mots inutiles;
-3. Concaténer les mots restants pour former un nom conforme à la convention Pascal Casing;
-4. Définir le nom obtenu sous la forme d'une méthode d'extension à l'extérieur du projet de test (c'est à dire dans le projet de votre application);
-5. Commenter la méthode sous la forme de [commentaires XML](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx);
-6. Écrire les spécifications de cette nouvelle méthode sous la forme d'exemples en commençant par les cas les plus simples;
-7. Prendre le premier exemple de la spécification pour écrire la partie *Arrange* du premier test unitaire;
-8. Mettre en place le code d'exécution de la nouvelle méthode dans la partie *Act* de la méthode de test en vérifiant que :
+2. Transformer cette phrase en une ligne de code (typiquement la ligne de code que vous seriez amené à écrire dans la partie *ACT* du test unitaire) en supprimant les mots inutiles et en concaténant les mots restants pour former un nom conforme à la convention Pascal Casing;
+3. Définir le nom obtenu sous la forme d'une méthode d'extension à l'extérieur du projet de test (c'est à dire dans le projet de votre application);
+4. Commenter la méthode sous la forme de [commentaires XML](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx);
+5. Écrire les spécifications de cette nouvelle méthode sous la forme d'exemples en commençant par les cas les plus simples;
+6. Prendre le premier exemple de la spécification pour écrire la partie *Arrange* du premier test unitaire;
+7. Mettre en place le code d'exécution de la nouvelle méthode dans la partie *Act* de la méthode de test en vérifiant que :
   * l'IntelliSense ramène bien le commentaire XML
   * Le commentaire affiché est cohérent avec le nom choisi
   * L'IntelliSense permet de découvrir et de manipuler rapidement cette nouvelle méthode
-9. Valider le résultat dans la partie *Assert* de la méthode de test;
-10. Vérifier que le test échoue;
-11. Montrer l'intégralité de ce premier test unitaire aux autres membres de l' équipe pour vérifier qu'ils comprennent le code;
-12. Vérifier que le nom choisi fait l'unanimité au sein de l'équipe.
+8. Valider le résultat dans la partie *Assert* de la méthode de test;
+9. Vérifier que le test échoue;
+10. Montrer l'intégralité de ce premier test unitaire aux autres membres de l' équipe pour vérifier qu'ils comprennent le code;
+11. Vérifier que le nom choisi fait l'unanimité au sein de l'équipe.
 
 
-Je vous propose de détailler ces 12 étapes en développant une méthode qui permet de déterminer si une chaîne de caractères est présente dans un tableau de chaînes de caractères
+Je vous propose de détailler ces 11 étapes en développant une méthode qui consiste à déterminer si une chaîne de caractères est présente dans un tableau de chaînes de caractères.
+
+#### Etape 1 : Décrire brièvement ce que doit faire la méthode
+
+Vous pouvez construire cette phrase en la structurant de la manière suivante:
+
+>L'objectif est de ... (verbe à l'infinitif) ... (sur ce quoi porte l'action définie par le verbe précédent) est dans une situation donnée (description de la situation) ou possède un attribut spécifique (description de l'attribut); 
+
+Dans le cas d'une projection la phrase est structurée de la manière suivante:
+>L'objectif est de ... (verbe à l'infinitif) ... (sur ce quoi porte l'action définie par le verbe précédent) en (résultat de la projection) ou bien de récupérer ... (valeur par défaut) en cas d'impossibilité.
+
+Par exemple:
+* L'objectif est de déterminer que le mot saisi par l'utilisateur est présent dans un tableau de valeurs prédéfinies.
+
+* L'objectif est de convertir le texte présent dans une cellule d'un tableau en un booléen ou bien de récupérer la valeur *false* en cas d'échec de la conversion. 
+
+Écrivez ensuite la phrase en anglais. Les deux exemples ci-dessus pourraient ainsi être traduits de la manière suivante:
+
+* Checks if input string is present in a given array of values.
+
+* Convert input string into a boolean or get false value when conversion fails.
+
+A compléter
