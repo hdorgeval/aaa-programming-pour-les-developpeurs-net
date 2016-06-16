@@ -75,7 +75,7 @@ public class Myclass
 }
 ```
 
-Il convient de coder toutes les méthodes publiques d’instance en utilisant la technique des méthodes d'extension. 
+Il est plus intéressant de coder toutes les méthodes publiques d’instance en utilisant la technique des méthodes d'extension. 
 
 En effet, les méthodes d'extension permettent d'étendre le code d'une classe sans avoir accès au code source de cette classe. Il est donc possible d'enrichir n'importe quelle classe du Framework .Net avec ses propres méthodes. Par conséquent il est également possible d’enrichir ses propres classes sans avoir à modifier leur code source.
 
@@ -194,7 +194,7 @@ Pour créer le premier test unitaire de votre future méthode, il faut mettre en
 11. Vérifier que le nom choisi fait l'unanimité au sein de l'équipe.
 
 
-Je vous propose de détailler ces 11 étapes en développant une méthode qui consiste à déterminer si une chaîne de caractères est présente dans un tableau de chaînes de caractères.
+Je vous propose d'appliquer ces 11 étapes pour développer une méthode qui consiste à déterminer si une chaîne de caractères est présente dans un tableau de chaînes de caractères.
 
 #### Etape 1 : Décrire brièvement ce que doit faire la méthode
 
@@ -202,7 +202,7 @@ Vous pouvez construire cette phrase en la structurant de la manière suivante:
 
 >L'objectif est de ... (verbe à l'infinitif) ... (sur ce quoi porte l'action définie par le verbe précédent) est dans une situation donnée (description de la situation) ou possède un attribut spécifique (description de l'attribut); 
 
-Dans le cas d'une projection la phrase est structurée de la manière suivante:
+Dans le cas d'une projection d'un objet vers un booléen, la phrase est structurée de la manière suivante:
 >L'objectif est de ... (verbe à l'infinitif) ... (sur ce quoi porte l'action définie par le verbe précédent) en (résultat de la projection) ou bien de récupérer ... (valeur par défaut) en cas d'impossibilité.
 
 Par exemple:
@@ -215,5 +215,54 @@ Par exemple:
 * Checks if input string is present in a given array of values.
 
 * Convert input string into a boolean or get false value when conversion fails.
+
+
+#### Etape 2 : Transformer cette description en une ligne de code
+
+Cette transformation peut se faire en plusieurs étapes.
+
+Partez de l'étape précédente comme par exemple:
+* Checks if input string is present in a given array of values.
+
+Supprimez ensuite les espaces inutiles, concaténez les mots entre eux en respectant la convention PasCal Casing pour le nom de la méthode et la convention Camel Casing pour le nom des paramètres, sépareez le sujet et le verbe par un point:
+* Checks if inputString.IsPresentIn(givenArrayOfValues)
+
+Supprimez tous les mots qui vous semblent inutiles pour obtenir une écriture la plus ramassée possible:
+* input.IsIn(values)
+
+Vérifiez qu'en préfixant le résultat obtenu par *var result =*, vous pouvez former une ligne de code valide pour la partie *ACT* de votre premier test unitaire:
+
+```Csharp
+//ACT
+var result = input.IsIn(values);
+```
+
+Vérifiez ensuite qu'en situation réelle d'usage de la méthode, vous êtes capable de reformuler à l'identique la description de départ.
+
+```Csharp
+if (input.IsIn(values) )
+{
+    //Ce code est exécuté si le texte saisi par l'utilisateur est présent dans une liste de valeurs prédéfinies.
+}
+```
+
+Vous allez certainement constater un écart entre la description de départ et la description reconstruite d'après la simple lecture du code.
+
+Dans l'exemple ci-dessus la phrase reconstruite laisse penser que le paramètre *values* représente une liste de valeurs (```List<string>```) et non pas un tableau de valeurs (```string[]```).
+
+Constater un écart signifie que l'usage de cette future méthode va poser un problème tôt ou tard soit pour vous même soit pour les autres développeurs de votre équipe, soit pour les personnes qui seront en charge de la maintenance future de l'application.
+
+Même si cet écart vous paraît insignifiant ou négligeable, il est nécessaire de le réduire au maximum, car il introduit un risque majeur en terme de coûts quand il s'agira de faire évoluer l'application conformément aux attentes du marché ou du métier.
+
+Pour réduire cet écart, demandez aux membres de l'équipe d'écrire ce qu'ils comprennent de votre code :
+
+```Csharp
+if (input.IsIn(values) )
+{
+    //Ce code est exécuté si <merci de compléter>
+}
+```
+
+De cette demande d'avis va naître un échange qui vous permettra de trouver le nom de la méthode et en définir un usage qui fera l'unanimité.
 
 A compléter
