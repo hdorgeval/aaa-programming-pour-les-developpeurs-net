@@ -75,7 +75,7 @@ public class Myclass
 }
 ```
 
-Il est plus intéressant de coder toutes les méthodes publiques d’instance en utilisant la technique des méthodes d'extension. 
+Il est souvent plus intéressant de coder toutes les méthodes publiques d’instance en utilisant la technique des méthodes d'extension. 
 
 En effet, les méthodes d'extension permettent d'étendre le code d'une classe sans avoir accès au code source de cette classe. Il est donc possible d'enrichir n'importe quelle classe du Framework .Net avec ses propres méthodes. Par conséquent il est également possible d’enrichir ses propres classes sans avoir à modifier leur code source.
 
