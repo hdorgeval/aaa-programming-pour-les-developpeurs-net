@@ -221,7 +221,7 @@ Par exemple:
 
 Cette transformation peut se faire en plusieurs étapes.
 
-Partez de l'étape précédente comme par exemple:
+Partez d'abord de l'étape précédente comme par exemple:
 * Checks if input string is present in a given array of values.
 
 Supprimez ensuite les espaces inutiles, concaténez les mots entre eux en respectant la convention PasCal Casing pour le nom de la méthode et la convention Camel Casing pour le nom des paramètres, sépareez le sujet et le verbe par un point:
