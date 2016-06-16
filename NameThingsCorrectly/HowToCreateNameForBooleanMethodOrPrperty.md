@@ -222,13 +222,13 @@ Par exemple:
 Cette transformation peut se faire en plusieurs étapes.
 
 Partez d'abord de l'étape précédente comme par exemple:
-* Checks if input string is present in a given array of values.
+>Checks if input string is present in a given array of values.
 
 Supprimez ensuite les espaces inutiles, concaténez les mots entre eux en respectant la convention PasCal Casing pour le nom de la méthode et la convention Camel Casing pour le nom des paramètres, séparez le sujet et le verbe par un point:
-* Checks if inputString.IsPresentIn(givenArrayOfValues)
+>Checks if inputString.IsPresentIn(givenArrayOfValues)
 
 Supprimez tous les mots qui vous semblent inutiles pour obtenir une écriture la plus ramassée possible:
-* input.IsIn(values)
+>input.IsIn(values)
 
 Vérifiez qu'en préfixant le résultat obtenu par *var result =*, vous pouvez former une ligne de code valide pour la partie *ACT* de votre premier test unitaire:
 
@@ -237,7 +237,7 @@ Vérifiez qu'en préfixant le résultat obtenu par *var result =*, vous pouvez f
 var result = input.IsIn(values);
 ```
 
-Vérifiez ensuite qu'en situation réelle d'usage de la méthode, vous êtes capable de reformuler à l'identique la description de départ.
+Vérifiez ensuite qu'en situation réelle d'usage de la méthode, vous êtes capable de reformuler à l'identique la description de départ:
 
 ```Csharp
 if (input.IsIn(values) )
