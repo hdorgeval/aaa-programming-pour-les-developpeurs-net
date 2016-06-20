@@ -196,7 +196,7 @@ Pour créer le premier test unitaire de votre future méthode, il faut mettre en
 
 Je vous propose d'appliquer ces 11 étapes pour développer une méthode qui consiste à déterminer si une chaîne de caractères est présente dans un tableau de chaînes de caractères.
 
-#### Etape 1 : Décrire brièvement ce que doit faire la méthode
+#### Étape 1 : Décrire brièvement ce que doit faire la méthode
 
 Vous pouvez construire cette phrase en la structurant de la manière suivante:
 
@@ -217,7 +217,7 @@ Par exemple:
 * Convert input string into a boolean or get false value when conversion fails.
 
 
-#### Etape 2 : Transformer cette description en une ligne de code
+#### Étape 2 : Transformer cette description en une ligne de code
 
 Cette transformation peut se faire en plusieurs étapes.
 
@@ -264,5 +264,70 @@ if (input.IsIn(values) )
 ```
 
 De cette demande d'avis va naître un échange qui vous permettra de trouver le nom de la méthode et en définir un usage qui fera l'unanimité.
+
+#### Étape 3 : Définir le nom obtenu sous la forme d'une méthode d'extension
+
+Pour créer une méthode d'extension, vous pouvez ajouter le code suivant soit dans le même fichier de classe soit dans un projet séparé si vous souhaitez réutiliser celle-ci dans différents projets:
+
+```Csharp
+public static class StringExtensions
+{
+    public static bool IsIn(this string input, string[] values)
+    {
+        //code omitted for brevity
+    }
+}
+
+```
+
+Notez que le nom du premier paramètre est nommé *input*, et que le nom du deuxième paramètre est *values* quand celui-ci désigne un ensemble d'objets, c'est à dire soit une liste ```List<T>``` soit un tableau ```T[]``` d'objet du même type, soit un nombre indéterminé d'ensembles d'objets ```params Object[]```.
+
+Ainsi la méthode d'extension ci-dessus pourrait aussi supporter les signatures suivantes:
+
+```Csharp
+public static class StringExtensions
+{
+    public static bool IsIn(this string input, IList<string> values)
+    {
+        //code omitted for brevity
+    }
+}
+
+```
+
+```Csharp
+public static class StringExtensions
+{
+    public static bool IsIn(this string input, params Object[] values)
+    {
+        //code omitted for brevity
+    }
+}
+
+```
+
+Dans la méthode d'extension ci-dessus, le mot clé *params* permet de passer un nombre quelconque de listes ou de tableaux.
+
+De manière générale je vous recommande de respecter la convention de nommage ci-dessous pour définir la signature d'une méthode d'extension:
+
+>Le nom donné au premier paramètre d'une méthode d'extension est ```input```
+>>Si cette méthode d'extension nécessite d'accéder à un ensemble d'objets du même type: 
+>>>le nom de ce paramètre est ```values```
+
+
+>>Si cette méthode d'extension nécessite d'accéder à un ensemble d'objets de type différents, vous devez créer une classe qui regroupe tous ces objets sous la forme de propriétés, puis passer tous ces objets sous la forme d'une instance de cette classe: 
+>>>le nom de ce paramètre est alors ```context``` quand les objets correspondants définissent un contexte d’exécution, ou bien ```args``` quand au moins un des objets est utilisé pour transférer une information entre l'appelant et l'appelé,
+
+>et le nom de la méthode d'extension est postfixé par l'un des termes suivants:
+>>In
+>>
+>>From
+>>
+>>Of
+>>
+>>With
+>>
+
+
 
 A compléter
