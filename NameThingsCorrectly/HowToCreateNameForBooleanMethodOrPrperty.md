@@ -441,4 +441,9 @@ Le contenu de la balise ```<returns>...</returns>``` doit suivre la règle suiva
 
 Autrement dit la balise ```<returns>...</returns>``` doit toujours décrire le cas positif. Si vous décrivez directement le cas négatif car cela vous semble plus direct ou plus naturel, cela signifie que le nom choisi nécessite de penser négativement ce qu'il faut à tout prix éviter: je vous expliquerai pourquoi dans le chapitre suivant.
 
+#### Étape 5 : Écrire les spécifications
+
+
+Cette étape est à mes yeux l'étape pivot, celle qui va permettre de dérouler naturellement les tests unitaires dans une approche TDD (Test Driven Development ) s'il s'agit d'une action technique ou les tests fonctionnels dans une approche BDD (Behavior Driven Development ) s'il s'agit d'une action métier.
+
 A compléter
