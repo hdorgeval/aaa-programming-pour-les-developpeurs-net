@@ -363,7 +363,7 @@ public static class StringExtensions
 
 ```
 
-Dans la balise ```<summary> ...</summary``` insérez la description de la méthode établie à l'étape 1 (ou à la fin de l'étape 2):
+Dans la balise ```<summary> ...</summary``` insérez la description de la méthode établie à la fin de l'étape 1:
 
 ```Csharp
 public static class StringExtensions
@@ -391,7 +391,7 @@ public static class StringExtensions
     /// Checks if input string is present in a given array of values.
     /// </summary>
     /// <param name="input">Input string.</param>
-    /// <param name="values">array of strings</param>
+    /// <param name="values">Array of strings</param>
     /// <returns></returns>
     public static bool IsIn(this string input, string[] values)
     {
@@ -400,6 +400,36 @@ public static class StringExtensions
 }
 
 ```
+
+Renseignez ensuite la balise <returns>...</returns> en vous aidant de ce que vous avez produit à l'étape 2:
+
+```Csharp
+if (input.IsIn(values) )
+{
+    //Ce code est exécuté si <merci de compléter>
+}
+```
+
+Cela pourrait donner par exemple:
+
+```Csharp
+public static class StringExtensions
+{
+    /// <summary>
+    /// Checks if input string is present in a given array of values.
+    /// </summary>
+    /// <param name="input">Input string.</param>
+    /// <param name="values">Array of strings</param>
+    /// <returns>Returns true if input string is present in the predefined array of values.</returns>
+    public static bool IsIn(this string input, string[] values)
+    {
+        //code omitted for brevity
+    }
+}
+
+```
+
+En résumé, tout le contenu des commentaires XML provient directement du travail effectué à l'étape 1 (Décrire brièvement ce que doit faire la méthode) et à l'étape 2 (Transformer cette description en une ligne de code) décrites ci-dessus.
 
 
 A compléter
