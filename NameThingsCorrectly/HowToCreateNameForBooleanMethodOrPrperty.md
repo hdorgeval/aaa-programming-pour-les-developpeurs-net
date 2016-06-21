@@ -328,6 +328,78 @@ De manière générale je vous recommande de respecter la convention de nommage 
 >>With
 >>
 
+#### Étape 4 : Commenter la méthode sous la forme de [commentaires XML](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx) 
+
+Une fois que vous avez défini la signature de la méthode d'extension comme dans l'exemple ci-dessous:
+```Csharp
+public static class StringExtensions
+{
+    public static bool IsIn(this string input, string[] values)
+    {
+        //code omitted for brevity
+    }
+}
+
+```
+
+Insérez trois fois le caractère / au dessus de la déclaration de la méthode. 
+
+Ce raccourci permet de générer automatiquement les commentaires dits XML de la méthode d'extension:
+
+```Csharp
+public static class StringExtensions
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="input"></param>
+    /// <param name="values"></param>
+    /// <returns></returns>
+    public static bool IsIn(this string input, string[] values)
+    {
+        //code omitted for brevity
+    }
+}
+
+```
+
+Dans la balise ```<summary> ...</summary``` insérez la description de la méthode établie à l'étape 1 (ou à la fin de l'étape 2):
+
+```Csharp
+public static class StringExtensions
+{
+    /// <summary>
+    /// Checks if input string is present in a given array of values.
+    /// </summary>
+    /// <param name="input"></param>
+    /// <param name="values"></param>
+    /// <returns></returns>
+    public static bool IsIn(this string input, string[] values)
+    {
+        //code omitted for brevity
+    }
+}
+
+```
+
+Renseignez le plus précisément possible la ou les balises ```<param> ...</param>```:
+
+```Csharp
+public static class StringExtensions
+{
+    /// <summary>
+    /// Checks if input string is present in a given array of values.
+    /// </summary>
+    /// <param name="input">Input string.</param>
+    /// <param name="values">array of strings</param>
+    /// <returns></returns>
+    public static bool IsIn(this string input, string[] values)
+    {
+        //code omitted for brevity
+    }
+}
+
+```
 
 
 A compléter
