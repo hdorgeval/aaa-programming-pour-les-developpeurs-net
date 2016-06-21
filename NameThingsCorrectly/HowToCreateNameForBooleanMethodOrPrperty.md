@@ -401,7 +401,7 @@ public static class StringExtensions
 
 ```
 
-Renseignez ensuite la balise <returns>...</returns> en vous aidant de ce que vous avez produit à l'étape 2:
+Renseignez ensuite la balise ```<returns>...</returns>``` en vous aidant de ce que vous avez produit à l'étape 2:
 
 ```Csharp
 if (input.IsIn(values) )
@@ -431,5 +431,14 @@ public static class StringExtensions
 
 En résumé, tout le contenu des commentaires XML provient directement du travail effectué à l'étape 1 (Décrire brièvement ce que doit faire la méthode) et à l'étape 2 (Transformer cette description en une ligne de code) décrites ci-dessus.
 
+Notez que la balise ```<returns>...</returns>``` décrit uniquement le cas où la méthode renvoie vrai.
+
+Ce n'est pas un hasard. 
+
+Le contenu de la balise ```<returns>...</returns>``` doit suivre la règle suivante:
+
+>Dans un commentaire XML, la balise ```<returns>...</returns>``` commence toujours par ```Returns true if ...```
+
+Autrement dit la balise ```<returns>...</returns>``` doit toujours décrire le cas positif. Si vous décrivez directement le cas négatif car cela vous semble plus direct ou plus naturel, cela signifie que le nom choisi nécessite de penser négativement ce qu'il faut à tout prix éviter: je vous expliquerai pourquoi dans le chapitre suivant.
 
 A compléter
