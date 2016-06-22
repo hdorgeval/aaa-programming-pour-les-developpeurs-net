@@ -536,7 +536,7 @@ public void ShouldReturnFalseWhenTheArrayOfValuesIsNull()
 }
 ```
 
-Il reste à définir dans un premier temps la partie ARRANGE du test:
+Il reste à définir dans un premier temps la partie *Arrange* du test:
 
 ```Csharp
 [TestMethod]
