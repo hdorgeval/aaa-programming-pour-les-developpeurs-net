@@ -555,7 +555,7 @@ public void ShouldReturnFalseWhenTheArrayOfValuesIsNull()
 Dans la partie *Arrange* vous préparer tous les objets nécessaires pour exécuter la méthode.
 Pour la méthode d'extension ```IsIn()```, il suffit de définir la chaîne de caractères en entrée ainsi que le tableau de valeurs.
 
-L'exemple ci-dessus est un exemple simple. Dans le cas d'un test unitaire fonctionnel, la partie *Arrange* peut contenir tout type de code permettant de créer des objets métiers dans un état spécifique. Cependant le nombre de lignes de code dans la partie *Arrange* ne doit jamais excéder cinq lignes de code.
+L'exemple ci-dessus est un exemple simple. Dans le cas d'un test unitaire fonctionnel, la partie *Arrange* peut contenir tout type de code permettant de créer des objets métiers dans un état spécifique. Cependant le nombre de lignes de code dans la partie *Arrange* ne doit jamais excéder cinq lignes.
 
 
 #### Étape 6 : Mettre en place le code d'exécution de la nouvelle méthode dans la partie *Act* de la méthode de test
