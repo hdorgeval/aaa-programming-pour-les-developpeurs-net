@@ -448,7 +448,9 @@ Cette étape est à mes yeux l'étape pivot, celle qui va permettre de dérouler
 
 Ecrivez les spécifications sous forme d'exemples. 
 
-Commencez d'abord par décrire les exemples les plus simples. Un exemple simple est un exemple qui permet un traitement immédiat nécessitant très peu de lignes de code pour être implémenté.
+Commencez d'abord par décrire les exemples les plus simples. 
+
+Un exemple simple est un exemple qui permet un traitement immédiat nécessitant très peu de lignes de code pour être implémenté.
 Vous constaterez que les exemples les plus simples sont souvent les moins probables.
 
 Ecrivez ensuite des exemples de plus en plus complexe.
