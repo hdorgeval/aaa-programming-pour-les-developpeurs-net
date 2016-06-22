@@ -468,7 +468,7 @@ Voici comment pourraient êtres écrites les spécifications de la méthode d'ex
 ######Exemples simples
 >Quand le tableau de valeurs est null, la méthode renvoie toujours faux.
 >
->Quand le tableau de valeurs est vide, a méthode renvoie toujours faux.
+>Quand le tableau de valeurs est vide, la méthode renvoie toujours faux.
 >
 >Quand la chaîne de caractères en entrée est nulle et que le tableau de valeurs contient un élement null, la méthode renvoie vrai.
 >
@@ -477,9 +477,9 @@ Voici comment pourraient êtres écrites les spécifications de la méthode d'ex
 >Quand la chaîne de caractères en entrée est présente à l'identique dans le tableau, la méthode renvoie vrai.
 
 ######Exemples moins simples
->Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec une différence uniquement sur la casse, la méthode renvoi faux
+>Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec une différence uniquement sur la casse, la méthode renvoi faux.
 
->Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec des expaces en plus ou en moins après la chaîne, la méthode renvoi faux
+>Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec des expaces en plus ou en moins après la chaîne, la méthode renvoi faux.
 
 ######Exemples orientés performance
 >Quand la chaines de caractères n'est pas présente dans un tableau de valeurs contenant 100 élements, le temps d'éxécution de la méthode ne doit pas dépasser 0,5 millisecondes.
