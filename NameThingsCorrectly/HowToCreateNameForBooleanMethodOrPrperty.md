@@ -455,7 +455,7 @@ Vous constaterez que les exemples les plus simples sont souvent les moins probab
 
 Ecrivez ensuite des exemples de plus en plus complexe.
 
-Finissez ensuite avec des exemples qui décrivent des exigences en terme de performance, c'est à dire en terme de vistesse d'exécution, en terme  d'allocation mémoire ou en terme de pourentage de CPU. J'appelle ces exigences des spécifications orientées performance.
+Finissez ensuite avec des exemples qui décrivent des exigences en terme de performance, c'est à dire en terme de vistesse d'exécution, en terme  d'allocation mémoire ou en terme de pourcentage d'occupation de la CPU. J'appelle ces exigences des spécifications orientées performance.
 
 >En résumé, l'écriture des spécifications se fait en trois étapes:
 
