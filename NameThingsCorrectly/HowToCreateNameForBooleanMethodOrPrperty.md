@@ -487,4 +487,77 @@ Voici comment pourraient êtres écrites les spécifications de la méthode d'ex
 
 #### Étape 6 : Prendre le premier exemple de la spécification pour écrire la partie *Arrange* du premier test unitaire
 
+
+Revenez sur votre projet de test. 
+Mettez en place le premier test unitaire sous la forme:
+
+```Csharp
+[TestMethod]
+public void TestMethod1()
+{
+    //Arrange
+
+    //Act
+
+    //Assert
+}
+```
+
+Partez du premier exemple de la spécification:
+>Quand le tableau de valeurs est null, la méthode renvoie toujours faux.
+
+Eventuellement traduisez en anglais l'exemple:
+>Should return false when the array of values is null
+
+Pour donnez un nom suffisament évocateur à la méthode de test (et oui, même les méthodes de test doivent avoir un nom suffisament évocateur et donc nommer correctement une méthode de test est aussi important que nommer correctement la méthode ou la propriété qui est visée par la méthode de test), il suffit de concaténer tous les mots de la phrase:
+
+```Csharp
+[TestMethod]
+public void QuandLeTableauDeValeursEstNullLaMéthodeRenvoieToujoursFaux()
+{
+    //Arrange
+
+    //Act
+
+    //Assert
+}
+```
+
+ou bien en anglais:
+```Csharp
+[TestMethod]
+public void ShouldReturnFalseWhenTheArrayOfValuesIsNull()
+{
+    //Arrange
+
+    //Act
+
+    //Assert
+}
+```
+
+Il reste à définir dans un premier temps la partie ARRANGE du test:
+
+```Csharp
+[TestMethod]
+public void ShouldReturnFalseWhenTheArrayOfValuesIsNull()
+{
+    //Arrange
+    string input = "test";
+    string[] values = null;
+
+    //Act
+
+    //Assert
+}
+```
+
+Dans la partie *Arrange* vous préparer tous les objets nécessaires pour exécuter la méthode.
+Pour la méthode d'extension ```IsIn()```, il suffit de définir la chaîne de caractères en entrée ainsi que le tableau de valeurs.
+
+L'exemple ci-dessus est un exemple simple. Dans le cas d'un test unitaire fonctionnel, la partie *Arrange* peut contenir tout type de code permettant de créer des objets métiers dans un état spécifique. Cependant le nombre de lignes de code dans la partie *Arrange* ne doit jamais excéder cinq lignes de code.
+
+
+#### Étape 6 : Mettre en place le code d'exécution de la nouvelle méthode dans la partie *Act* de la méthode de test
+
 A compléter
