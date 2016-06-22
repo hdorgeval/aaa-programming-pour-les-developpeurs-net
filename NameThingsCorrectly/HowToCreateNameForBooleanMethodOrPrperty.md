@@ -485,4 +485,6 @@ Voici comment pourraient êtres écrites les spécifications de la méthode d'ex
 >Quand la chaines de caractères n'est pas présente dans un tableau de valeurs contenant 100 élements, le temps d'éxécution de la méthode ne doit pas dépasser 0,5 millisecondes.
 
 
+#### Étape 6 : Prendre le premier exemple de la spécification pour écrire la partie *Arrange* du premier test unitaire
+
 A compléter
