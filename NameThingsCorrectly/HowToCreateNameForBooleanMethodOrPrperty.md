@@ -446,4 +446,41 @@ Autrement dit la balise ```<returns>...</returns>``` doit toujours décrire le c
 
 Cette étape est à mes yeux l'étape pivot, celle qui va permettre de dérouler naturellement les tests unitaires dans une approche TDD (Test Driven Development ) s'il s'agit d'une action technique ou les tests fonctionnels dans une approche BDD (Behavior Driven Development ) s'il s'agit d'une action métier.
 
+Ecrivez les spécifications sous forme d'exemples. 
+
+Commencez d'abord par décrire les exemples les plus simples. Un exemple simple est un exemple qui permet un traitement immédiat nécessitant très peu de lignes de code pour être implémenté.
+Vous constaterez que les exemples les plus simples sont souvent les moins probables.
+
+Ecrivez ensuite des exemples de plus en plus complexe.
+
+Finissez ensuite avec des exemples qui décrivent des exigences en terme de performance, c'est à dire en terme de vistesse d'exécution, en terme  d'allocation mémoire ou en terme de pourentage de CPU. J'appelle ces exigences des spécifications orientées performance.
+
+>En résumé, l'écriture des spécifications se fait en trois étapes:
+
+>* Commencer par les exemples les plus simples;
+>* Continuer avec des exemples de moins en moins simples;
+>* Finissez avec des exemples orientés performance.
+
+Voici comment pourraient êtres écrites les spécifications de la méthode d'extension ```IsIn()```:
+
+######Exemples simples
+>Quand le tableau de valeurs est null, la méthode renvoie toujours faux.
+>
+>Quand le tableau de valeurs est vide, a méthode renvoie toujours faux.
+>
+>Quand la chaîne de caractères en entrée est nulle et que le tableau de valeurs contient un élement null, la méthode renvoie vrai.
+>
+>Quand la chaîne de caractères en entrée est vide et que le tableau de valeurs contient un élement vide, la méthode renvoie vrai.
+>
+>Quand la chaîne de caractères en entrée est présente à l'identique dans le tableau, la méthode renvoie vrai.
+
+######Exemples moins simples
+>Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec une différence uniquement sur la casse, la méthode renvoi faux
+
+>Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec des expaces en plus ou en moins après la chaîne, la méthode renvoi faux
+
+######Exemples orientés performance
+>Quand la chaines de caractères n'est pas présente dans un tableau de valeurs contenant 100 élements, le temps d'éxécution de la méthode ne doit pas dépasser 0,5 millisecondes.
+
+
 A compléter
