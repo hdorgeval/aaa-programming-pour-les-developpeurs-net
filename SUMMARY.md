@@ -12,7 +12,9 @@
      * [Quand utiliser Camel Casing](NamingConventionsInFrameworkDotNet/WhenToUseCamelCasing.md)
      * [Le cas particulier des variables associées à une propriété](NamingConventionsInFrameworkDotNet/SpecialCaseOfVariablesThatAreBackingFieldsOfProperties.md)
   * [Comment nommer une méthode ou une propriété qui renvoie un booléen](NameThingsCorrectly/HowToCreateNameForBooleanMethodOrPrperty.md)
-* [Introduction](ThinkPositive/README.md)
-* 
+
+* Toujours penser positif
+  * [Introduction](ThinkPositive/README.md)
+
 
 
