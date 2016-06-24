@@ -1,8 +1,8 @@
 # Summary
 
 
-### [Introduction](README.md)
-### Nommer correctement les choses
+## [Introduction](README.md)
+## Nommer correctement les choses
 * [Introduction](NameThingsCorrectly/README.md)
 * [Les conventions de nom du Framework .Net](NamingConventionsInFrameworkDotNet/README.md)
    * [Pascal Casing](NamingConventionsInFrameworkDotNet/PascalCasing.md)
@@ -14,6 +14,6 @@
 * [Comment nommer une méthode ou une propriété qui renvoie un booléen](NameThingsCorrectly/HowToCreateNameForBooleanMethodOrPrperty.md)
 
 
-### Toujours penser positif
+## Toujours penser positif
 * [Introduction](ThinkPositive/README.md)
 
