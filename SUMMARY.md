@@ -1,8 +1,6 @@
 # Summary
 
-
-## [Introduction](README.md)
-## Nommer correctement les choses
+* [Introduction](README.md)
 * [Introduction](NameThingsCorrectly/README.md)
 * [Les conventions de nom du Framework .Net](NamingConventionsInFrameworkDotNet/README.md)
    * [Pascal Casing](NamingConventionsInFrameworkDotNet/PascalCasing.md)
@@ -10,10 +8,7 @@
    * [Quand utiliser Pascal Casing](NamingConventionsInFrameworkDotNet/WhenToUsePascalCasing.md)
    * [Quand utiliser Camel Casing](NamingConventionsInFrameworkDotNet/WhenToUseCamelCasing.md)
    * [Le cas particulier des variables associées à une propriété](NamingConventionsInFrameworkDotNet/SpecialCaseOfVariablesThatAreBackingFieldsOfProperties.md)
-
 * [Comment nommer une méthode ou une propriété qui renvoie un booléen](NameThingsCorrectly/HowToCreateNameForBooleanMethodOrPrperty.md)
-
-
-## Toujours penser positif
 * [Introduction](ThinkPositive/README.md)
+* AAA Programming
 
