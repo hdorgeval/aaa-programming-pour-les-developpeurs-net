@@ -24,3 +24,4 @@ En effet la structure d'un code unitaire est en principe la suivante:
 
 
 
+A Compléter
