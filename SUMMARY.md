@@ -11,6 +11,7 @@
      * [Le cas particulier des variables associées à une propriété](NamingConventionsInFrameworkDotNet/SpecialCaseOfVariablesThatAreBackingFieldsOfProperties.md)
   * [Comment nommer une méthode ou une propriété qui renvoie un booléen](NameThingsCorrectly/HowToCreateNameForBooleanMethodOrPrperty.md)
 
+
 * [Toujours penser positif](ThinkPositive/README.md)
   * [Introduction](ThinkPositive/README.md)
 
