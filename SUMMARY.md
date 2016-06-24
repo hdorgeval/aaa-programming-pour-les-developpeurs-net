@@ -1,8 +1,7 @@
 # Summary
 
-* AAA Programming
-  * [Introduction](README.md)
 
+* [Introduction](README.md)
 * Nommer correctement les choses
   * [Introduction](NameThingsCorrectly/README.md)
   * [Les conventions de nom du Framework .Net](NamingConventionsInFrameworkDotNet/README.md)
