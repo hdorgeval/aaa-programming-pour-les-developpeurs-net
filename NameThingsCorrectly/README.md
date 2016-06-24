@@ -1,4 +1,4 @@
-# Règle 1 : Nommer correctement les choses
+# Nommer correctement les choses
 
   Nommer correctement les choses signifie donner un nom suffisamment évocateur à la variable que vous vous apprêtez à déclarer, à la méthode, à la classe, à la propriété, à l'interface, bref à tous les objets que vous allez manipuler au sein de votre application.
   
