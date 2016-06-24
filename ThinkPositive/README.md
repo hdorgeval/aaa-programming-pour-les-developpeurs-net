@@ -18,7 +18,9 @@ Ce pattern est tellement commun que la plupart des développeurs que j'ai pu ren
 
 La pensée négative pose cependant deux problèmes:
 
-Le premier problème est que coder en utilisant le pattern de la pensée négative est en contradiction avec une approche TDD et/ou BDD et de manière générale est en contradiction avec la façon de coder un test unitaire.
+Le premier problème est que l'usage du pattern de la pensée négative est en contradiction avec une approche TDD (Test Driven Development) et/ou BDD (Behavior Driven Development) et de manière générale est en contradiction avec la façon de coder un test unitaire.
 
-En effet la structure d'un code unitaire est toujours la suivante
+En effet la structure d'un code unitaire est en principe la suivante:
+
+
 
