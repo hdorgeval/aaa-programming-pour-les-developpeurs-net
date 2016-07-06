@@ -18,7 +18,7 @@ Ce pattern est tellement commun que la plupart des développeurs que j'ai pu ren
 
 La pensée négative pose cependant deux problèmes:
 
-Le premier problème est que l'usage de ce pattern de la pensée négative est en contradiction avec une approche TDD (Test Driven Development) et/ou BDD (Behavior Driven Development) et de manière générale est en contradiction avec la façon de coder un test unitaire.
+>Le premier problème est que l'usage de ce pattern de la pensée négative est en contradiction avec une approche TDD (Test Driven Development) et/ou BDD (Behavior Driven Development) et de manière générale est en contradiction avec la façon de coder un test unitaire.
 
 En effet pour tester le code suivant:
 
@@ -63,8 +63,9 @@ throw new NotImplementedException();
 
 Vous pouvez ainsi constater que le code obtenu est la version positive du pattern évoqué en début de chapitre.
 
+La pensée négative est donc en contradiction avec une approche TDD et/ou BDD, et de manière générale est en contradiction avec la façon de coder un test unitaire. 
 
-Le deuxième problème posé par la pensée négative est qu'elle réduit considérablement la productivité du développeur ainsi que la lisibilité et la compréhension du code ce qui affectera les délais de correction ou de mise à disposition de nouvelles fonctionnalités.
+>Le deuxième problème posé par la pensée négative est qu'elle réduit considérablement la productivité du développeur ainsi que la lisibilité et la compréhension du code ce qui affectera les délais de correction ou de mise à disposition de nouvelles fonctionnalités.
 
 Je vous invite à analyser la méthode ci-dessous et à déterminer quel devrait être le nom réel de cette méthode:
 
