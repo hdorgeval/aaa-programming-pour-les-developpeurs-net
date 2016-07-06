@@ -96,7 +96,7 @@ Déterminez ainsi le temps moyen mis pour analyser une seule ligne de code (en d
 
 Déterminez ensuite le nombre de lignes de code, dans l'application que vous développez, qui suivent le pattern de la pensée négative.
 Imaginons par exemple que vous avez déterminé que le temps moyen pour analyser une ligne de code dans l’exemple ci-dessus est de 10 secondes et qu'il y a 1000 lignes de code qui suivent le pattern de la pensée négative:
-chaque correction ou chaque évolution de l'application prendra vraisemblablement 3 heures de plus qu’initialement prévu au planning.
+chaque correction ou chaque évolution de l'application prendra vraisemblablement 3 heures de plus (pour chaque développeur affecté à cette correction ou évolution) qu’initialement prévu au planning.
 
 
 L'objectif de ce chapitre est de vous montrer les techniques de base qui vont vous permettre de toujours penser positif. 
