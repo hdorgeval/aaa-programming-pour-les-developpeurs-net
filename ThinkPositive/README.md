@@ -94,8 +94,6 @@ Notez le temps qu'ils ont mis pour accomplir cette tâche.
 
 Déterminez ainsi le temps moyen mis pour analyser une seule ligne de code (en divisant la durée d'analyse par le nombre effectif de lignes de code - soit 7 dans l'exemple ci-dessus).
 
-
-
 Voici un autre exemple de code qui est une variante de la pensée négative basée sur l'usage de l'opérateur ternaire ```?```:
 ```Csharp
 public void ExportToCsv(bool isDetailedExport, bool isAnnualReport)
