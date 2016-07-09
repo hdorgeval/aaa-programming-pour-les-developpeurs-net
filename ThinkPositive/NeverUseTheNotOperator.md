@@ -36,7 +36,7 @@ L'usage de la négation à l'aide d'un point d'exclamation provoque un ralentiss
 
 En effet le point d'exclamation peut indiquer un danger comme le montre l'illustration ci-dessous:
 
-![](Not2.jpg)
+![](Not.jpg)
 
 Le point d'exclamation peut indiquer un impératif quand il est utilisé en fin de phrase comme par exemple : 
 
