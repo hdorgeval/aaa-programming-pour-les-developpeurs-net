@@ -140,11 +140,31 @@ B //la plupart du temps beaucoup de lignes de code
 
 ```
 
-Pour transformer en version positive un code négatif, il suffit d'appliquer les deux règles suivantes:
+Pour transformer en version positive un code négatif, il suffit donc d'appliquer les deux règles suivantes:
 
 >La dernière instruction d'un bloc de code ```If``` est toujours  ```return``` ou ```continue```
 
 >Un ```If``` n'a jamais de ```else```
+
+Si ces deux règles sont nécessaires elles ne sont pas suffisantes.
+
+En effet, il reste à étudier le cas suivant:
+
+ ```Csharp
+A1
+if ( ! A )
+{
+  B //la plupart du temps beaucoup de lignes de code
+}
+else {
+  C //la plupart du temps très peu de lignes de code
+}
+A2
+```
+
+Dans l'exemple ci-dessus ```A``` représente une expression booléenne, ```B``` le bloc de code à l'intérieur du ```If```, et ```C``` le bloc de code à l'intérieur du ```else```. ```A1``` représente toutes les lignes de code situées avant le ```if``` et ```A2``` toutes les lignes de code situées après le ```else```.
+
+
 
 A compléter
 
