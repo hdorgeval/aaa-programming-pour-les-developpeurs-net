@@ -7,7 +7,7 @@
 // A est une expression booléenne
 if ( ! A )
 {
-  // la plupart du temps beaucoup de lignes de code
+  //la plupart du temps beaucoup de lignes de code
 }
 
 ```
@@ -16,7 +16,7 @@ if ( ! A )
 // A est un objet
 if ( A != null )
 {
-  // la plupart du temps beaucoup de lignes de code
+  //la plupart du temps beaucoup de lignes de code
 }
 
 ```
@@ -25,7 +25,7 @@ if ( A != null )
 // A et B sont des objets du même type
 if ( A != B )
 {
-  // la plupart du temps beaucoup de lignes de code
+  //la plupart du temps beaucoup de lignes de code
 }
 
 ```
@@ -51,7 +51,7 @@ Par conséquent pour analyser le code:
  ```Csharp
 if ( ! A )
 {
-  // la plupart du temps beaucoup de lignes de code
+  //la plupart du temps beaucoup de lignes de code
 }
 
 ```
@@ -73,16 +73,78 @@ Je vais vous montrer qu'il est parfaitement possible de se passer totalement de 
 Partons dans un premier temps du pattern de la pensée négative exposée en introduction de ce chapitre:
 
  ```Csharp
-if ( une certaine condition n'est pas remplie )
+if ( ! A )
 {
-  // la plupart du temps beaucoup de lignes de code
+  B //la plupart du temps beaucoup de lignes de code
 }
 else {
-  // la plupart du temps très peu de lignes de code
+  C //la plupart du temps très peu de lignes de code
 }
 ```
 
+Dans l'exemple ci-dessus ```A``` représente une expression booléenne, ```B``` le bloc de code à l'intérieur du ```If```, et ```C``` le bloc de code à l'intérieur du ```else```.
+Supposons dans un premier temps qu'il n'y a pas de code ni avant le ```if``` ni après le ```else``` c'est à dire que le code ci-dessus est entièrement encapsulé dans une méthode ou une propriété.
 
+
+Il est possible de réécrire ce code de la manière suivante
+ ```Csharp
+if ( ! A )
+{
+  B //la plupart du temps beaucoup de lignes de code
+}
+if ( A ) 
+{
+  C //la plupart du temps très peu de lignes de code
+}
+```
+Notez la disparation du ```else``` et notez qu'il y a maintenant deux if qui sont indépendants l'un de l'autre: il est donc possible d'inverser les deux ```if```.
+
+ ```Csharp
+if ( A ) 
+{
+  C //la plupart du temps très peu de lignes de code
+}
+if ( ! A )
+{
+  B //la plupart du temps beaucoup de lignes de code
+}
+
+```
+
+Il est possible d'ajouter un ```return``` ( ou un ```return R``` si la méthode renvoie un résultat ou si il s'agit d'une propriété) à la fin du bloc de code ```C```  sans que cela change quoi que ce soit à l'exécution:
+
+
+ ```Csharp
+if ( A ) 
+{
+  C //la plupart du temps très peu de lignes de code
+  return;
+}
+if ( ! A )
+{
+  B //la plupart du temps beaucoup de lignes de code
+}
+
+```
+
+Il est maintenant possible de se débarrasser de l'opérateur de négation:
+
+ ```Csharp
+if ( A ) 
+{
+  C //la plupart du temps très peu de lignes de code
+  return;
+}
+
+B //la plupart du temps beaucoup de lignes de code
+
+```
+
+Pour transformer en version positive un code négatif, il suffit d'appliquer les deux règles suivantes:
+
+>La dernière instruction d'un bloc de code ```If``` est toujours  ```return``` ou ```continue```
+
+>Un ```If``` n'a jamais de ```else```
 
 A compléter
 
