@@ -18,7 +18,7 @@ Ce pattern est tellement commun que la plupart des développeurs que j'ai pu ren
 
 La pensée négative pose cependant deux problèmes:
 
->Le premier problème est que l'usage de ce pattern de la pensée négative est en contradiction avec une approche TDD (Test Driven Development) et/ou BDD (Behavior Driven Development) et de manière générale est en contradiction avec la façon de coder un test unitaire.
+>Le premier problème est que l'usage de ce pattern est en contradiction avec une approche TDD (Test Driven Development) et/ou BDD (Behavior Driven Development) et de manière générale est en contradiction avec la façon de coder un test unitaire.
 
 En effet pour tester le code suivant:
 
