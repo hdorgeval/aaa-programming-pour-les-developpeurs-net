@@ -12,6 +12,7 @@
 
 * [Toujours penser positif](ThinkPositive/README.md)
   * [Introduction](ThinkPositive/README.md)
+  * [Ne jamais utiliser l’opérateur de négation !](ThinkPositive/NeverUseTheNotOperator.md)
 
 
 
