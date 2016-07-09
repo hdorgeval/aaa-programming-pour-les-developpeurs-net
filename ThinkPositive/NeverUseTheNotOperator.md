@@ -86,7 +86,7 @@ Dans l'exemple ci-dessus ```A``` représente une expression booléenne, ```B``` 
 Supposons dans un premier temps qu'il n'y a pas de code ni avant le ```if``` ni après le ```else``` c'est à dire que le code ci-dessus est entièrement encapsulé dans une méthode ou une propriété.
 
 
-Il est possible de réécrire ce code de la manière suivante
+Il est possible de réécrire ce code de la manière suivante:
  ```Csharp
 if ( ! A )
 {
@@ -111,7 +111,7 @@ if ( ! A )
 
 ```
 
-Il est possible d'ajouter un ```return``` ( ou un ```return R``` si la méthode renvoie un résultat ou si il s'agit d'une propriété) à la fin du bloc de code ```C```  sans que cela change quoi que ce soit à l'exécution:
+Il est possible d'ajouter un ```return``` ( ou un ```return R``` si la méthode renvoie un résultat ou s'il s'agit d'une propriété) à la fin du bloc de code ```C```  sans que cela change quoi que ce soit à l'exécution:
 
 
  ```Csharp
@@ -226,13 +226,13 @@ A2
 
 Vous pouvez remarquer que les lignes représentées par ```A2``` sont dupliquées à l'issue de la transformation positive.
 
-Ainsi l'insertion d'un bloc ```if...else``` à l'intérieur d'un bloc de code est une façon déguisée de dupliquer du code. 
+Ainsi l'insertion d'un bloc ```if...else``` à l'intérieur d'un bloc de code est une façon déguisée de dupliquer tout le code situé après le ```else```. 
 
 Le codage en pensée positive a donc l'avantage de mettre en évidence la duplication de code et permet donc de découvrir très rapidement quelle partie de code doit être factorisée sous la forme d'une méthode.
 
-Cette fois-ci pour terminer cette transformation en pensée il a fallu ajouter la règle suivante:
+Cette fois-ci pour terminer cette transformation en pensée positive il a fallu ajouter la règle suivante:
 
->Toute ligne de code ( ou ensemble de lignes) dupliquée doit être factorisée
+>Toute ligne de code (ou ensemble de lignes) dupliquée doit être factorisée.
 
 
 A compléter
