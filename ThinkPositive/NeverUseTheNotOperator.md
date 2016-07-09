@@ -58,7 +58,7 @@ if ( ! A )
 
 il faut réaliser les opérations suivantes:
 
-* Ignorer dans un premier temps la présence du signe !
+* Ignorer dans un premier temps la présence du signe ```!```
 * Transformer l'expression A en une phrase (plus l'expression A est compliquée - présence multiple de  ```&& ``` et de  ```|| ``` - plus cette transformation est longue)
 * Tourner cette phrase sous une forme négative
 * Déterminer dans quelles circonstances cette forme négative est vrai
@@ -66,11 +66,11 @@ il faut réaliser les opérations suivantes:
 
 L'usage de l’opérateur de négation ```!``` entraîne donc un arrêt brutal de la lecture du code environnant mais aussi un ralentissement significatif au moment de l'écriture du code.
 
-Pour toutes ces raisons, il faut toujours éviter d'utiliser l'opérateur de négation ```!``
+Pour toutes ces raisons, il faut toujours éviter d'utiliser l'opérateur de négation ```!```
 
 Je vais vous montrer qu'il est parfaitement possible de se passer totalement de cet opérateur.
 
-Partons dans un premier temps du pattern de la pensée négative exposée en introduction de ce chapitre:
+Partons dans un premier temps du pattern de la pensée négative exposé en introduction de ce chapitre:
 
  ```Csharp
 if ( ! A )
