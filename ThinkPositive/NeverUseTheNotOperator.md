@@ -72,6 +72,16 @@ Je vais vous montrer qu'il est parfaitement possible de se passer totalement de 
 
 Partons dans un premier temps du pattern de la pensée négative exposée en introduction de ce chapitre:
 
+ ```Csharp
+if ( une certaine condition n'est pas remplie )
+{
+  // la plupart du temps beaucoup de lignes de code
+}
+else {
+  // la plupart du temps très peu de lignes de code
+}
+```
+
 
 
 A compléter
