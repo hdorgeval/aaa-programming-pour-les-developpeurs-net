@@ -162,8 +162,77 @@ else {
 A2
 ```
 
-Dans l'exemple ci-dessus ```A``` représente une expression booléenne, ```B``` le bloc de code à l'intérieur du ```If```, et ```C``` le bloc de code à l'intérieur du ```else```. ```A1``` représente toutes les lignes de code situées avant le ```if``` et ```A2``` toutes les lignes de code situées après le ```else```.
+Dans l'exemple ci-dessus ```A``` représente une expression booléenne, ```B``` le bloc de code à l'intérieur du ```If```, ```C``` le bloc de code à l'intérieur du ```else```. ```A1``` représente toutes les lignes de code situées avant le ```if``` et ```A2``` toutes les lignes de code situées après le ```else```.
 
+Le cas ci-dessus est équivalent à l'écriture suivante:
+
+ ```Csharp
+A1
+if ( ! A )
+{
+  B //la plupart du temps beaucoup de lignes de code
+  A2
+}
+else {
+  C //la plupart du temps très peu de lignes de code
+  A2
+}
+```
+
+Il est maintenant possible d'appliquer la transformation que vous avez apprise:
+ ```Csharp
+A1
+if ( ! A )
+{
+  B //la plupart du temps beaucoup de lignes de code
+  A2
+}
+if ( A ) 
+{
+  C //la plupart du temps très peu de lignes de code
+  A2
+}
+```
+
+puis:
+
+```Csharp
+A1
+if ( A ) 
+{
+  C //la plupart du temps très peu de lignes de code
+  A2
+}
+if ( ! A )
+{
+  B //la plupart du temps beaucoup de lignes de code
+  A2
+}
+
+```
+
+puis:
+```Csharp
+A1
+if ( A ) 
+{
+  C //la plupart du temps très peu de lignes de code
+  A2
+  return;
+}
+B //la plupart du temps beaucoup de lignes de code
+A2
+```
+
+Vous pouvez remarquer que les lignes représentées par ```A2``` sont dupliquées à l'issue de la transformation positive.
+
+Ainsi l'insertion d'un bloc ```if...else``` à l'intérieur d'un bloc de code est une façon déguisée de dupliquer du code. 
+
+Le codage en pensée positive a donc l'avantage de mettre en évidence la duplication de code et permet donc de découvrir très rapidement quelle partie de code doit être factorisée sous la forme d'une méthode.
+
+Cette fois-ci pour terminer cette transformation en pensée il a fallu ajouter la règle suivante:
+
+>Toute ligne de code ( ou ensemble de lignes) dupliquée doit être factorisée
 
 
 A compléter
