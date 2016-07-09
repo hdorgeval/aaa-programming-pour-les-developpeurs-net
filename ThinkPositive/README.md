@@ -120,6 +120,7 @@ Imaginons par exemple que vous avez déterminé que le temps moyen pour analyser
 chaque correction ou chaque évolution de l'application prendra vraisemblablement au moins une heure de plus (pour chaque développeur affecté à cette correction ou évolution) qu’initialement prévu au planning.
 
 La pensée négative a donc un coût qu'il est possible de quantifier en utilisant la méthodologie exposée à partir des exemples ci-dessus.
+
 La pensée négative, en fonction de la taille de l'application, en fonction du pourcentage de lignes de code écrites en pensée négative, en fonction du nombre de développeurs dans l’équipe, peut entraîner un surcoût pouvant aller de 10% à 100% du budget initialement prévu.
 
 L'objectif de ce chapitre est de vous montrer les techniques de base qui vont vous permettre de toujours penser positif. 
