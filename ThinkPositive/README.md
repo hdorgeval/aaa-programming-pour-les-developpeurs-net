@@ -31,9 +31,9 @@ if ( ! A )
 
 ```
 
-Il va falloir mettre en place un test unitaire pour chaque cas où l'expression A est fausse. Il est vraisemblable que ces cas forment un ensemble ouvert, c'est à dire qu'il est très souvent impossible ou impraticable de lister en totalité tous les cas possibles.
+Il va falloir mettre en place autant de tests unitaires que de cas où l'expression A est fausse. Il est vraisemblable que ces cas forment un ensemble ouvert, c'est à dire un ensemble non exhaustif des cas possibles.
 
-Le risque de tomber sur le cas non prévu lorsque l'application sera déployée en production devient alors extrêmement élevé.
+Le risque de tomber sur un cas imprévu quand l'application sera déployée en production devient alors extrêmement élevé.
 
 Dans un contexte TDD ou BDD, la spécification associée à un test est exprimée grossièrement de la manière suivante : 
 
@@ -92,11 +92,34 @@ Notez combien de temps il vous a fallu pour déterminer le nom exact de cette m�
 Demandez aux développeurs de votre équipe d'analyser ce code et de trouver le meilleur nom pour cette méthode.
 Notez le temps qu'ils ont mis pour accomplir cette tâche.
 
-Déterminez ainsi le temps moyen mis pour analyser une seule ligne de code (en divisant la durée d'analyse par 7 ).
+Déterminez ainsi le temps moyen mis pour analyser une seule ligne de code (en divisant la durée d'analyse par le nombre effectif de lignes de code - soit 7 dans l'exemple ci-dessus).
+
+
+
+Voici un autre exemple de code qui est une variante de la pensée négative qui utilise l'opérateur ternaire ```?```:
+```Csharp
+public void ExportToCsv(bool isDetailedExport, bool isAnnualReport)
+{
+    var connection = new SqlConnection("...");
+    var command = connection.CreateCommand();
+    command.CommandType = System.Data.CommandType.StoredProcedure;
+    command.CommandText = !isDetailedExport ? (!isAnnualReport ? "ps4" : "ps2"):(isAnnualReport?"ps3":"ps1");
+    // code omitted for brevity
+}
+```
+
+Pour ce type de code la démarche est la suivante: déterminez quelles sont les conditions pour que la procédure stockée appelée soit ```ps1```, mais surtout déterminez combien de temps il vous faut pour répondre de façon certaine à la question.
+
+Demandez aux développeurs de votre équipe d'analyser ce code et de trouver la réponse à la question.
+Notez le temps qu'ils ont mis pour accomplir cette tâche.
+
+Déterminez ainsi le temps moyen mis pour analyser une seule ligne de code (en divisant la durée d'analyse par le nombre effectif de lignes de code - soit une seule ligne de code dans l'exemple ci-dessus).
 
 Déterminez ensuite le nombre de lignes de code, dans l'application que vous développez, qui suivent le pattern de la pensée négative.
-Imaginons par exemple que vous avez déterminé que le temps moyen pour analyser une ligne de code dans l’exemple ci-dessus est de 10 secondes et qu'il y a 1000 lignes de code dans votre application qui suivent le pattern de la pensée négative:
-chaque correction ou chaque évolution de l'application prendra vraisemblablement 3 heures de plus (pour chaque développeur affecté à cette correction ou évolution) qu’initialement prévu au planning.
+Imaginons par exemple que vous avez déterminé que le temps moyen pour analyser une ligne de code ( à partir des deux exemples ci-dessus) est de 4 secondes et qu'il y a 1000 lignes de code dans votre application qui suivent le pattern de la pensée négative:
+chaque correction ou chaque évolution de l'application prendra vraisemblablement au moins une heure de plus (pour chaque développeur affecté à cette correction ou évolution) qu’initialement prévu au planning.
 
+La pensée négative a donc un coût qu'il est possible de quantifier en utilisant la méthodologie exposée à partir des exemples ci-dessus.
+La pensée négative, en fonction de la taille de l'application, en fonction du pourcentage de lignes de code écrites en pensée négative, en fonction du nombre de développeurs dans l’équipe, peut entraîner un surcoût pouvant aller de 10% à 100% du budget initialement prévu.
 
 L'objectif de ce chapitre est de vous montrer les techniques de base qui vont vous permettre de toujours penser positif. 
