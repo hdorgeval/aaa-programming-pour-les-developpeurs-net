@@ -96,7 +96,7 @@ Déterminez ainsi le temps moyen mis pour analyser une seule ligne de code (en d
 
 
 
-Voici un autre exemple de code qui est une variante de la pensée négative qui utilise l'opérateur ternaire ```?```:
+Voici un autre exemple de code qui est une variante de la pensée négative basée sur l'usage de l'opérateur ternaire ```?```:
 ```Csharp
 public void ExportToCsv(bool isDetailedExport, bool isAnnualReport)
 {
