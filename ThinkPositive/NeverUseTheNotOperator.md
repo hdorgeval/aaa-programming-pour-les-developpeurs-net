@@ -291,7 +291,7 @@ Pour effectuer cette transformation semi-positive il a fallu ajouter la règle s
 
 L'application de cette règle induit cependant une complexification des expressions : d'un ```if (A) {}``` et ```if (B) {}```, on est passé à un ```if (A && B) {}``` et ```if (A && !B) {}```.
 
-En réalité, l'application des règles ci-dessus permet de mettre en évidence l'ensemble des contextes possibles lors de l'exécution du code. Le code ci-dessus pourrait être décrit par le pseudo-code suivant:
+En réalité, l'application des règles ci-dessus permet de mettre rapidement en évidence l'ensemble des contextes possibles lors de l'exécution du code. Le code ci-dessus pourrait être décrit par le pseudo-code suivant:
 
 
 ```Csharp
