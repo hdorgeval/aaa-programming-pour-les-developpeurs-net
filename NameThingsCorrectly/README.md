@@ -6,7 +6,7 @@
   
   L'intérêt de raconter une histoire est qu'une relecture rapide permet de détecter très tôt les éventuelles incohérences, les éventuelles erreurs de conception , permet de se poser très rapidement les bonnes questions et permet d'échanger plus facilement avec les autres développeurs de son équipe.
     
-  L'objectif de ce chapitre est de vous montrer les méthodes qui vous permettront de trouver le nom le plus évocateur possible pour définir une variable, une méthode ou une propriété.
+  L'objectif de ce chapitre est de vous montrer les méthodes qui vous permettront de trouver le nom le plus évocateur possible pour définir une variable, une méthode, une propriété ou une classe.
   
   Trouvez le bon nom peut se révéler être une activité difficile ou chronophage. 
   
