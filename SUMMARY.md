@@ -19,6 +19,6 @@
 
 
 
-* [Synthèse des règles spécifique au AAAProgramming](RulesIndex/README.md)
+* [Synthèse des règles spécifiques au AAAProgramming](RulesIndex/README.md)
 
 
