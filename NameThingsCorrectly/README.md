@@ -16,4 +16,6 @@
   
   Si vous êtes responsable d'équipe, je vous recommande d'être à l'écoute des difficultés rencontrées par un développeur quand il doit donner un nom expressif aux différents éléments de son code : c'est un signal très fort de la présence d'un choix de conception ou d'un choix technique qui doit être retravaillé avec l'équipe.
   
-  Pour nommer correctement les choses, il est nécessaires de connaître et de respecter dans un premier temps les conventions de nom qui existent au sein du Framework .Net
+  Pour nommer correctement les choses, il est nécessaires de connaître et de respecter dans un premier temps les conventions de nom qui existent au sein du Framework .Net.
+  
+  
