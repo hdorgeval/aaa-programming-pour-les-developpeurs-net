@@ -19,6 +19,11 @@
 |Le nom d'une variable locale associée à une propriété est constitué d'un préfixe, le caractère _, suivi d'un nom conforme à la convention Camel Casing. |
 | |
 
+|Règle n°  |
+| -- |
+|Toute variable doit être déclarée au plus près de son utilisation. |
+| |
+
 
 |Règle n°  |
 | -- |
