@@ -5,7 +5,12 @@
 
 |Règle n°  |
 | -- |
-|La convention de nom Camel Casing doit être utilisée pour nommer les éléments suivants:<ul><li>Variable locale;</li> <li>Paramètre de méthode</li></ul>|
+|La convention de nom Camel Casing doit être utilisée pour nommer les éléments suivants:<ul><li>Variable locale;</li> <li>Paramètre de méthode.</li></ul>|
+| |
+
+|Règle n°  |
+| -- |
+|La convention de nom Pascal Casing doit être utilisée pour nommer les éléments suivants:<ul><li>Classe;</li><li>Énumération;</li><li>Valeur d'une énumération;</li><li>Événement;</li><li>Membre public static et read-only;</li><li>Méthode;</li><li>Propriété;</li><li>Namespace;</li><li>Interface.</li></ul>|
 | |
 
 |Règle n°  |
