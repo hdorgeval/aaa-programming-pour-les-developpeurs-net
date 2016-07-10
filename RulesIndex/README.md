@@ -33,7 +33,7 @@ Ce chapitre regroupe l'ensemble des règles qui ont été expliquées et démont
 
 |Règle n° 6 |
 | -- |
-|Ne jamais utiliser l’opérateur de négation ```!``` = pensez toujours positif |
+|Ne jamais utiliser l’opérateur de négation ```!``` = pensez toujours positif. |
 | |
 
 |Règle n° 7 |
