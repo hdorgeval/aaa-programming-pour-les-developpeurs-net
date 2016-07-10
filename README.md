@@ -20,7 +20,7 @@ Partager ces techniques avec d'autres programmeurs m'a aidé à les formaliser e
 
 Ce livre est destiné à un double public:
 
-* A tous les développeurs .Net qui sont amenés à travailler sur des applications critiques, qui sont pilotés par les délais, qui doivent fournir du code simple à comprendre, facile à lire, facile à maintenir, facile à faire évoluer;
+* A tous les développeurs .Net, du développeur débutant au développeur confirmé, qui sont amenés à travailler sur des applications critiques, qui sont pilotés par les délais, qui doivent fournir du code simple à comprendre, facile à lire, facile à maintenir, facile à faire évoluer;
 
 * A tous les responsables qui ont les objectifs suivants pour leur équipe :
  * Augmenter la vélocité de l'équipe, 
