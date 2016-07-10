@@ -13,6 +13,13 @@
 |La convention de nom Pascal Casing doit être utilisée pour nommer les éléments suivants:<ul><li>Classe;</li><li>Énumération;</li><li>Valeur d'une énumération;</li><li>Événement;</li><li>Membre public static et read-only;</li><li>Méthode;</li><li>Propriété;</li><li>Namespace;</li><li>Interface.</li></ul>|
 | |
 
+
+|Règle n°  |
+| -- |
+|Le nom d'une variable locale associée à une propriété est constitué d'un préfixe, le caractère _, suivi d'un nom conforme à la convention Camel Casing. |
+| |
+
+
 |Règle n°  |
 | -- |
 |Ne jamais utiliser l’opérateur de négation ```!``` = pensez toujours positif |
