@@ -1,7 +1,7 @@
 # Ne jamais utiliser l’opérateur de négation ```!```
 
   
- L'opérateur de négation utilisé dans le langage .Net mais aussi dans le langage C et JavaScript est un point d'exclamation qui peut être utilisé de trois façons:
+ L'opérateur de négation utilisé dans le langage .Net mais aussi dans le langage C et JavaScript est un point d'exclamation qui peut être utilisé de trois façons différentes:
   
   ```Csharp
 // A est une expression booléenne
@@ -45,7 +45,7 @@ Le point d'exclamation peut indiquer un impératif quand il est utilisé en fin 
 Dans un cas comme dans l'autre, le cerveau cesse toutes ses activités pour analyser la situation actuelle et déterminer quelles seraient les conséquences de ne pas tenir compte du danger ou de l'ordre.
 
 
->L'usage de la négation à l'aide d'un signe placé devant une affirmation n'existe pas dans le langage naturel. 
+>L'usage de la négation à l'aide d'un signe placé devant une affirmation est sans équivalent dans le langage naturel. 
 
 Par conséquent pour analyser le code:
  ```Csharp
@@ -58,10 +58,10 @@ if ( ! A )
 
 il faut réaliser les opérations suivantes:
 
-* Ignorer dans un premier temps la présence du signe ```!```
-* Transformer l'expression A en une phrase (plus l'expression A est compliquée - présence multiple de  ```&& ``` et de  ```|| ``` - plus cette transformation est longue)
-* Tourner cette phrase sous une forme négative
-* Déterminer dans quelles circonstances cette forme négative est vrai
+* Ignorer dans un premier temps la présence du signe ```!```;
+* Transformer l'expression A en une phrase (plus l'expression A est compliquée - présence multiple de  ```&& ``` et de  ```|| ``` - plus cette transformation est longue);
+* Tourner cette phrase sous une forme négative;
+* Déterminer dans quelles circonstances cette forme négative est vrai;
 * Refaire au moins une fois toutes ces opérations pour vérifier qu'on ne s'est pas trompé.
 
 L'usage de l’opérateur de négation ```!``` entraîne donc un arrêt brutal de la lecture du code environnant mais aussi un ralentissement significatif au moment de l'écriture du code.
@@ -233,6 +233,81 @@ Le codage en pensée positive a donc l'avantage de mettre en évidence la duplic
 Cette fois-ci pour terminer cette transformation en pensée positive il a fallu ajouter la règle suivante:
 
 >Toute ligne de code (ou ensemble de lignes) dupliquée doit être factorisée.
+
+Le code ci-dessous est parfaitement conforme avec la pensée positive. Par contre il pose un problème dans la mesure où le deuxième if imbriqué ne se termine pas par un ```return```:
+
+```Csharp
+if ( A ) 
+{
+  if ( B )
+  {
+    C 
+  }
+  D 
+  return;
+}
+```
+
+Le code ci-dessous est équivalent au code suivant:
+
+```Csharp
+if ( A ) 
+{
+  if ( B )
+  {
+    C
+    D
+    return;
+  }
+  if ( ! B )
+  {
+    D 
+    return;
+  }
+  return;
+}
+```
+
+Vous pouvez remarquer qu'un ```if``` imbriqué est une façon déguisé de penser négatif et est aussi une façon déguisée de dupliquer du code (en effet toutes les lignes représentée par ```D``` sont dupliquées). 
+Cependant il est possible de transformer le code ci-dessous en une version semi-positive:
+
+```Csharp
+if ( A && B )
+{
+  C
+  D
+  return;
+}
+if ( A && !B )
+{
+  D 
+  return;
+}
+```
+
+Pour effectuer cette transformation semi-positive il a fallu ajouter la règle suivante :
+
+>Un ```if``` ne contient jamais de ```if``` imbriqué.
+
+L'application de cette règle induit cependant une complexification des expressions : d'un ```if (A) {}``` et ```if (B) {}```, on est passé à un ```if (A && B) {}``` et ```if (A && !B) {}```.
+
+En réalité, l'application des règles ci-dessus permet de mettre en évidence l'ensemble des contextes possibles lors de l'exécution du code. Le code ci-dessus pourrait être décrit par le pseudo-code suivant:
+
+
+```Csharp
+if ( contexte 1)
+{
+  C
+  D
+  return;
+}
+
+if (contexte 2 )
+{
+  D 
+  return;
+}
+```
 
 
 A compléter
