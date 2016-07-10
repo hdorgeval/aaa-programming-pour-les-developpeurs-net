@@ -12,9 +12,11 @@
   * [Comment nommer une méthode ou une propriété qui renvoie un booléen](NameThingsCorrectly/HowToCreateNameForBooleanMethodOrPrperty.md)
 
 
+
 * [Toujours penser positif](ThinkPositive/README.md)
   * [Introduction](ThinkPositive/README.md)
   * [Ne jamais utiliser l’opérateur de négation !](ThinkPositive/NeverUseTheNotOperator.md)
+
 
 
 * [Synthèse des règles spécifique au AAAProgramming](RulesIndex/README.md)
