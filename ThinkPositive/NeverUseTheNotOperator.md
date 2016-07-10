@@ -287,7 +287,6 @@ if ( A && !B )
 
 Pour effectuer cette transformation semi-positive il a fallu ajouter la règle suivante :
 
-<a name="if3"></a>
 >Un ```if``` ne contient jamais de ```if``` imbriqué.
 
 L'application de cette règle induit cependant une complexification des expressions : d'un ```if (A) {}``` et ```if (B) {}```, on est passé à un ```if (A && B) {}``` et ```if (A && !B) {}```.
