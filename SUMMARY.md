@@ -1,5 +1,7 @@
 # Summary
 * [Introduction](README.md)
+
+
 * [Nommer correctement les choses](NameThingsCorrectly/README.md)
   * [Les conventions de nom du Framework .Net](NamingConventionsInFrameworkDotNet/README.md)
      * [Pascal Casing](NamingConventionsInFrameworkDotNet/PascalCasing.md)
@@ -13,6 +15,7 @@
 * [Toujours penser positif](ThinkPositive/README.md)
   * [Introduction](ThinkPositive/README.md)
   * [Ne jamais utiliser l’opérateur de négation !](ThinkPositive/NeverUseTheNotOperator.md)
+
 
 * [Synthèse des règles spécifique au AAAProgramming](RulesIndex/README.md)
 
