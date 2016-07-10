@@ -5,7 +5,7 @@
 
 |Règle n°  |
 | -- |
-|Ne jamais utiliser l’opérateur de négation ```!``` |
+|Ne jamais utiliser l’opérateur de négation ```!``` = pensez toujours positif |
 | |
 
 |Règle n°  |
