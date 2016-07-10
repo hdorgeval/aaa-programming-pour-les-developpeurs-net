@@ -27,6 +27,11 @@
 
 |Règle n°  |
 | -- |
+|Toute variable associée à une propriété doit être utilisée exclusivement au sein du getter ou du setter de cette propriété.|
+| |
+
+|Règle n°  |
+| -- |
 |Ne jamais utiliser l’opérateur de négation ```!``` = pensez toujours positif |
 | |
 
