@@ -10,6 +10,11 @@
 
 |Règle n°  |
 | -- |
+|Ne jamais utiliser l’opérateur de négation ```!``` = pensez toujours positif |
+| |
+
+|Règle n°  |
+| -- |
 |Un ```if``` ne contient jamais de ```if``` imbriqué. |
 | |
 
