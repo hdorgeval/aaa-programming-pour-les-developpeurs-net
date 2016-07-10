@@ -5,7 +5,7 @@
 
 |Règle n°  |
 | -- |
-|Ne jamais utiliser l’opérateur de négation ```!``` = pensez toujours positif |
+|La convention de nom Camel Casing doit être utilisée pour nommer les éléments suivants:<ul><li>Variable locale;</li> <li>Paramètre de méthode</li></ul>|
 | |
 
 |Règle n°  |
