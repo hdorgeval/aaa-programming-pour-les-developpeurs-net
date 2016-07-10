@@ -3,6 +3,10 @@
 
 
 
+|Règle n°  |
+| -- |
+|Ne jamais utiliser l’opérateur de négation ```!``` |
+| |
 
 |Règle n°  |
 | -- |
