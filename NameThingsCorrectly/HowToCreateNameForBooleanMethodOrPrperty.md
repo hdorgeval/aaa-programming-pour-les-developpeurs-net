@@ -441,7 +441,6 @@ Autrement dit la balise ```<returns>...</returns>``` doit toujours décrire le c
 
 #### Étape 5 : Écrire les spécifications
 
-
 Cette étape est à mes yeux l'étape pivot, celle qui va permettre de dérouler naturellement les tests unitaires dans une approche TDD (Test Driven Development ) s'il s'agit d'une action technique ou les tests fonctionnels dans une approche BDD (Behavior Driven Development ) s'il s'agit d'une action métier.
 
 Ecrivez les spécifications sous forme d'exemples. 
@@ -556,9 +555,24 @@ Pour la méthode d'extension ```IsIn()```, il suffit de définir la chaîne de c
 L'exemple ci-dessus est un exemple simple. Dans le cas d'un test unitaire fonctionnel, la partie *Arrange* peut contenir tout type de code permettant de créer des objets métiers dans un état spécifique. Cependant le nombre de lignes de code dans la partie *Arrange* ne doit jamais excéder cinq lignes.
 
 
-#### Étape 6 : Mettre en place le code d'exécution de la nouvelle méthode dans la partie *Act* de la méthode de test
+#### Étape 7 : Mettre en place le code d'exécution de la nouvelle méthode dans la partie *Act* de la méthode de test
 
-La phase *Act* est la phase pendant laquelle vous allez exécuter votre méthode et en récupérer le résultat.
+La phase *Act* est la phase pendant laquelle vous allez exécuter votre méthode et en récupérer le résultat:
+
+```Csharp
+[TestMethod]
+public void ShouldReturnFalseWhenTheArrayOfValuesIsNull()
+{
+    //Arrange
+    string input = "test";
+    string[] values = null;
+
+    //Act
+    var result = input.IsIn(values);
+
+    //Assert
+}
+```
 
 Cette phase est l'une des plus importantes car vous allez vérifier que :
   * l'IntelliSense ramène bien le commentaire XML;
@@ -566,5 +580,82 @@ Cette phase est l'une des plus importantes car vous allez vérifier que :
   * L'IntelliSense permet de découvrir et de manipuler rapidement cette nouvelle méthode.
 
 
+Vous devriez obtenir quelque chose de similaire aux copies d'écran ci-dessous:
+![](Act.PNG)
+
+![](Act2.PNG)
+
+
+#### Étape 8 : Valider le résultat dans la partie *Assert* de la méthode de test
+
+La phase *Assert* est la phase pendant laquelle vous allez comparer le résultat obtenu dans la phase *Act* avec le résultat attendu; en cas de différence vous signalez l'échec du test:
+
+```Csharp
+[TestMethod]
+public void ShouldReturnFalseWhenTheArrayOfValuesIsNull()
+{
+    //Arrange
+    string input = "test";
+    string[] values = null;
+
+    //Act
+    var result = input.IsIn(values);
+
+    //Assert
+    var expected = true;
+    if (result != expected)
+    {
+        Assert.Fail();
+    }
+}
+```
+
+L'objet ```Assert``` expose bien d'autres méthodes que la méthode ```Fail()``` utilisée ci-dessus, comme par exemple: 
+
+```Csharp
+Assert.AreSame(result, expected);
+Assert.Equals(result, expected);
+Assert.IsFalse(result);
+```
+
+  N'employez aucune de ces méthodes car elles peuvent introduire ce qu'on appelle des false positive, c'est à dire que le teste unitaire passe au vert alors qu'il devrait rester au rouge.
+  
+  Définissez explicitement le résultat attendu:
+  
+```Csharp
+var expected = true;
+```
+
+Signalez l'échec du test sous la forme la plus basique qui soit:
+```Csharp
+Assert.Fail();
+```
+
+Signalez l'échec du test uniquement quand le résultat est différent de ce qui est attendu en testant le plus simplement et le plus directement la non égalité des deux objets:
+
+```Csharp
+if (result != expected)
+{
+    Assert.Fail();
+}
+```
+
+
+#### Étape 8 : Vérifier que le test échoue
+
+Pour faire échouer la première exécution du test, la première et unique ligne de code de la méthode à tester doit être:
+
+```Csharp
+throw new NotImplementedException();
+```
+
+Avant la première exécution du test assurez vous donc que la méthode sous test est codée de la manière suivante:
+
+```Csharp
+public static bool IsIn(this string input, string[] values)
+{
+    throw new NotImplementedException();
+}
+```
 
 A compléter
