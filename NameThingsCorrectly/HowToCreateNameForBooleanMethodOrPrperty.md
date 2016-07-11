@@ -660,4 +660,12 @@ public static bool IsIn(this string input, string[] values)
 }
 ```
 
+#### Étape 10 : Montrer l'intégralité de ce premier test unitaire aux autres membres de l' équipe pour vérifier qu'ils comprennent le code
+
+
+A compléter
+
+#### Étape 11 : Vérifier que le nom choisi fait l'unanimité au sein de l'équipe
+
+
 A compléter
