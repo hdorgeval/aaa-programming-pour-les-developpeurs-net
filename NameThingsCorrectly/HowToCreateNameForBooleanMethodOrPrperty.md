@@ -641,7 +641,9 @@ if (result != expected)
 ```
 
 
-#### Étape 8 : Vérifier que le test échoue
+#### Étape 9 : Vérifier que le test échoue
+
+Une fois que vous avez mis en place les trois phases du test, vous pouvez exécuter le test. Dans une approche TDD cette première exécution doit aller à l'échec.
 
 Pour faire échouer la première exécution du test, la première et unique ligne de code de la méthode à tester doit être:
 
