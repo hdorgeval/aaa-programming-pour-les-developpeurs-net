@@ -618,7 +618,7 @@ Assert.Equals(result, expected);
 Assert.IsFalse(result);
 ```
 
-  N'employez aucune de ces méthodes car elles peuvent introduire ce qu'on appelle des false positive, c'est à dire que le teste unitaire passe au vert alors qu'il devrait rester au rouge.
+  N'employez aucune de ces méthodes car elles peuvent introduire ce qu'on appelle un false positive, c'est à dire que le teste unitaire passe au vert alors qu'il devrait rester au rouge.
   
   Définissez explicitement le résultat attendu:
   
