@@ -475,9 +475,9 @@ Voici comment pourraient êtres écrites les spécifications de la méthode d'ex
 >Quand la chaîne de caractères en entrée est présente à l'identique dans le tableau, la méthode renvoie vrai.
 
 ######Exemples moins simples
->Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec une différence uniquement sur la casse, la méthode renvoi faux.
+>Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec une différence uniquement sur la casse, la méthode renvoi vrai.
 
->Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec des expaces en plus ou en moins après la chaîne, la méthode renvoi faux.
+>Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec des espaces en plus ou en moins après la chaîne, la méthode renvoi vrai.
 
 ######Exemples orientés performance
 >Quand la chaines de caractères n'est pas présente dans un tableau de valeurs contenant 100 élements, le temps d'éxécution de la méthode ne doit pas dépasser 0,5 millisecondes.
@@ -557,5 +557,14 @@ L'exemple ci-dessus est un exemple simple. Dans le cas d'un test unitaire foncti
 
 
 #### Étape 6 : Mettre en place le code d'exécution de la nouvelle méthode dans la partie *Act* de la méthode de test
+
+La phase *Act* est la phase pendant laquelle vous allez exécuter votre méthode et en récupérer le résultat.
+
+Cette phase est l'une des plus importantes car vous allez vérifier que :
+  * l'IntelliSense ramène bien le commentaire XML;
+  * Le commentaire affiché est cohérent avec le nom choisi;
+  * L'IntelliSense permet de découvrir et de manipuler rapidement cette nouvelle méthode.
+
+
 
 A compléter
