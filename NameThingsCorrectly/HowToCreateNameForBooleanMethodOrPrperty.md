@@ -363,7 +363,7 @@ public static class StringExtensions
 
 ```
 
-Dans la balise ```<summary> ...</summary``` insérez la description de la méthode établie à la fin de l'étape 1:
+Dans la balise ```<summary> ...</summary``` insérez la description de la méthode que vous avez réalisée à la fin de l'étape 1:
 
 ```Csharp
 public static class StringExtensions
@@ -431,9 +431,7 @@ public static class StringExtensions
 
 En résumé, tout le contenu des commentaires XML provient directement du travail effectué à l'étape 1 (Décrire brièvement ce que doit faire la méthode) et à l'étape 2 (Transformer cette description en une ligne de code) décrites ci-dessus.
 
-Notez que la balise ```<returns>...</returns>``` décrit uniquement le cas où la méthode renvoie vrai.
-
-Ce n'est pas un hasard. 
+Notez que la balise ```<returns>...</returns>``` décrit uniquement le cas où la méthode renvoie vrai. 
 
 Le contenu de la balise ```<returns>...</returns>``` doit suivre la règle suivante:
 
