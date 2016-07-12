@@ -58,7 +58,7 @@ if ( myObject.CanXXX() )
 }
 ```
 
-Notez que je commence toujours par coder l'usage de la méthode d'extension avant même de coder son implémentation.
+Notez que je commence toujours par coder l'usage de la méthode d'extension avant même de coder son implémentation. Si vous utiliser la méthodologie TDD vous trouverez cette approche normale, dans le cas contraire cette approche devrait vous inciter à mettre en œuvre cette méthodologie.
 
 
 Je laisse de côté pour l'instant le cas où l'expression booléenne est décrite sous la forme d'une phrase négative : ce cas sera étudié en détail dans la prochaine section.
