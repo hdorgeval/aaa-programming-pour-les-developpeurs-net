@@ -310,8 +310,9 @@ if (contexte 2 )
 ```
 
 La façon de coder ce contexte peut être multiple.
-je vais vous donner les clés pour réaliser au mieux cette opération.
-La première de ces clés est de toujours coder une expression booléenne sous la forme d'un appel à une méthode d'extension sur l'objet qui vous semble le plus approprié : c'est l'objet de la section ci-dessous. 
+Dans les sections qui vont suivre, je vais vous donner les clés pour réaliser au mieux cette opération.
+
+La première de ces clés est de toujours coder une expression booléenne sous la forme d'un appel à une méthode d'extension sur l'objet qui vous semble le plus approprié : c'est l'objet de la prochaine section. 
 
 
 
