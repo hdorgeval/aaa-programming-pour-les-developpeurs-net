@@ -14,7 +14,8 @@ if ( A )
  
  Par défaut, et dans la mesure du possible, vous devez toujours formuler de manière positive l'expression booléenne que vous êtes sur le point de coder. 
  
- Pour 
+ Pour réaliser cela, substituer l'expression ```A``` par  une méthode d'extension définie sur le type d'objet qui vous semble le plus approprié.
+  
  
  La méthodologie
  
