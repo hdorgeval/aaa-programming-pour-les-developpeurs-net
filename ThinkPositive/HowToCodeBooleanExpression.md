@@ -1,16 +1,23 @@
 # Comment coder une expression booléenne
 
   
- Votre code doit raconter une histoire et par conséquent toute expression booléenne telle que :
+ Votre code doit raconter une histoire; par conséquent toute expression booléenne telle que :
  
+ ```Csharp
+if ( A )
+{
+  //code omitted for brevity
+}
+```
  
+ doit être écrite sous la forme d'une phrase positive.
  
- Une expression booléenne doit être décrite sous la forme d'une phrase positive et codée en concaténant les mots de cette phrase.
+ Par défaut, et dans la mesure du possible, vous devez toujours formuler de manière positive l'expression booléenne que vous êtes sur le point de coder. 
  
- Je laisse de côté pour l'instant le cas où l'expression booléenne est décrite sous la forme d'une phrase négative : ce cas sera étudié en détail dans la prochaine section.
- 
- Par défaut, et dans la mesure du possible, vous devez décrire toujours de manière positive l'expression booléenne que vous êtes sur le point de coder. Pour 
+ Pour 
  
  La méthodologie
  
- A compléter
+Je laisse de côté pour l'instant le cas où l'expression booléenne est décrite sous la forme d'une phrase négative : ce cas sera étudié en détail dans la prochaine section.
+
+A compléter
