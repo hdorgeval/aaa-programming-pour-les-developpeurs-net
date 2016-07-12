@@ -29,6 +29,40 @@ if ( A )
  
 [Comment nommer une méthode ou une propriété qui renvoie un booléen](NameThingsCorrectly/HowToCreateNameForBooleanMethodOrPrperty.md)
  
+
+Le code snippet ci-dessus peut donc être réécrit de la manière suivante:
+
+```Csharp
+var myObject = ... //code omitted for brevity
+if ( myObject.IsXXX() )
+{
+  //code omitted for brevity
+}
+```
+
+ou bien
+
+```Csharp
+var myObject = ... //code omitted for brevity
+if ( myObject.HasXXX() )
+{
+  //code omitted for brevity
+}
+```
+
+ou bien
+
+```Csharp
+var myObject = ... //code omitted for brevity
+if ( myObject.CanXXX() )
+{
+  //code omitted for brevity
+}
+```
+
+Notez que je commence toujours par coder l'usage de la méthode d'extension avant même de coder son implémentation.
+
+
 Je laisse de côté pour l'instant le cas où l'expression booléenne est décrite sous la forme d'une phrase négative : ce cas sera étudié en détail dans la prochaine section.
 
 A compléter
