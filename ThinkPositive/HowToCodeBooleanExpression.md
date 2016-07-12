@@ -26,7 +26,8 @@ if ( A )
 * Une séquence de mots qui représente une phrase en langage naturel dont on a supprimé les espaces entre les mots.
  
  Pour mettre en œuvre la méthodologie de création de nom d'une méthode ou d'une propriété qui renvoie un booléen reportez vous à la section correspondante : 
- Comment nommer une méthode ou une propriété qui renvoie un booléen
+ 
+[Comment nommer une méthode ou une propriété qui renvoie un booléen](NameThingsCorrectly/HowToCreateNameForBooleanMethodOrPrperty.md)
  
 Je laisse de côté pour l'instant le cas où l'expression booléenne est décrite sous la forme d'une phrase négative : ce cas sera étudié en détail dans la prochaine section.
 
