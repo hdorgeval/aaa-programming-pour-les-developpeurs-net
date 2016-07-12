@@ -309,6 +309,8 @@ if (contexte 2 )
 }
 ```
 
+La façon de coder ce contexte peut être multiple.
+je vais vous donner les clés pour réaliser au mieux cette opération.
 
 A compléter
 
