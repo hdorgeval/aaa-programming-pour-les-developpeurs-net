@@ -138,4 +138,6 @@ Notez que Visual Studio vous incite par défaut à penser et à coder positif.
 
 Il ne vous reste plus qu'à remplacer ```true``` par une expression booléenne codée en utilisant la technique décrite dans cette section.
 
+
+
 A compléter
