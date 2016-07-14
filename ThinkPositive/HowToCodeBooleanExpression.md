@@ -67,7 +67,7 @@ La première ligne de code de cette méthode d'extension doit être :
 ```Csharp
 throw new NotImplementedException();
 ```
-Ceci est la garantie que le premier test unitaire associée à cette méthode va à l'échec.
+Ceci est la garantie que la première exécution du premier test unitaire associée à cette méthode va à l'échec.
 
 Si vous êtes dans une approche TDD et si vous avez défini les spécifications associées à cette méthode d'extension et bien commencez par mettre en place le code qui fait passer la première spécification.
 
