@@ -69,7 +69,32 @@ throw new NotImplementedException();
 ```
 Ceci est la garantie que le premier test unitaire associée à cette méthode va à l'échec.
 
-Dans une deuxième étape vous allez mettre en place le code qui fera passer ce code unitaire. 
+Si vous êtes dans une approche TDD et si vous avez défini les spécifications associées à cette méthode d'extension et bien commencez par mettre en place le code qui fait passer la première spécification.
+
+Pour savoir commencer définir les spécifications d'une méthode booléenne, reportez vous à la section correspondante : [Comment nommer une méthode ou une propriété qui renvoie un booléen](NameThingsCorrectly/HowToCreateNameForBooleanMethodOrPrperty.md).
+
+Si malgré tout vous n'avez pas défini de spécifications et que vous souhaitez déjà coder l'expression sous la forme d'une méthode d'extension, appuyez vous sur les règles suivantes pour structurer le contenu de votre code:
+
+>Quand vous développez une méthode, vous devez en sortir le plus vite possible. Autrement dit si vous pouvez déterminer un cas de figure qui permet de faire immédiatement un ```return``` écrivez d'abord ce cas.
+
+>La dernière instruction d'une méthode booléenne est toujours: ```return false;```
+
+>le bloc de code qui précède la dernière ligne de code de la méthode est toujours de la forme:
+ ```Csharp
+if ( A )
+{
+  //code omitted for brevity
+  return true;
+}
+```
+L'expression ```A``` ci-dessus peut être exprimée en pensée positive ou en pensée négative.
+
+Le squelette d'une méthode booléenne est donc toujours de la forme:
+
+
+
+
+Dans une deuxième étape vous allez mettre en place le code qui fera passer ce test unitaire. 
 Pour cela remplacez la ligne 
 ```Csharp
 throw new NotImplementedException();
@@ -87,8 +112,8 @@ if (true)
 }
 ```
 
-Notez que Visual Studio vous incite par défaut à penser et coder positif
+Notez que Visual Studio vous incite par défaut à penser et à coder positif.
 
-
+Il ne vous reste plus qu'à remplacer true par une expression  
 
 A compléter
