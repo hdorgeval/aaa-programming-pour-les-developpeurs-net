@@ -76,5 +76,11 @@ Ce chapitre regroupe l'ensemble des règles qui ont été expliquées et démont
 |La dernière instruction d'une méthode booléenne est toujours: ```return false;``` |
 | |
 
+|Règle n° 15 |
+| -- |
+|Le bloc de code qui précède la dernière ligne de code d'une méthode booléenne est toujours de la forme: <div><span class="hljs-keyword">if</span> ( A )<div>{</div><div><span class="hljs-comment" style="padding-left:15px;">//code omitted for brevity</span></div><div><span class="hljs-keyword" style="padding-left:15px;">return</span> <span class="hljs-keyword">true</span>;</div><div>}</div>|
+| |
+
+
 
 A compléter
