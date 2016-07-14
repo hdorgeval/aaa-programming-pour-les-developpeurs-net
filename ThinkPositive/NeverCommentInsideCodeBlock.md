@@ -4,9 +4,9 @@
  Très souvent il m'arrive de vouloir commenter le bloc de code que je suis en train de mettre en place.
  Très souvent le commentaire est là pour permettre à soi même ou aux autres développeur de l'équipe de bien comprendre ce qui se passe.
  
- Documenter unitairement une ou plusieurs lignes de code à l'intérieur d'une méthode ou d'une propriété revient à décrire ce que fait le code de façon à masquer la complexité de l'écriture du code ou de l'algorithmique.
+ Documenter unitairement une ou plusieurs lignes de code à l'intérieur d'une méthode ou d'une propriété permet de masquer la complexité de l'écriture du code ou de l'algorithmique.
  
- Ce type de commentaire est une autre façon de penser négatif non pas vis à vis de son propre code mais vis à vis des autres développeurs qui seront amenés à le modifier dans l'avenir.
+ Ce type de commentaire est en réalité une autre façon de penser négatif non pas vis à vis de son propre code mais vis à vis des autres développeurs qui seront amenés à le modifier dans l'avenir.
  
  Le message implicite est le suivant : comme il y a de forte chance que vous ne compreniez pas le code que j'ai écris je vais vous faire gagner du temps en vous expliquant ce qu'il fait.
  
