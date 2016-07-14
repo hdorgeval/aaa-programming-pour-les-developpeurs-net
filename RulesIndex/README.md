@@ -68,7 +68,7 @@ Ce chapitre regroupe l'ensemble des règles qui ont été expliquées et démont
 
 |Règle n° 13 |
 | -- |
-|Dans un commentaire XML, la balise ```<returns>...</returns>``` commence toujours par ```Returns true if ...``` ou ```Returns true when ...``` |
+|Quand vous développez une méthode, vous devez en sortir le plus vite possible. Autrement dit si vous pouvez déterminer un cas de figure qui permet de faire immédiatement un ```return``` écrivez d'abord ce cas. |
 | |
 
 A compléter
