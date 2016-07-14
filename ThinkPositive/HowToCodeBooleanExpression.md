@@ -73,13 +73,13 @@ Si vous êtes dans une approche TDD et si vous avez défini les spécifications 
 
 Pour savoir commencer définir les spécifications d'une méthode booléenne, reportez vous à la section correspondante : [Comment nommer une méthode ou une propriété qui renvoie un booléen](NameThingsCorrectly/HowToCreateNameForBooleanMethodOrPrperty.md).
 
-Si malgré tout vous n'avez pas défini de spécifications et que vous souhaitez déjà coder l'expression sous la forme d'une méthode d'extension, appuyez vous sur les règles suivantes pour structurer le contenu de votre code:
+Si vous n'avez pas défini de spécifications et que vous souhaitez déjà coder l'expression sous la forme d'une méthode d'extension, appuyez vous sur les règles suivantes pour structurer le contenu de votre code:
 
 >Quand vous développez une méthode, vous devez en sortir le plus vite possible. Autrement dit si vous pouvez déterminer un cas de figure qui permet de faire immédiatement un ```return``` écrivez d'abord ce cas.
 
 >La dernière instruction d'une méthode booléenne est toujours: ```return false;```
 
->le bloc de code qui précède la dernière ligne de code de la méthode est toujours de la forme:
+>le bloc de code qui précède la dernière ligne de code d'une méthode booléenne est toujours de la forme:
  ```Csharp
 if ( A )
 {
@@ -89,7 +89,36 @@ if ( A )
 ```
 L'expression ```A``` ci-dessus peut être exprimée en pensée positive ou en pensée négative.
 
-Le squelette d'une méthode booléenne est donc toujours de la forme:
+Une méthode booléenne doit donc toujours être structurée de la manière suivante:
+
+```Csharp
+public static bool IsIn(this string input, string[] values)
+{
+    //code omitted for brevity
+    if ( A )
+    {
+      //code omitted for brevity
+      return true;
+    }
+    return false;
+}
+```
+
+ou bien
+```Csharp
+public static bool IsIn(this string input, string[] values)
+{
+    //code omitted for brevity
+    if ( ! A )
+    {
+      //code omitted for brevity
+      return true;
+    }
+    return false;
+}
+```
+
+Vous verrez dans la section suivante comment coder une expression négative.
 
 
 
