@@ -56,9 +56,12 @@ Ce chapitre regroupe l'ensemble des règles qui ont été expliquées et démont
 |Un ```If``` n'a jamais de ```else``` |
 | |
 
-
-
 |Règle n° 11 |
+| -- |
+|Quand vous commencer à coder un ```If```, utilisez toujours le code snippet associé en tapant ```if``` puis ```TAB``` deux fois. |
+|Remarque : cette astuce vous rappelle qu'il faut toujours penser positif. |
+
+|Règle n° 12 |
 | -- |
 |Dans un commentaire XML, la balise ```<returns>...</returns>``` commence toujours par ```Returns true if ...``` ou ```Returns true when ...``` |
 | |
