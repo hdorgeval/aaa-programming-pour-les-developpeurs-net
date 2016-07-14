@@ -17,19 +17,11 @@
  L'usage des commentaires à l'intérieur d'un bloc de code pose aussi les problèmes suivants:
  
  * Ces commentaires sont perdus à la compilation;
- * Ces commentaires sont souvent assez courts pour ne pas gêner la lecture du code environnant;
+ * Ces commentaires sont souvent trop courts pour ne pas gêner la lecture du code environnant;
  * Ces commentaires échappent à tout système de génération automatique de la documentation du logiciel tel que SandCastle.
  
- Si vous êtes amené à documenter du code à l'intérieur d'une méthode ou d'une propriété, considérez le fait de remplacer ce code par une méthode d'extension ayant un nom suffisamment évocateur et de déplacer votre commentaire dans la documentation XML associée à la méthode d'extension.
+ Si vous êtes amené à documenter du code à l'intérieur d'une méthode ou d'une propriété, considérez le fait de remplacer ce code par une méthode d'extension ayant un nom suffisamment évocateur et de déplacer votre commentaire dans la [documentation XML](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx) associée à la méthode d'extension.
 
- 
- En procédant de la sorte, vous rendez votre code plus lisible, plus maintenable mais surtout vos commentaires sont conservés à la compilation et seront affichés dynamiquement par l'IntelliSense quand un développeur utilisateur votre méthode d'extension. 
- 
+ En procédant de la sorte, vous rendez votre code plus lisible, plus maintenable mais surtout vos commentaires sont conservés à la compilation et seront affichés dynamiquement par l'IntelliSense quand un développeur utilisera votre méthode d'extension. 
  
  
- ```Csharp
-if ( A )
-{
-  //code omitted for brevity
-}
-```
