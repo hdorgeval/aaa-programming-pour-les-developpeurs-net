@@ -17,13 +17,13 @@ if ( A )
  Pour réaliser cela, substituer l'expression ```A``` par  une méthode d'extension définie sur le type d'objet qui vous semble le plus approprié.
   
  Cette méthode d'extension doit être nommée en utilisant l'une des trois options ci-dessous:
-* le préfixe :
+* avoir le préfixe :
   * *Is*; 
   * *Has*; 
   * *Can*.
-* Un verbe à la troisième personne du singulier comme :
+* Être Un verbe à la troisième personne du singulier comme :
   * *Exists*;
-* Une séquence de mots qui représente une phrase en langage naturel dont on a supprimé les espaces entre les mots.
+* Etre Une séquence de mots qui représente une phrase en langage naturel dont on a supprimé les espaces entre les mots.
  
 Pour mettre en œuvre la méthodologie de création de nom d'une méthode ou d'une propriété qui renvoie un booléen reportez vous à la section correspondante : [Comment nommer une méthode ou une propriété qui renvoie un booléen](NameThingsCorrectly/HowToCreateNameForBooleanMethodOrPrperty.md).
  
@@ -58,9 +58,37 @@ if ( myObject.CanXXX() )
 }
 ```
 
-Notez que je commence toujours par coder l'usage de la méthode d'extension avant même de coder son implémentation. Si vous utiliser la méthodologie TDD vous trouverez cette approche normale, dans le cas contraire cette approche devrait vous inciter à mettre en œuvre cette méthodologie.
+Notez qu'il faut toujours commencer par coder l'usage de la méthode d'extension avant même de coder son implémentation. Si vous utilisez la méthodologie TDD vous trouverez cette approche normale, dans le cas contraire cette approche devrait vous inciter à mettre en œuvre cette méthodologie.
+
+Une fois que vous avez défini le nom et l'usage de la méthode d'extension, il reste à l'implémenter.
+
+La première ligne de code de cette méthode d'extension doit être :
+
+```Csharp
+throw new NotImplementedException();
+```
+Ceci est la garantie que le premier test unitaire associée à cette méthode va à l'échec.
+
+Dans une deuxième étape vous allez mettre en place le code qui fera passer ce code unitaire. 
+Pour cela remplacez la ligne 
+```Csharp
+throw new NotImplementedException();
+```
+
+par le mot clé ```if``` puis attendez que l'IntelliSense vous montre l'existence du code snippet associé:
+![](IF.PNG)
+
+Appuyez ensuite deux fois sur la touche ```TAB```. Visual Studio substitue le mot clé ```if``` par le code:
+
+```Csharp
+if (true)
+{
+
+}
+```
+
+Notez que Visual Studio vous incite par défaut à penser et coder positif
 
 
-Je laisse de côté pour l'instant le cas où l'expression booléenne est décrite sous la forme d'une phrase négative : ce cas sera étudié en détail dans la prochaine section.
 
 A compléter
