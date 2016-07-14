@@ -73,7 +73,7 @@ Si vous êtes dans une approche TDD et si vous avez défini les spécifications 
 
 Pour savoir commencer définir les spécifications d'une méthode booléenne, reportez vous à la section correspondante : [Comment nommer une méthode ou une propriété qui renvoie un booléen](NameThingsCorrectly/HowToCreateNameForBooleanMethodOrPrperty.md).
 
-Si vous n'avez pas défini de spécifications et que vous souhaitez déjà coder l'expression sous la forme d'une méthode d'extension, appuyez vous sur les règles suivantes pour structurer le contenu de votre code:
+Si vous n'avez pas défini de spécifications et que vous souhaitez déjà coder l'expression booléenne sous la forme d'une méthode d'extension, appuyez vous sur les règles suivantes pour structurer le contenu de votre code:
 
 >Quand vous développez une méthode, vous devez en sortir le plus vite possible. Autrement dit si vous pouvez déterminer un cas de figure qui permet de faire immédiatement un ```return``` écrivez d'abord ce cas.
 
@@ -118,18 +118,11 @@ public static bool IsIn(this string input, string[] values)
 }
 ```
 
-Vous verrez dans la section suivante comment coder une expression négative.
+Vous verrez dans la section suivante comment coder une expression négative sans utiliser l'opérateur de négation ```!```.
 
 
-
-
-Dans une deuxième étape vous allez mettre en place le code qui fera passer ce test unitaire. 
-Pour cela remplacez la ligne 
-```Csharp
-throw new NotImplementedException();
-```
-
-par le mot clé ```if``` puis attendez que l'IntelliSense vous montre l'existence du code snippet associé:
+Quand vous codez un ```if``` procédez de la manière suivante:
+Tapez le mot clé ```if``` puis attendez que l'IntelliSense vous montre l'existence du code snippet associé:
 ![](IF.PNG)
 
 Appuyez ensuite deux fois sur la touche ```TAB```. Visual Studio substitue le mot clé ```if``` par le code:
@@ -143,6 +136,6 @@ if (true)
 
 Notez que Visual Studio vous incite par défaut à penser et à coder positif.
 
-Il ne vous reste plus qu'à remplacer true par une expression  
+Il ne vous reste plus qu'à remplacer ```true``` par une expression booléenne codée en utilisant la technique décrite dans cette section.
 
 A compléter
