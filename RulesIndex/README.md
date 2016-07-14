@@ -71,4 +71,10 @@ Ce chapitre regroupe l'ensemble des règles qui ont été expliquées et démont
 |Quand vous développez une méthode, vous devez en sortir le plus vite possible. Autrement dit si vous pouvez déterminer un cas de figure qui permet de faire immédiatement un ```return``` écrivez d'abord ce cas. |
 | |
 
+|Règle n° 14 |
+| -- |
+|La dernière instruction d'une méthode booléenne est toujours: ```return false;``` |
+| |
+
+
 A compléter
