@@ -476,10 +476,10 @@ Voici comment pourraient êtres écrites les spécifications de la méthode d'ex
 ######Exemples moins simples
 >Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec une différence uniquement sur la casse, la méthode renvoi vrai.
 
->Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec des espaces en plus ou en moins après la chaîne, la méthode renvoi vrai.
+>Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec des espaces en plus après la chaîne, la méthode renvoi vrai.
 
 ######Exemples orientés performance
->Quand la chaines de caractères n'est pas présente dans un tableau de valeurs contenant 100 élements, le temps d'éxécution de la méthode ne doit pas dépasser 0,5 millisecondes.
+>Quand la chaîne de caractères n'est pas présente dans un tableau de valeurs contenant 100 élements, le temps d'éxécution de la méthode ne doit pas dépasser 0,5 millisecondes.
 
 
 #### Étape 6 : Prendre le premier exemple de la spécification pour écrire la partie *Arrange* du premier test unitaire
