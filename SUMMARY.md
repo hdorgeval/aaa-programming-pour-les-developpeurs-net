@@ -20,6 +20,7 @@
   * [Introduction](ThinkPositive/README.md)
   * [Ne jamais utiliser l’opérateur de négation !](ThinkPositive/NeverUseTheNotOperator.md)
   * [Comment coder une expression booléenne](ThinkPositive/HowToCodeBooleanExpression.md)
+  * [Comment coder une expression négative sans utiliser l'opérateur de négation](ThinkPositive/HowToCodeNegativeBooleanExpressionWithoutTheNotOperator.md)
   * [Ne jamais commenter à l'intérieur d'un bloc de code](ThinkPositive/NeverCommentInsideCodeBlock.md)
 
 
