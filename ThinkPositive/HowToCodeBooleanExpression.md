@@ -121,11 +121,11 @@ public static bool IsIn(this string input, string[] values)
 Vous verrez dans la section suivante comment coder une expression négative sans utiliser l'opérateur de négation ```!```.
 
 
-Quand vous codez un ```if``` procédez de la manière suivante:
+>Quand vous codez un ```if``` procédez de la manière suivante:
 Tapez le mot clé ```if``` puis attendez que l'IntelliSense vous montre l'existence du code snippet associé:
 ![](IF.PNG)
 
-Appuyez ensuite deux fois sur la touche ```TAB```. Visual Studio substitue le mot clé ```if``` par le code:
+>Appuyez ensuite deux fois sur la touche ```TAB```. Visual Studio substitue le mot clé ```if``` par le code:
 
 ```Csharp
 if (true)
@@ -133,6 +133,7 @@ if (true)
 
 }
 ```
+
 
 Notez que Visual Studio vous incite par défaut à penser et à coder positif.
 
