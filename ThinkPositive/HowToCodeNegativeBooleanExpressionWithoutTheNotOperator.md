@@ -1,4 +1,4 @@
-# Comment coder négativement une expression booléenne
+# Comment coder négativement une expression booléenne sans utiliser l'opérateur de négation
 
   
  Il existe des cas où le fait de penser négatif permet de faire immédiatement un ```return``` dans l'implémentation d'une méthode ou d'une propriété.
