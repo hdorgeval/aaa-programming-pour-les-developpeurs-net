@@ -139,6 +139,11 @@ Notez que Visual Studio vous incite par défaut à penser et à coder positif.
 
 Il ne vous reste plus qu'à remplacer ```true``` par une expression booléenne codée en utilisant la technique décrite dans cette section.
 
+Si la méthode que vous développez contient une boucle ```for``` ou ```foreach```, vous pouvez structurer votre boucle en vous appuyant sur la règle suivante:
+
+>Quand vous développez une boucle ```for``` ou ```foreach```, vous devez en sortir le plus vite possible. Autrement dit si vous pouvez déterminer un cas de figure qui permet de passer immédiatement à l'itération suivante ,écrivez d'abord ce cas.
+>
+>Si vous pouvez ensuite déterminer un cas de figure qui permet de sortir de la boucle, écrivez d'abord ce cas.
 
 
 A compléter
