@@ -23,9 +23,11 @@ Ce livre est destiné à un double public:
 * A tous les développeurs .Net, du développeur débutant au développeur confirmé, qui ont l'ambition de développer des applications critiques ou grand public, qui ont l'ambition de fournir un code simple à comprendre, facile à lire, facile à maintenir, facile à faire évoluer;
 
 * A tous les responsables qui ont les objectifs suivants pour leur équipe :
- * Augmenter la vélocité de l'équipe, 
- * Faire en sorte que n'importe quel développeur puisse enrichir, modifier, maintenir le code d'un autre sans qu'on puisse distinguer qui à écrit quoi, 
- * Faire en sorte qu'une équipe de N développeurs agisse comme un seul développeur à la puissance N.
+ * Augmenter la vélocité de l'équipe; 
+ * Faire en sorte que n'importe quel développeur puisse enrichir, modifier, maintenir le code d'un autre sans qu'on puisse distinguer qui à écrit quoi; 
+ * Faire en sorte qu'une équipe de N développeurs agisse comme un seul développeur à la puissance N;
+ * Maintenir la maintenabilité;
+ * Répondre dans les plus brefs délais aux évolutions du métier ou du marché.
 
 
 # A propos des exemples de code montrés dans ce livre
