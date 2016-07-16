@@ -87,6 +87,9 @@ Ce chapitre regroupe l'ensemble des règles qui ont été expliquées et démont
 |Si vous êtes amené à documenter du code à l'intérieur d'une méthode ou d'une propriété, considérez le fait de remplacer ce code par une méthode d'extension ayant un nom suffisamment évocateur et de déplacer votre commentaire dans la [documentation XML](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx) associée à la méthode d'extension.|
 | |
 
-
+|Règle n° 17 |
+| -- |
+|Quand vous développez une boucle ```for``` ou ```foreach```, vous devez en sortir le plus vite possible. Autrement dit si vous pouvez déterminer un cas de figure qui permet de passer immédiatement à l'itération suivante ,écrivez d'abord ce cas. Si vous pouvez ensuite déterminer un cas de figure qui permet de sortir de la boucle, écrivez d'abord ce cas.|
+| |
 
 A compléter
