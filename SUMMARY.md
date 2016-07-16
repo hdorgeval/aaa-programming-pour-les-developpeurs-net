@@ -22,6 +22,7 @@
   * [Comment coder une expression booléenne](ThinkPositive/HowToCodeBooleanExpression.md)
   * [Comment coder une expression négative sans utiliser l'opérateur de négation](ThinkPositive/HowToCodeNegativeBooleanExpressionWithoutTheNotOperator.md)
   * [Ne jamais commenter à l'intérieur d'un bloc de code](ThinkPositive/NeverCommentInsideCodeBlock.md)
+  * [Comment remplacer un IF...ELSE par une projection](ThinkPositive/HowToReplaceIfThenElseWithAProjection.md)
 
 
 
