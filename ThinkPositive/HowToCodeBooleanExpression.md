@@ -145,5 +145,24 @@ Si la méthode que vous développez contient une boucle ```for``` ou ```foreach`
 >
 >Si vous pouvez ensuite déterminer un cas de figure qui permet de sortir de la boucle, écrivez d'abord ce cas.
 
+Autrement dit, une boucle ```for``` ou ```foreach``` doit toujours être codée de la manière suivante:
+
+```Csharp
+foreach (var item in input)
+{
+    if (A)
+    {
+        //code omitted for brevity
+        continue;
+    }
+    if (B)
+    {
+        //code omitted for brevity
+        return result;
+    }
+    //code omitted for brevity
+} 
+```
+
 
 A compléter
