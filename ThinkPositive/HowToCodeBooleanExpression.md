@@ -143,7 +143,7 @@ Si la méthode que vous développez contient une boucle ```for``` ou ```foreach`
 
 >Quand vous développez une boucle ```for``` ou ```foreach```, vous devez en sortir le plus vite possible. Autrement dit si vous pouvez déterminer un cas de figure qui permet de passer immédiatement à l'itération suivante ,écrivez d'abord ce cas.
 >
->Si vous pouvez ensuite déterminer un cas de figure qui permet de sortir de la boucle, écrivez d'abord ce cas.
+>Si vous pouvez déterminer un cas de figure qui permet de sortir de la boucle, écrivez d'abord ce cas.
 
 Autrement dit, une boucle ```for``` ou ```foreach``` doit toujours être codée de la manière suivante:
 
