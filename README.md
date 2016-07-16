@@ -41,7 +41,7 @@ Votre feedback est très important : je suis toujours à la recherche d'exemples
 
 Tous les exemples de code sont écrits en .Net C\#.
 
-. Si vous souhaitez expérimenter vous mêmes les techniques montrées dans ce livre, je vous invite à installer [Visual Studio 2015 Community Edition](https://www.visualstudio.com) sur votre poste.
+Si vous souhaitez expérimenter vous mêmes les techniques montrées dans ce livre, je vous invite à installer [Visual Studio 2015 Community Edition](https://www.visualstudio.com) sur votre poste.
 
 
 # Work in Progress
