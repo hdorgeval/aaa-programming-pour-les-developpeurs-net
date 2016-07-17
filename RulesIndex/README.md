@@ -89,7 +89,12 @@ Ce chapitre regroupe l'ensemble des règles qui ont été expliquées et démont
 
 |Règle n° 17 |
 | -- |
-|Quand vous développez une boucle ```for``` ou ```foreach```, vous devez en sortir le plus vite possible. Autrement dit si vous pouvez déterminer un cas de figure qui permet de passer immédiatement à l'itération suivante ,écrivez d'abord ce cas. Si vous pouvez ensuite déterminer un cas de figure qui permet de sortir de la boucle, écrivez d'abord ce cas.|
+|Quand vous développez une boucle ```for``` ou ```foreach```, vous devez en sortir le plus vite possible. Autrement dit si vous pouvez déterminer un cas de figure qui permet de passer immédiatement à l'itération suivante ,écrivez d'abord ce cas. Si vous pouvez déterminer un cas de figure qui permet de sortir de la boucle, écrivez d'abord ce cas.|
+| |
+
+|Règle n° 18 |
+| -- |
+|Une boucle while est toujours de la forme: <div><span class="hljs-keyword">while</span> ( true )<div>{</div><div><span class="hljs-comment" style="padding-left:15px;">//code omitted for brevity</span></div><div>}</div>|
 | |
 
 A compléter
