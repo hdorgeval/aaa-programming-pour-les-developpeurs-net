@@ -38,7 +38,7 @@ Cela est moins vrai concernant l'opérateur ternaire ```?```.
 
 En effet, cet opérateur est souvent utilisé pour exprimer une règle métier, une règle technique (comme par exemple une règle d'affichage - qui est en réalité l'expression d'une règle métier au niveau de l'interface graphique).
 
-Pour refactoriser ce type de code ou pour vous aider à ne plus utiliser cet opérateur, appuyez vous sur les règles suivantes:
+Pour factoriser ce type de code ou pour vous aider à ne plus utiliser cet opérateur, appuyez vous sur les règles suivantes:
 
 >Substituez l'usage de l'opérateur ternaire ```?``` par une méthode d'extension.
 
