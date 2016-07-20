@@ -36,7 +36,9 @@ Dans la section précédente je vous ai montré qu'il est très souvent possible
 
 Cela est moins vrai concernant l'opérateur ternaire ```?```.
 
-En effet, cet opérateur est souvent utilisé pour exprimer une règle métier, une règle technique (comme par exemple une règle d'affichage, qui est en réalité l'expression d'une règle métier au niveau de l'interface graphique)
+En effet, cet opérateur est souvent utilisé pour exprimer une règle métier, une règle technique (comme par exemple une règle d'affichage - qui est en réalité l'expression d'une règle métier au niveau de l'interface graphique).
+
+
 
 Voici un premier exemple tiré d'une couche d'accès au données:
 
