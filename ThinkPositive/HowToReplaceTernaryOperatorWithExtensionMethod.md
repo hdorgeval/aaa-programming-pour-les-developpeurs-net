@@ -40,16 +40,3 @@ En effet, cet opérateur est souvent utilisé pour exprimer une règle métier, 
 
 
 
-Voici un premier exemple tiré d'une couche d'accès au données:
-
- ```Csharp
-var input = "test";
-if (input != null)
-{
-    command.Parameters.Add(new SqlParameter("@UserLogin", input));
-}
-else
-{
-    command.Parameters.Add(new SqlParameter("@UserLogin", System.DBNull.Value));
-}
-```
