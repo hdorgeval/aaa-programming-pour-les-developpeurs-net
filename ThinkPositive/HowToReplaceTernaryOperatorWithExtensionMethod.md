@@ -1,4 +1,4 @@
-# Comment remplacer l'opérateur ternaire ? par une projection
+# Comment remplacer l'opérateur ternaire ? par une méthode d'extension
 
   
 L'opérateur ternaire ```?``` permet de coder un ```if...else``` sur une seule ligne.
