@@ -4,12 +4,16 @@ Cette section contient la liste des références utilisées pour la rédaction d
 
 |Naming Guidelines |
 | -- |
-|<ul><li><a href='https://msdn.microsoft.com/en-us/library/ms229002(v=vs.110).aspx'>https://msdn.microsoft.com/en-us/library/ms229002(v=vs.110).aspx</a></li></ul>|
+|<ul><li><a href='https://msdn.microsoft.com/en-us/library/ms229002(v=vs.110).aspx'>https://msdn.microsoft.com/en-us/library/ms229002(v=vs.110).aspx</a></li></ul><ul><li><a href='http://www.amazon.fr/dp/0321545613'>Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries de Krzysztof Cwalina et autres </a></li></ul>|
 | |
 
 
 
 
+|Anders Hejlsberg |
+| -- |
+|<ul><li><a href='https://msdn.microsoft.com/en-us/library/ms229002(v=vs.110).aspx'>https://msdn.microsoft.com/en-us/library/ms229002(v=vs.110).aspx</a></li></ul>|
+| |
 
 
 
