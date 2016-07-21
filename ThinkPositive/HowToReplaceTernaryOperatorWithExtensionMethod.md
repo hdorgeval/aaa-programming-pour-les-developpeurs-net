@@ -36,7 +36,7 @@ Dans la section précédente je vous ai montré qu'il est très souvent possible
 
 Cela est moins vrai concernant l'opérateur ternaire ```?```.
 
-En effet, cet opérateur est souvent utilisé pour exprimer une règle métier, une règle technique (comme par exemple une règle d'affichage - qui est en réalité l'expression d'une règle métier au niveau de l'interface graphique).
+En effet, cet opérateur est souvent utilisé pour exprimer une exigence métier, une exigence technique (comme par exemple une règle d'affichage - qui est en réalité l'expression d'une exigence métier au niveau de l'interface graphique).
 
 Pour factoriser ce type de code ou pour vous aider à ne plus utiliser cet opérateur, appuyez vous sur les règles suivantes:
 
@@ -44,4 +44,73 @@ Pour factoriser ce type de code ou pour vous aider à ne plus utiliser cet opér
 
 > Sur une ligne de code ne faites qu'une seule chose à la fois.
 
+Je vais vous montrer comment substituer l'opérateur ```?``` dans l'exemple ci-dessus.
 
+Il faut dans un premier temps décrire sous la forme d'une phrase positive la ligne de code contenant l'opérateur ternaire. Cette phrase doit être la plus simple possible:
+
+```
+Quand le produit a une description
+Le code de ce produit est concaténé avec un séparateur et la description.
+```
+
+Puis transformer cette phrase en du pseudo code, en supprimant tous les mots inutiles et en  concaténant ceux qui restent.
+La phrase ci-dessus pourrait être alors transcrite de la manière suivante (pseudo-code):
+
+```Csharp
+string label = productCode;
+if (Product.HasDescription)
+{
+  label = productCode.ConcatWithSeparatorAndValue(" - ", productDescription);
+}
+```
+
+La méthode ```ConcatWithSeparatorAndValue()``` peut être développée sous la forme d'une méthode d'extension :
+
+```Csharp
+public static string ConcatWithSeparatorAndValue(this string input, string separator, string value)
+{
+    if (input == null)
+    {
+        return null;
+    }
+
+    if (value == null)
+    {
+        return input;
+    }
+
+    if (value == string.Empty)
+    {
+        return input;
+    }
+
+    if (separator == null)
+    {
+        return input.ConcatWithSeparatorAndValue(string.Empty, value);
+    }
+    
+    var result = string.Format(@"{0}{1}{2}",input,separator,value);
+    return result;
+
+}
+```
+
+Grâce à cette méthode d'extension, le code initial :
+
+```Csharp
+string code = ... //product code;
+string libelle = ... //product description;
+string lib = (libelle != "" && !string.IsNullOrEmpty(libelle)) ? string.Concat(code, " - ", libelle) : code;
+```
+
+devient:
+
+```Csharp
+string code = ... //product code;
+string libelle = ... //product description;
+string lib = code.ConcatWithSeparatorAndValue(" - ",libelle);
+```
+
+La méthodologie exposée ci-dessus est itérative. Cette première itération a permis d'externaliser une exigence métier et a permis de rendre le code plus lisible.
+
+A compléter
