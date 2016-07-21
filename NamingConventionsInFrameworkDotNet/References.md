@@ -12,9 +12,7 @@ Cette section contient la liste des références utilisées pour la rédaction d
 
 |Anders Hejlsberg |
 | -- |
-|<ul><li><a href='https://msdn.microsoft.com/en-us/library/ms229002(v=vs.110).aspx'>https://msdn.microsoft.com/en-us/library/ms229002(v=vs.110).aspx</a></li></ul>|
+|<ul><li><a  href='https://en.wikipedia.org/wiki/Anders_Hejlsberg'>https://en.wikipedia.org/wiki/Anders_Hejlsberg</a></li></ul><ul><li><a  href='https://channel9.msdn.com/Blogs/TheChannel9Team/Anders-Hejlsberg-What-influenced-the-development-of-C'>Anders Hejlsberg - What influenced the development of C#? (Channel 9)</a></li></ul>|
 | |
-
-
 
 A compléter.
