@@ -23,6 +23,7 @@
   * [Comment coder une expression négative sans utiliser l'opérateur de négation](ThinkPositive/HowToCodeNegativeBooleanExpressionWithoutTheNotOperator.md)
   * [Ne jamais commenter à l'intérieur d'un bloc de code](ThinkPositive/NeverCommentInsideCodeBlock.md)
   * [Comment remplacer un IF...ELSE par une projection](ThinkPositive/HowToReplaceIfThenElseWithAProjection.md)
+  * [Comment remplacer l'opérateur ternaire ? par une méthode d'extension](ThinkPositive/HowToReplaceTernaryOperatorWithExtensionMethod.md)
   * [Comment coder une boucle While](ThinkPositive/HowToCodeWhileLoop.md)
 
 
