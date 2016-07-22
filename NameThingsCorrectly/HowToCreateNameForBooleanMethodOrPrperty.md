@@ -203,12 +203,13 @@ Vous pouvez construire cette phrase en la structurant de la manière suivante:
 >L'objectif est de ... (verbe à l'infinitif) ... (sur ce quoi porte l'action définie par le verbe précédent) est dans une situation donnée (description de la situation) ou possède un attribut spécifique (description de l'attribut); 
 
 Dans le cas d'une projection d'un objet vers un booléen, la phrase est structurée de la manière suivante:
->L'objectif est de ... (verbe à l'infinitif) ... (sur ce quoi porte l'action définie par le verbe précédent) en (résultat de la projection) ou bien de récupérer ... (valeur par défaut) en cas d'impossibilité.
+>L'objectif est de ```...``` (verbe à l'infinitif) ```...``` (sur ce quoi porte l'action définie par le verbe précédent) en ```...``` (résultat de la projection) ou bien de récupérer ```...``` (valeur par défaut) en cas d'impossibilité.
 
 Par exemple:
-* L'objectif est de déterminer que le mot saisi par l'utilisateur est présent dans un tableau de valeurs prédéfinies.
+* L'objectif est de ```déterminer``` ```que le mot saisi par l'utilisateur est présent dans un tableau de valeurs prédéfinies```.
 
-* L'objectif est de convertir le texte présent dans une cellule d'un tableau en un booléen ou bien de récupérer la valeur *false* en cas d'échec de la conversion. 
+Autre exemple:
+* L'objectif est de ```convertir``` ```le texte présent dans une cellule d'un tableau``` en un ```booléen``` ou bien de récupérer la valeur ```false``` en cas d'échec de la conversion. 
 
 Écrivez ensuite la phrase en anglais. Les deux exemples ci-dessus pourraient ainsi être traduits de la manière suivante:
 
@@ -228,9 +229,9 @@ Supprimez ensuite les espaces inutiles, concaténez les mots entre eux en respec
 >Checks if inputString.IsPresentIn( givenArrayOfValues )
 
 Supprimez tous les mots qui vous semblent inutiles pour obtenir une écriture la plus ramassée possible:
->input.IsIn(values)
+>Checks if input.IsIn(values)
 
-Vérifiez qu'en préfixant le résultat obtenu par *var result =*, vous pouvez former une ligne de code valide pour la partie *ACT* de votre premier test unitaire:
+Vérifiez qu'en remplaçant le début de la phrase par *var result =*, vous pouvez former une ligne de code valide pour la partie *ACT* de votre premier test unitaire:
 
 ```Csharp
 //ACT
