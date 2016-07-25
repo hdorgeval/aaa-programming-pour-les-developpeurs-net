@@ -29,6 +29,9 @@
 
 
 
+* [L'opérateur new](TheNewOperator/README.md)
+
+
 * [Synthèse des règles spécifiques au AAAProgramming](RulesIndex/README.md)
 
 
