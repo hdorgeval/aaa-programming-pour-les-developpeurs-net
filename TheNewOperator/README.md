@@ -15,3 +15,5 @@ Cependant chaque fois que vous faîtes un ```new```, vous rendez votre code moin
 Chaque fois que vous vous apprêtez à écrire un ```new``` dans votre code, posez vous la question : comment pourrais-je faire pour ne pas faire de ```new``` à cet endroit?
 
 L'objet de ce chapitre est de vous montrer comment faire pour utiliser le moins possible, l'opérateur ```new```.
+
+A compléter
