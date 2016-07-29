@@ -28,6 +28,12 @@ Si vous êtes dans une approche TDD, chaque test unitaire que vous allez écrire
 //Arrange
 var invoice = new Invoice();
 invoice.Currency = new Currency() { IsoCode = "EUR", Description = "Euro" };
+
+//Act
+...
+
+//Assert
+...
 ```
 
 ou bien de la forme:
@@ -36,11 +42,17 @@ ou bien de la forme:
 //Arrange
 var invoice = new Invoice();
 invoice.Currency = new Currency() { IsoCode = "GBP", Description = "British Pound" };
+
+//Act
+...
+
+//Assert
+...
 ```
 
 
 Le code ci-dessus pose plusieurs problèmes:
-* Le code de la partie Arrange du test unitaire forme un pattern qui est répété dans chaque test unitaire;
+* Le code de la partie ```Arrange``` du test unitaire forme un pattern qui est répété dans chaque test;
 
 * Le code de la partie ```Arrange``` manque d'expressivité, c'est à dire qu'on ne comprend pas très bien pour quel usage sont crées ces objets;
 
