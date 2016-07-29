@@ -79,8 +79,120 @@ Pour vous aider à utiliser le moins souvent possible l'opérateur ```new```, vo
 
 >Ne faites qu'une seule chose à la fois dans votre code mais faites le bien.
 
+Je vais vous montrer comment utiliser ces principes pour refactoriser le code de test ci-dessus.
 
+La classe ```Currency``` peut être modifiée de la façon suivante:
+```Csharp
+public class Currency
+{
+    public string IsoCode { get; set; }
+    public string Description { get; set; }
 
+    public static Currency Euro
+    {
+        get
+        {
+            var result = new Currency()
+            {
+                IsoCode = "Euro",
+                Description = "Euro"
+            };
+            return result;
+        }
+    }
 
+    public static Currency BritishPound
+    {
+        get
+        {
+            var result = new Currency()
+            {
+                IsoCode = "GBP",
+                Description = "British Pound"
+            };
+            return result;
+        }
+    }
+    
+    //code omitted for brevity
 
-  
+}
+
+```
+
+Grâce à cette première factorisation le code de test peut maintenir s'écrire:
+```Csharp
+//Arrange
+var invoice = new Invoice();
+invoice.Currency = Currency.Euro;
+
+//Act
+...
+
+//Assert
+...
+```
+
+Dans une deuxième étape de factorisation La classe ```Invoice``` peut être modifiée de la façon suivante:
+```Csharp
+public class Invoice
+{
+    public Currency Currency { get; set; }
+
+    public static Invoice EmptyInvoiceInEuro
+    {
+        get
+        {
+            var result = new Invoice()
+            {
+                Currency = Currency.Euro
+            };
+            return result;
+        }
+    }
+    
+    public static Invoice EmptyInvoiceInBritishPound
+    {
+        get
+        {
+            var result = new Invoice()
+            {
+                Currency = Currency.BritishPound
+            };
+            return result;
+        }
+    }
+
+    //code omitted for brevity
+}
+
+```
+
+Grâce à cette deuxième factorisation le code du premier test peut maintenir s'écrire:
+```Csharp
+//Arrange
+var invoice = Invoice.EmptyInvoiceInEuro;
+
+//Act
+...
+
+//Assert
+...
+```
+
+Grâce à cette deuxième factorisation le code du deuxième test peut maintenir s'écrire:
+```Csharp
+//Arrange
+var invoice = Invoice.EmptyInvoiceInBritishPound;
+
+//Act
+...
+
+//Assert
+...
+```
+ 
+ Dans cette deuxième étape de factorisation, j'ai introduit un pattern de codage dans la classe ```Invoice``` entre les propriétés ```EmptyInvoiceInEuro``` et ```EmptyInvoiceInBritishPound```. Ce pattern pourrait se nommer EmptyInvoiceInCurrencyX où X est le code ISO code de la devise.
+ 
+ 
+ Il est donc nécessaire de réaliser une troisième étape de factorisation pour éliminer ce pattern
