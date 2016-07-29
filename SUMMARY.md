@@ -30,6 +30,7 @@
 
 
 * [L'opérateur new](TheNewOperator/README.md)
+  * [Comment remplacer l'opérateur new :propriété statique et chaînage de méthode](TheNewOperator/HowToReplaceNewWithProjection.md)
 
 
 * [Synthèse des règles spécifiques au AAAProgramming](RulesIndex/README.md)
