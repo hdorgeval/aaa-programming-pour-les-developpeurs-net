@@ -133,7 +133,7 @@ invoice.Currency = Currency.Euro;
 ...
 ```
 
-Dans une deuxième étape de factorisation La classe ```Invoice``` peut être modifiée de la façon suivante:
+Dans une deuxième étape de factorisation la classe ```Invoice``` peut être modifiée de la façon suivante:
 ```Csharp
 public class Invoice
 {
@@ -195,4 +195,76 @@ var invoice = Invoice.EmptyInvoiceInBritishPound;
  Dans cette deuxième étape de factorisation, j'ai introduit un pattern de codage dans la classe ```Invoice``` entre les propriétés ```EmptyInvoiceInEuro``` et ```EmptyInvoiceInBritishPound```. Ce pattern pourrait se nommer EmptyInvoiceInCurrencyX où X est le code ISO code de la devise.
  
  
- Il est donc nécessaire de réaliser une troisième étape de factorisation pour éliminer ce pattern
+ Il est donc nécessaire de réaliser une troisième étape de factorisation pour éliminer ce pattern.
+ Pour cela il existe une méthode de codage qui est très courante en JavaScript et qui s'appelle le chaînage de méthode (Fluent API en anglais).
+ 
+ En appliquant cette méthode dite de chaînage, la classe ```Invoice``` peut être modifiée de la façon suivante:
+```Csharp
+public class Invoice
+{
+    public Currency Currency { get; set; }
+
+    public static Invoice Empty
+    {
+        get
+        {
+            var result = new Invoice();
+            //application des règles métiers 
+            //pour l'initialisation d'une nouvelle facture
+            return result;
+        }
+    }
+
+    //code omitted for brevity
+}
+
+public static class InvoiceExtensions
+{
+    public static Invoice SetCurrencyTo(this Invoice input, Currency  value)
+    {
+        if (input == null)
+        {
+            return input;
+        }
+
+        var oldValue = input.Currency;
+        input.Currency = value;
+
+        //application des règles métiers quand la devise change
+        return input;
+    }
+}
+
+``` 
+ 
+Grâce à cette troisième factorisation le code du premier test peut maintenir s'écrire:
+```Csharp
+//Arrange
+var invoice = Invoice.Empty
+                     .SetCurrencyTo(Currency.Euro);
+
+//Act
+...
+
+//Assert
+...
+```
+
+Grâce à cette troisième factorisation le code du deuxième test peut maintenir s'écrire:
+```Csharp
+//Arrange
+var invoice = Invoice.Empty
+                     .SetCurrencyTo(Currency.BritishPound);
+
+//Act
+...
+
+//Assert
+...
+```
+ 
+ Grâce à cette technique de chaînage de méthode, le code de la classe Invoice a été allégé, toutes les méthodes de chaînage sont externalisées sous la forme de méthodes d'extension.
+ 
+ Notez également qu'une méthode de chaînage renvoie toujours le même objet si bien que le chaînage des appels se passe correctement y compris quand l'objet de départ est nul.
+ 
+ A compléter.
