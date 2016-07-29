@@ -231,6 +231,7 @@ public static class InvoiceExtensions
         input.Currency = value;
 
         //application des règles métiers quand la devise change
+        
         return input;
     }
 }
@@ -263,8 +264,22 @@ var invoice = Invoice.Empty
 ...
 ```
  
- Grâce à cette technique de chaînage de méthode, le code de la classe Invoice a été allégé, toutes les méthodes de chaînage sont externalisées sous la forme de méthodes d'extension.
+ Grâce à cette technique de chaînage de méthode, le code de la classe ```Invoice``` a été allégé et toutes les méthodes de chaînage sont externalisées sous la forme de méthodes d'extension.
  
  Notez également qu'une méthode de chaînage renvoie toujours le même objet si bien que le chaînage des appels se passe correctement y compris quand l'objet de départ est nul.
+ 
+ 
+ Cette technique de chaînage des méthodes a aussi renforcé l'expressivité du code.
+ En effet, si on extrait de son contexte la ligne de code suivante:
+ 
+ ```Csharp
+var invoice = Invoice.Empty
+                     .SetCurrencyTo(Currency.BritishPound);
+
+```
+ On comprend parfaitement que le code réalise en séquence les étapes suivantes:
+ * création d'une nouvelle facture;
+ * affection de la devise GBP à cette facture.
+ 
  
  A compléter.
