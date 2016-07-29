@@ -266,7 +266,7 @@ var invoice = Invoice.Empty
  
  Grâce à cette technique de chaînage de méthode, le code de la classe ```Invoice``` a été allégé et toutes les méthodes de chaînage sont externalisées sous la forme de méthodes d'extension.
  
- Notez également qu'une méthode de chaînage renvoie toujours le même objet si bien que le chaînage des appels se passe correctement y compris quand l'objet de départ est nul.
+ Notez également qu'une méthode de chaînage renvoie toujours le même objet (et doit toujours renvoyer le même objet) si bien que le chaînage des appels se passe correctement y compris quand l'objet de départ est nul.
  
  
  Cette technique de chaînage des méthodes a aussi renforcé l'expressivité du code.
