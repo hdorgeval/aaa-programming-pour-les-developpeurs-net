@@ -73,11 +73,11 @@ Le code ci-dessus pose plusieurs problèmes:
 
 Pour vous aider à utiliser le moins souvent possible l'opérateur ```new```, vous pouvez vous appuyer sur les règles suivantes:
 
->Tout duplication d'un pattern d'écriture de code doit être factorisé
+>Tout duplication d'un pattern d'écriture de code doit être factorisé.
 
->Ne prenez jamais la responsabilité de construire par vous même un objet métier
+>Ne prenez jamais la responsabilité de construire par vous même un objet métier.
 
->Ne faites qu'une seule chose à la fois dans votre code mais faites le bien
+>Ne faites qu'une seule chose à la fois dans votre code mais faites le bien.
 
 
 
