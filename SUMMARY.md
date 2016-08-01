@@ -1,5 +1,6 @@
 1. [Introduction](README.md)
 
+
 2. [Nommer correctement les choses](NameThingsCorrectly/README.md)
   * [Les conventions de nom du Framework .Net](NamingConventionsInFrameworkDotNet/README.md)
      * [Pascal Casing](NamingConventionsInFrameworkDotNet/PascalCasing.md)
@@ -9,6 +10,7 @@
      * [Le cas particulier des variables associées à une propriété](NamingConventionsInFrameworkDotNet/SpecialCaseOfVariablesThatAreBackingFieldsOfProperties.md)
      * [Références](NamingConventionsInFrameworkDotNet/References.md)
   * [Comment nommer une méthode ou une propriété qui renvoie un booléen](NameThingsCorrectly/HowToCreateNameForBooleanMethodOrPrperty.md)
+
 
 3. [Toujours penser positif](ThinkPositive/README.md)
   * [Introduction](ThinkPositive/README.md)
@@ -20,8 +22,10 @@
   * [Comment remplacer l'opérateur ternaire ? par une méthode d'extension](ThinkPositive/HowToReplaceTernaryOperatorWithExtensionMethod.md)
   * [Comment coder une boucle While](ThinkPositive/HowToCodeWhileLoop.md)
 
+
 4. [L'opérateur new](TheNewOperator/README.md)
   * [Comment remplacer l'opérateur new : propriété statique, méthode statique et chaînage de méthode](TheNewOperator/HowToReplaceNewWithProjection.md)
+
 
 5. [Synthèse des règles spécifiques au AAAProgramming](RulesIndex/README.md)
 
