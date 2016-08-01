@@ -79,7 +79,7 @@ Pour vous aider à utiliser le moins souvent possible l'opérateur ```new```, vo
 
 >Ne faites qu'une seule chose à la fois dans votre code mais faites le bien.
 
-Je vais vous montrer comment utiliser ces principes pour refactoriser le code de test ci-dessus.
+Je vais vous montrer comment utiliser ces principes pour factoriser le code de test ci-dessus.
 
 La classe ```Currency``` peut être modifiée de la façon suivante:
 ```Csharp
@@ -282,4 +282,127 @@ var invoice = Invoice.Empty
  * affection de la devise GBP à cette facture.
  
  
+ La classe ```Currency``` contient maintenant un pattern d'écriture de code qui est le suivant:
+ ```Csharp
+
+var result = new Currency()
+{
+    IsoCode = "Euro",
+    Description = "Euro"
+};
+return result;
+```
+
+
+ ```Csharp
+
+var result = new Currency()
+{
+    IsoCode = "GBP",
+    Description = "British Pound"
+};
+return result;
+       
+
+```
+ 
+ Ce pattern consiste à créer un objet à partir de deux autres objets : le code ISO de la devise et sa description. 
+ 
+ Une première solution possible est de définir un constructeur paramétré dans la classe ```Currency```. Dans ce cas la classe ```Currency``` pourrait être factorisée de la manière suivante:
+ 
+ ```Csharp
+public class Currency
+{
+    public string IsoCode { get; set; }
+    public string Description { get; set; }
+
+    public Currency(string isocCode, string description)
+    {
+        this.IsoCode = IsoCode;
+        this.Description = description;
+    }
+
+    public static Currency Euro
+    {
+        get
+        {
+            var result = new Currency("Euro", "Euro");
+            return result;
+        }
+    }
+
+    public static Currency BritishPound
+    {
+        get
+        {
+            var result = new Currency("GBP", "British Pound");
+            return result;
+        }
+    }
+
+}
+
+```
+ 
+ 
+ Dans le code ci-dessus, il reste toujours un pattern d'écriture de code qui est le suivant:
+ ```Csharp
+var result = new Currency("XXX", "YYY");
+return result;
+```
+
+Si la méthode d’instanciation d'un objet de type ```Currency``` doit être modifiée pour répondre à une évolution de l'application, il faudra alors réécrire toutes les méthodes qui font appel au constructeur paramétré.
+
+L'utilisation de l'opérateur ```new``` doit être centralisée au sein d'une seule et unique méthode dans la classe correspondante. Cette méthode peut être codée de la manière suivante:
+
+ ```Csharp
+public class Currency
+{
+    public string IsoCode { get; set; }
+    public string Description { get; set; }
+
+    public static Currency FromIsoCode(string isoCode, string withDescription = null)
+    {
+        var result = new Currency();
+        result.IsoCode = isoCode;
+        result.Description = isoCode;
+        
+        if (withDescription == null)
+        {
+            return result;
+        }
+
+        result.Description = withDescription;
+        return result;
+
+    }
+
+    public static Currency Euro
+    {
+        get
+        {
+            var result = Currency.FromIsoCode("Euro");
+            return result;
+        }
+    }
+
+    public static Currency BritishPound
+    {
+        get
+        {
+            var result = Currency.FromIsoCode("GBP", withDescription: "British Pound");
+            return result;
+        }
+    }
+
+}
+```
+
+Dans la classe ```Currency``` , l'usage de l'opérateur ```new``` a été centralisé dans une méthode statique dont le nom comme par le terme ```From```. 
+
+Ce terme indique la création d'un objet de type ```Currency``` à partir d'un ou de plusieurs autres objets. 
+
+La technique consistant à déclarer un paramètre optionnel dont le nom commence par le terme ```with``` ou bien le terme ```and``` est empruntée de la méthodologie de nommage des méthodes et paramètres préconisée par Apple. 
+Cette méthodologie rend le code encore plus expressif.
+
  A compléter.
