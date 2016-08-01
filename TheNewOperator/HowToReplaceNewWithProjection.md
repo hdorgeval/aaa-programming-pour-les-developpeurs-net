@@ -1,4 +1,4 @@
-# Comment remplacer l'opérateur new : propriété statique et chaînage de méthode
+# Comment remplacer l'opérateur new : propriété statique, méthode statique et chaînage de méthode
 
 
 
