@@ -1,16 +1,16 @@
-[Introduction](README.md)
+1. [Introduction](README.md)
 
-[Nommer correctement les choses](NameThingsCorrectly/README.md)
-* [Les conventions de nom du Framework .Net](NamingConventionsInFrameworkDotNet/README.md)
+2. [Nommer correctement les choses](NameThingsCorrectly/README.md)
+  * [Les conventions de nom du Framework .Net](NamingConventionsInFrameworkDotNet/README.md)
      * [Pascal Casing](NamingConventionsInFrameworkDotNet/PascalCasing.md)
      * [Camel Casing](NamingConventionsInFrameworkDotNet/CamelCasing.md)
      * [Quand utiliser Pascal Casing](NamingConventionsInFrameworkDotNet/WhenToUsePascalCasing.md)
      * [Quand utiliser Camel Casing](NamingConventionsInFrameworkDotNet/WhenToUseCamelCasing.md)
      * [Le cas particulier des variables associées à une propriété](NamingConventionsInFrameworkDotNet/SpecialCaseOfVariablesThatAreBackingFieldsOfProperties.md)
      * [Références](NamingConventionsInFrameworkDotNet/References.md)
-* [Comment nommer une méthode ou une propriété qui renvoie un booléen](NameThingsCorrectly/HowToCreateNameForBooleanMethodOrPrperty.md)
+  * [Comment nommer une méthode ou une propriété qui renvoie un booléen](NameThingsCorrectly/HowToCreateNameForBooleanMethodOrPrperty.md)
 
-[Toujours penser positif](ThinkPositive/README.md)
+3. [Toujours penser positif](ThinkPositive/README.md)
   * [Introduction](ThinkPositive/README.md)
   * [Ne jamais utiliser l’opérateur de négation !](ThinkPositive/NeverUseTheNotOperator.md)
   * [Comment coder une expression booléenne](ThinkPositive/HowToCodeBooleanExpression.md)
@@ -20,10 +20,9 @@
   * [Comment remplacer l'opérateur ternaire ? par une méthode d'extension](ThinkPositive/HowToReplaceTernaryOperatorWithExtensionMethod.md)
   * [Comment coder une boucle While](ThinkPositive/HowToCodeWhileLoop.md)
 
-
-[L'opérateur new](TheNewOperator/README.md)
+4. [L'opérateur new](TheNewOperator/README.md)
   * [Comment remplacer l'opérateur new : propriété statique, méthode statique et chaînage de méthode](TheNewOperator/HowToReplaceNewWithProjection.md)
 
-[Synthèse des règles spécifiques au AAAProgramming](RulesIndex/README.md)
+5. [Synthèse des règles spécifiques au AAAProgramming](RulesIndex/README.md)
 
 
