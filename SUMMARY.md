@@ -1,7 +1,7 @@
 # AAA Programming
 
 
-* [Introduction](README.md)
+[Introduction](README.md)
 
 
 * [Nommer correctement les choses](NameThingsCorrectly/README.md)
