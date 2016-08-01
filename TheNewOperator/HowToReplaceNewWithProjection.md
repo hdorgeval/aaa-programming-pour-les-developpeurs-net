@@ -402,7 +402,7 @@ Dans la classe ```Currency``` , l'usage de l'opérateur ```new``` a été centra
 
 Ce terme indique la création d'un objet de type ```Currency``` à partir d'un ou de plusieurs autres objets. 
 
-La technique consistant à déclarer un paramètre optionnel dont le nom commence par le terme ```with``` ou bien le terme ```and``` est empruntée de la méthodologie de nommage des méthodes et paramètres préconisée par Apple. 
+La technique consistant à déclarer dans la méthode ```From...``` un paramètre optionnel dont le nom commence par le terme ```with``` ou bien le terme ```and``` est empruntée de la méthodologie de nommage des méthodes et paramètres préconisée par Apple. 
 Cette méthodologie rend le code encore plus expressif.
 
  A compléter.
