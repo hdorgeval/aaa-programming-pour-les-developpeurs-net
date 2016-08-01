@@ -1,6 +1,4 @@
 [Introduction](README.md)
-
-
 * [Nommer correctement les choses](NameThingsCorrectly/README.md)
   * [Les conventions de nom du Framework .Net](NamingConventionsInFrameworkDotNet/README.md)
      * [Pascal Casing](NamingConventionsInFrameworkDotNet/PascalCasing.md)
