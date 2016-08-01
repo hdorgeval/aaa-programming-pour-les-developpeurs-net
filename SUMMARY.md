@@ -25,5 +25,3 @@
   * [Comment remplacer l'opérateur new : propriété statique, méthode statique et chaînage de méthode](TheNewOperator/HowToReplaceNewWithProjection.md)
 
 # [Synthèse des règles spécifiques au AAAProgramming](RulesIndex/README.md)
-
-
