@@ -1,8 +1,10 @@
-# Synthèse des règles spécifiques au AAAProgramming
+# Synthèse des règles spécifiques au AAA Programming
 
 
 
-Ce chapitre regroupe l'ensemble des règles qui ont été expliquées et démontrées dans cet ouvrage.
+Ce chapitre regroupe l'ensemble des règles spécifiques au AAA Programming. 
+
+Je vous invite à les mettre en pratique. Commencez par la règle qui vous semble la plus facile à appliquer, ou bien la plus appropriée dans votre contexte. Dans tous les cas de figure vous allez vous rendre compte qu'appliquer ces règles va automatiquement enclencher une série de questions et d'échanges avec les autres développeurs. De ces questions et de ces échanges sortira une meilleure architecture, une meilleure implémentation, une meilleure cohésion d'équipe.
 
 |Règle n° 1 |
 | -- |
@@ -33,8 +35,8 @@ Ce chapitre regroupe l'ensemble des règles qui ont été expliquées et démont
 
 |Règle n° 6 |
 | -- |
-|Ne jamais utiliser l’opérateur de négation ```!``` = pensez toujours positif. |
-| |
+|Ne jamais utiliser l’opérateur de négation ```!```  |
+|= pensez toujours positif. |
 
 |Règle n° 7 |
 | -- |
@@ -96,5 +98,12 @@ Ce chapitre regroupe l'ensemble des règles qui ont été expliquées et démont
 | -- |
 |Une boucle while est toujours de la forme: <div><span class="hljs-keyword">while</span> ( true )<div>{</div><div><span class="hljs-comment" style="padding-left:15px;">//code omitted for brevity</span></div><div>}</div>|
 | |
+
+|Règle n° 19 |
+| -- |
+|Chaque fois que vous vous apprêtez à écrire un ```new``` dans votre code, posez vous la question : comment pourrais-je faire pour ne pas faire de ```new``` à cet endroit?|
+| |
+
+
 
 A compléter
