@@ -1,7 +1,5 @@
 # L'opérateur new
 
-
-
 Pour créer un objet il suffit de créer une instance de la classe voulue en utilisant l'opérateur ```new``` comme dans l'exemple ci-dessous:
 
 ```Csharp
@@ -16,4 +14,3 @@ Chaque fois que vous vous apprêtez à écrire un ```new``` dans votre code, pos
 
 L'objet de ce chapitre est de vous montrer comment faire pour utiliser le moins possible, l'opérateur ```new```.
 
-A compléter
