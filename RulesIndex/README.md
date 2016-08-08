@@ -19,7 +19,7 @@ Je vous invite à les mettre en pratique. Commencez par la règle qui vous sembl
 
 |Règle n° 3 |
 | -- |
-|Le nom d'une variable locale associée à une propriété est constitué d'un préfixe, le caractère _, suivi d'un nom conforme à la convention Camel Casing. |
+|Quand une variable locale est associée à une propriété, considérez le fait de préfixer son nom par le caractère _. |
 | |
 
 |Règle n° 4 |
@@ -50,22 +50,22 @@ Je vous invite à les mettre en pratique. Commencez par la règle qui vous sembl
 
 |Règle n° 9 |
 | -- |
-|La dernière instruction d'un bloc de code ```If``` est toujours  ```return``` ou ```continue``` |
+|La dernière instruction d'un bloc de code ```If``` est toujours  ```return``` ou ```continue```. |
 | |
 
 |Règle n° 10 |
 | -- |
-|Un ```If``` n'a jamais de ```else``` |
+|Un ```If``` n'a jamais de ```else```. |
 | |
 
 |Règle n° 11 |
 | -- |
-|Quand vous commencer à coder un ```If```, utilisez toujours le code snippet associé en tapant ```if``` puis ```TAB``` deux fois. |
+|Quand vous commencez à coder un ```If```, utilisez toujours le code snippet associé en tapant ```if``` puis ```TAB``` deux fois. |
 |Remarque : cette astuce vous rappelle qu'il faut toujours penser positif. |
 
 |Règle n° 12 |
 | -- |
-|Dans un commentaire XML, la balise ```<returns>...</returns>``` commence toujours par ```Returns true if ...``` ou ```Returns true when ...``` |
+|Quand vous documentez une méthode booléenne, la balise ```<returns>...</returns>``` dans le commentaire XML, commence toujours par ```Returns true if ...``` ou ```Returns true when ...``` |
 | |
 
 |Règle n° 13 |
@@ -101,7 +101,7 @@ Je vous invite à les mettre en pratique. Commencez par la règle qui vous sembl
 
 |Règle n° 19 |
 | -- |
-|Chaque fois que vous vous apprêtez à écrire un ```new``` dans votre code, posez vous la question : comment pourrais-je faire pour ne pas faire de ```new``` à cet endroit?|
+|Quand vous écrivez un ```new``` dans votre code, posez vous la question : comment pourrais-je faire pour ne pas faire de ```new``` à cet endroit?|
 | |
 
 
