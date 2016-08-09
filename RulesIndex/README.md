@@ -105,5 +105,10 @@ Je vous invite à les mettre en pratique. Commencez par la règle qui vous sembl
 | |
 
 
+|Règle n° 20 |
+| -- |
+|Tout duplication d'un pattern d'écriture de code doit être factorisé.|
+| |
+
 
 A compléter
