@@ -49,14 +49,12 @@ invoice.Currency = new Currency() { IsoCode = "GBP", Description = "British Poun
 //Assert
 ...
 ```
-
-
 Le code ci-dessus pose plusieurs problèmes:
-* Le code de la partie ```Arrange``` du test unitaire forme un pattern qui est répété dans chaque test;
+* Le code de la partie ```Arrange``` des tests unitaires forme un pattern qui est répété dans chaque test;
 
 * Le code de la partie ```Arrange``` manque d'expressivité, c'est à dire qu'on ne comprend pas très bien pour quel usage sont crées ces objets;
 
-* L'usage du mot clé ```new``` entraîne un couplage fort entre la classe de test et et les classes ```Invoice``` et ```Currency```. En particulier vous pouvez vous rendre compte que si les noms des propriétés ou si le contenu des propriétés de la classe ```Currency``` changent, cela va entraîner un refactoring important des classes clientes;
+* L'usage du mot clé ```new``` entraîne un couplage fort entre la classe de test et les classes ```Invoice``` et ```Currency```. En particulier vous pouvez vous rendre compte que si les noms des propriétés ou si le contenu des propriétés de la classe ```Currency``` changent, cela va entraîner un refactoring important des classes clientes et notamment des classes de test;
 
 * Le test unitaire fait deux choses simultanément : 
   * il prend la responsabilité de créer correctement tous les objets nécessaires dans la partie ```Arrange``` ;
@@ -120,7 +118,7 @@ public class Currency
 
 ```
 
-Grâce à cette première factorisation le code de test peut maintenir s'écrire:
+Grâce à cette première factorisation le premier test unitaire peut maintenir s'écrire:
 ```Csharp
 //Arrange
 var invoice = new Invoice();
@@ -132,6 +130,23 @@ invoice.Currency = Currency.Euro;
 //Assert
 ...
 ```
+
+Et le deuxième test unitaire peut s'écrire:
+```Csharp
+//Arrange
+var invoice = new Invoice();
+invoice.Currency = Currency.BritishPound;
+
+//Act
+...
+
+//Assert
+...
+```
+Vous voyez que cette première factorisation a permis : 
+* de passer de 2 ```new``` à un seul ```new``` pour chaque test unitaire;
+* de déléguer la responsabilité de remplir correctement les propriétés ```IsoCode``` et ```Description``` à la classe même où sont définies ces propriétés.
+
 
 Dans une deuxième étape de factorisation la classe ```Invoice``` peut être modifiée de la façon suivante:
 ```Csharp
@@ -192,11 +207,15 @@ var invoice = Invoice.EmptyInvoiceInBritishPound;
 ...
 ```
  
- Dans cette deuxième étape de factorisation, j'ai introduit un pattern de codage dans la classe ```Invoice``` entre les propriétés ```EmptyInvoiceInEuro``` et ```EmptyInvoiceInBritishPound```. Ce pattern pourrait se nommer EmptyInvoiceInCurrencyX où X est le code ISO code de la devise.
+ Cette deuxième étape de factorisation a permis:
+ * d'éliminer l'usage de l'opérateur ```new``` : l'action de créer correctement un objet est maintenant déléguée à la classe où est défini cet objet.
  
+Cependant cette deuxième factorisation a introduit un pattern de codage dans la classe ```Invoice``` entre les propriétés ```EmptyInvoiceInEuro``` et ```EmptyInvoiceInBritishPound```. Ce pattern pourrait se nommer ```EmptyInvoiceInCurrencyX``` où X est le code ISO code de la devise. 
+
+Si l'application qui gère les factures ne gère que deux devises, cela ne pose aucun problème. Par contre si l'application est réellement multi-devises, là il y a un problème. 
  
- Il est donc nécessaire de réaliser une troisième étape de factorisation pour éliminer ce pattern.
- Pour cela il existe une méthode de codage qui est très courante en JavaScript et qui s'appelle le chaînage de méthode (Fluent API en anglais).
+Il est donc nécessaire de réaliser une troisième étape de factorisation pour éliminer ce pattern.
+Pour cela il existe une méthode de codage qui est très courante en JavaScript et qui s'appelle le chaînage de méthode (Fluent API en anglais).
  
  En appliquant cette méthode dite de chaînage, la classe ```Invoice``` peut être modifiée de la façon suivante:
 ```Csharp
@@ -268,7 +287,6 @@ var invoice = Invoice.Empty
  
  Notez également qu'une méthode de chaînage renvoie toujours le même objet (et doit toujours renvoyer le même objet) si bien que le chaînage des appels se passe correctement y compris quand l'objet de départ est nul.
  
- 
  Cette technique de chaînage des méthodes a aussi renforcé l'expressivité du code.
  En effet, si on extrait de son contexte la ligne de code suivante:
  
@@ -282,31 +300,19 @@ var invoice = Invoice.Empty
  * affection de la devise GBP à cette facture.
  
  
- La classe ```Currency``` contient maintenant un pattern d'écriture de code qui est le suivant:
+ La classe ```Currency``` contient maintenant un pattern d'écriture de code, situé à l'intérieur de chacune des propriétés statiques ```Euro``` et ```BritishPound```,  qui est le suivant:
  ```Csharp
-
 var result = new Currency()
 {
-    IsoCode = "Euro",
-    Description = "Euro"
+    IsoCode = "X",
+    Description = "Y"
 };
 return result;
-```
-
-
- ```Csharp
-
-var result = new Currency()
-{
-    IsoCode = "GBP",
-    Description = "British Pound"
-};
-return result;
-       
-
 ```
  
  Ce pattern consiste à créer un objet à partir de deux autres objets : le code ISO de la devise et sa description. 
+ 
+ Ce pattern d'écriture sera dupliqué à chaque définition d'une nouvelle devise. Il faut donc factoriser cette répétition qui n'est pas la répétition d'un ensemble de lignes de code mais qui est la répétition d'un pattern d'écriture de code.
  
  Une première solution possible est de définir un constructeur paramétré dans la classe ```Currency```. Dans ce cas la classe ```Currency``` pourrait être factorisée de la manière suivante:
  
@@ -341,9 +347,7 @@ public class Currency
     }
 
 }
-
 ```
- 
  
  Dans le code ci-dessus, il reste toujours un pattern d'écriture de code qui est le suivant:
  ```Csharp
@@ -351,7 +355,7 @@ var result = new Currency("XXX", "YYY");
 return result;
 ```
 
-Si la méthode d’instanciation d'un objet de type ```Currency``` doit être modifiée pour répondre à une évolution de l'application, il faudra alors réécrire toutes les méthodes qui font appel au constructeur paramétré.
+Si la méthode d'instanciation d'un objet de type ```Currency``` doit être modifiée pour répondre à une évolution de l'application, il faudra alors réécrire toutes les méthodes qui font appel au constructeur paramétré.
 
 L'utilisation de l'opérateur ```new``` doit être centralisée au sein d'une seule et unique méthode dans la classe correspondante. Cette méthode peut être codée de la manière suivante:
 
@@ -398,11 +402,33 @@ public class Currency
 }
 ```
 
-Dans la classe ```Currency``` , l'usage de l'opérateur ```new``` a été centralisé dans une méthode statique dont le nom comme par le terme ```From```. 
+Dans la classe ```Currency``` , l'usage de l'opérateur ```new``` est maintenant centralisé dans une méthode statique dont le nom comme par le terme ```From```. 
 
 Ce terme indique la création d'un objet de type ```Currency``` à partir d'un ou de plusieurs autres objets. 
 
-La technique consistant à déclarer dans la méthode ```From...``` un paramètre optionnel dont le nom commence par le terme ```with``` ou bien le terme ```and``` est empruntée de la méthodologie de nommage des méthodes et paramètres préconisée par Apple. 
+La technique consistant à déclarer dans la méthode ```FromXXX``` un paramètre optionnel dont le nom commence par le terme ```with``` ou bien le terme ```and``` est empruntée de la méthodologie de nommage des méthodes et paramètres préconisée par Apple. 
 Cette méthodologie rend le code encore plus expressif.
 
- A compléter.
+ Si un test unitaire souhaite créer une devise "bidon" pour vérifier son impact dans d'autres parties de l'application, il pourra s'écrire de la façon suivante:
+ 
+ ```Csharp
+//Arrange
+var deviseBidon = Currency.FromIsoCode("IGA", withDescription: "Inter Galactique");
+
+//Act
+...
+
+//Assert
+...
+```
+
+Toutes les factorisations effectuées ci-dessus ont permis de centraliser la création des instances en un seul endroit pour chacune des classes ```Currency``` et ```Invoice```. Les clients de ces classes et notamment l'ensemble des tests unitaires associés n'ont plus besoin de prendre la responsabilité de créer par eux-même des instances valides du point de vue métier. 
+
+Vous pouvez constater que l'usage de l'opérateur ```new``` a également disparu dans toutes les classes clientes. 
+
+Vous pouvez aussi constater que la factorisation progressive du mot clé ```new``` a rendu le code plus expressif en utilisation les techniques suivantes:
+* Propriété statique typiquement nommée ```Empty```;
+* Chaînage de méthode (la base des APIs dites Fluent - technique principalement empruntée à JavaScript);
+* Méthode statique typiquement nommée ```FromXXX``` ;
+* Paramètres optionnels dont le nom est typiquement préfixé par ```with``` ou ```and``` (technique empruntée à Apple).
+
