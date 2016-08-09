@@ -3,6 +3,15 @@
 
 
 Imaginez une facture fournisseur définie de la manière suivante:
+```Csharp
+public class Invoice
+{
+    public Currency Currency { get; set; }
+
+    //code omitted for brevity
+}
+```
+La classe ```Invoice``` contient une propriété ```Currency``` dont le type est défini ci-dessous:
 
 ```Csharp
 public class Currency
@@ -12,17 +21,9 @@ public class Currency
     
     //code omitted for brevity
 }
-
-public class Invoice
-{
-    public Currency Currency { get; set; }
-
-    //code omitted for brevity
-}
 ```
 
-
-Si vous êtes dans une approche TDD, chaque test unitaire que vous allez écrire sera de la forme:
+Si vous êtes dans une approche TDD, chaque test unitaire que vous allez écrire pour tester la classe ```Invoice``` sera de la forme:
 
 ```Csharp
 //Arrange
@@ -49,19 +50,18 @@ invoice.Currency = new Currency() { IsoCode = "GBP", Description = "British Poun
 //Assert
 ...
 ```
-Le code ci-dessus pose plusieurs problèmes:
-* Le code de la partie ```Arrange``` des tests unitaires forme un pattern qui est répété dans chaque test;
+Ce code de test pose plusieurs problèmes:
+* Le code de la partie ```Arrange``` forme un pattern qui est répété dans chaque test;
 
 * Le code de la partie ```Arrange``` manque d'expressivité, c'est à dire qu'on ne comprend pas très bien pour quel usage sont crées ces objets;
 
-* L'usage du mot clé ```new``` entraîne un couplage fort entre la classe de test et les classes ```Invoice``` et ```Currency```. En particulier vous pouvez vous rendre compte que si les noms des propriétés ou si le contenu des propriétés de la classe ```Currency``` changent, cela va entraîner un refactoring important des classes clientes et notamment des classes de test;
+* L'usage du mot clé ```new``` entraîne un couplage fort entre la classe de test et les classes ```Invoice``` et ```Currency```. En particulier vous pouvez vous rendre compte que si les noms des propriétés ou si le contenu des propriétés de la classe ```Currency``` changent, cela va entraîner un refactoring des classes clientes et notamment des classes de test;
 
 * Le test unitaire fait deux choses simultanément : 
-  * il prend la responsabilité de créer correctement tous les objets nécessaires dans la partie ```Arrange``` ;
+  * il prend la responsabilité de créer correctement tous les objets nécessaires dans la partie ```Arrange```;
   * et il prend la responsabilité de mener à bien le test dans la partie ```Act``` et ```Assert```. 
   
   S'il s'agit d'instancier des objets non métiers , cela pose en général aucun problème, mais s'il s'agit d'instancier des objets métiers il est vraisemblable que cela doive se faire en suivant des règles métiers prédéfinies mais susceptibles de changer à tout moment.
-  
   
   L'usage de l'opérateur ```new``` entraîne donc les effets suivants:
   * Duplication de code;
@@ -111,9 +111,7 @@ public class Currency
             return result;
         }
     }
-    
     //code omitted for brevity
-
 }
 
 ```
@@ -208,11 +206,11 @@ var invoice = Invoice.EmptyInvoiceInBritishPound;
 ```
  
  Cette deuxième étape de factorisation a permis:
- * d'éliminer l'usage de l'opérateur ```new``` : l'action de créer correctement un objet est maintenant déléguée à la classe où est défini cet objet.
+ * d'éliminer l'usage de l'opérateur ```new``` : l'action de créer correctement un objet est maintenant totalement déléguée à la classe où est défini cet objet.
  
 Cependant cette deuxième factorisation a introduit un pattern de codage dans la classe ```Invoice``` entre les propriétés ```EmptyInvoiceInEuro``` et ```EmptyInvoiceInBritishPound```. Ce pattern pourrait se nommer ```EmptyInvoiceInCurrencyX``` où X est le code ISO code de la devise. 
 
-Si l'application qui gère les factures ne gère que deux devises, cela ne pose aucun problème. Par contre si l'application est réellement multi-devises, là il y a un problème. 
+Si l'application qui gère les factures ne gère que deux devises, cela ne pose aucun problème. Par contre si l'application est réellement multi-devises, l'implémentation des différentes devises, au sein de la classe ```Invoice``` se fera par copier/coller d'une propriété existante. 
  
 Il est donc nécessaire de réaliser une troisième étape de factorisation pour éliminer ce pattern.
 Pour cela il existe une méthode de codage qui est très courante en JavaScript et qui s'appelle le chaînage de méthode (Fluent API en anglais).
@@ -300,7 +298,7 @@ var invoice = Invoice.Empty
  * affection de la devise GBP à cette facture.
  
  
- La classe ```Currency``` contient maintenant un pattern d'écriture de code, situé à l'intérieur de chacune des propriétés statiques ```Euro``` et ```BritishPound```,  qui est le suivant:
+ La classe ```Currency``` contient maintenant un pattern d'écriture de code, situé à l'intérieur de chacune des propriétés statiques ```Euro``` et ```BritishPound```. Ce pattern est le suivant:
  ```Csharp
 var result = new Currency()
 {
@@ -402,11 +400,11 @@ public class Currency
 }
 ```
 
-Dans la classe ```Currency``` , l'usage de l'opérateur ```new``` est maintenant centralisé dans une méthode statique dont le nom comme par le terme ```From```. 
+Dans la classe ```Currency``` , l'usage de l'opérateur ```new``` est maintenant centralisé dans une méthode statique dont le nom commence par le terme ```From```. 
 
 Ce terme indique la création d'un objet de type ```Currency``` à partir d'un ou de plusieurs autres objets. 
 
-La technique consistant à déclarer dans la méthode ```FromXXX``` un paramètre optionnel dont le nom commence par le terme ```with``` ou bien le terme ```and``` est empruntée de la méthodologie de nommage des méthodes et paramètres préconisée par Apple. 
+La technique consistant à déclarer dans la méthode ```FromXXX``` un paramètre optionnel dont le nom commence par le terme ```with``` ou bien le terme ```and``` est empruntée à la méthodologie de nommage des méthodes et paramètres préconisée par Apple. 
 Cette méthodologie rend le code encore plus expressif.
 
  Si un test unitaire souhaite créer une devise "bidon" pour vérifier son impact dans d'autres parties de l'application, il pourra s'écrire de la façon suivante:
@@ -426,7 +424,7 @@ Toutes les factorisations effectuées ci-dessus ont permis de centraliser la cr�
 
 Vous pouvez constater que l'usage de l'opérateur ```new``` a également disparu dans toutes les classes clientes. 
 
-Vous pouvez aussi constater que la factorisation progressive du mot clé ```new``` a rendu le code plus expressif en utilisation les techniques suivantes:
+Vous pouvez aussi constater que la factorisation progressive du mot clé ```new``` a rendu le code plus expressif en utilisant les techniques suivantes:
 * Propriété statique typiquement nommée ```Empty```;
 * Chaînage de méthode (la base des APIs dites Fluent - technique principalement empruntée à JavaScript);
 * Méthode statique typiquement nommée ```FromXXX``` ;
