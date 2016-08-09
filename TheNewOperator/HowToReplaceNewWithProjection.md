@@ -270,7 +270,7 @@ var invoice = Invoice.Empty
 ...
 ```
 
-Grâce à cette troisième factorisation le code du deuxième test peut maintenir s'écrire:
+Et le code du deuxième test peut maintenir s'écrire:
 ```Csharp
 //Arrange
 var invoice = Invoice.Empty
