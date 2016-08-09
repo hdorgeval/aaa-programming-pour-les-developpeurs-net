@@ -12,3 +12,7 @@ Cette section contient la liste des références utilisées pour la rédaction d
 |<ul><li><a href='https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGuidelines/Articles/NamingMethods.html'>Coding Guidelines for Cocoa</a></li></ul>|
 | |
 
+|Google |
+| -- |
+|<ul><li><a href='http://misko.hevery.com/attachments/Guide-Writing%20Testable%20Code.pdf'>Guide: Writing Testable Code</a></li></ul>|
+|To keep our code at Google in the best possible shape we provided our software engineers with these constant reminders. Now, we are happy to share them with the world. |
