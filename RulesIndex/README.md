@@ -9,7 +9,7 @@ Je vous invite à les mettre en pratique. Commencez par la règle qui vous sembl
 |Règle n° 1 |
 | -- |
 |La convention de nom Camel Casing doit être utilisée pour nommer les éléments suivants:<ul><li>Variable locale;</li> <li>Paramètre de méthode.</li></ul>|
-|Voir les chapitres [Camel Casing](NamingConventionsInFrameworkDotNet/CamelCasing.md) et  |
+|Voir les chapitres [Camel Casing](NamingConventionsInFrameworkDotNet/CamelCasing.md) et [Quand utiliser Camel Casing](NamingConventionsInFrameworkDotNet/WhenToUseCamelCasing.md) |
 
 |Règle n° 2 |
 | -- |
