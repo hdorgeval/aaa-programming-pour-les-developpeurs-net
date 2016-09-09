@@ -20,7 +20,7 @@ Je vous invite à les mettre en pratique. Commencez par la règle qui vous sembl
 |Règle n° 3 |
 | -- |
 |Quand une variable locale est associée à une propriété, considérez le fait de préfixer son nom par le caractère _. |
-| |
+|Voir le chapitre [Cas particulier des variables qui sont associées à une propriété](NamingConventionsInFrameworkDotNet/SpecialCaseOfVariablesThatAreBackingFieldsOfProperties.md) |
 
 |Règle n° 4 |
 | -- |
