@@ -14,7 +14,7 @@ Je vous invite à les mettre en pratique. Commencez par la règle qui vous sembl
 |Règle n° 2 |
 | -- |
 |La convention de nom Pascal Casing doit être utilisée pour nommer les éléments suivants:<ul><li>Classe;</li><li>Énumération;</li><li>Valeur d'une énumération;</li><li>Événement;</li><li>Membre public static et read-only;</li><li>Méthode;</li><li>Propriété;</li><li>Namespace;</li><li>Interface.</li></ul>|
-| |
+|Voir les chapitres [Pascal Casing](NamingConventionsInFrameworkDotNet/PascalCasing.md) et [Quand utiliser Pascal Casing](NamingConventionsInFrameworkDotNet/WhenToUsePascalCasing.md) |
 
 
 |Règle n° 3 |
