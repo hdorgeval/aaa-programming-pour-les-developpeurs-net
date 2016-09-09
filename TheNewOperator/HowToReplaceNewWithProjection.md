@@ -71,7 +71,7 @@ Ce code de test pose plusieurs problèmes:
 
 Pour vous aider à utiliser le moins souvent possible l'opérateur ```new```, vous pouvez vous appuyer sur les règles suivantes:
 
->Tout duplication d'un pattern d'écriture de code doit être factorisé.
+>Toute duplication d'un pattern d'écriture de code doit être factorisé.
 
 >Ne prenez jamais la responsabilité de construire par vous même un objet métier.
 
@@ -312,7 +312,7 @@ return result;
  
  Ce pattern d'écriture sera dupliqué à chaque définition d'une nouvelle devise. Il faut donc factoriser cette répétition qui n'est pas la répétition d'un ensemble de lignes de code mais qui est la répétition d'un pattern d'écriture de code.
  
- Une première solution possible est de définir un constructeur paramétré dans la classe ```Currency```. Dans ce cas la classe ```Currency``` pourrait être factorisée de la manière suivante:
+ Une première solution possible est de définir un constructeur paramétré dans la classe ```Currency```. Dans ce cas, la classe ```Currency``` pourrait être factorisée de la manière suivante:
  
  ```Csharp
 public class Currency
