@@ -27,7 +27,6 @@
   * [Comment remplacer l'opérateur new : propriété statique, méthode statique et chaînage de méthode](TheNewOperator/HowToReplaceNewWithProjection.md)
   * [Références](TheNewOperator/References.md)
 
-
 5. [La Loi de Déméter](TheLawOfDemeter/README.md)
 
 6. [Synthèse des règles spécifiques au AAAProgramming](RulesIndex/README.md)
