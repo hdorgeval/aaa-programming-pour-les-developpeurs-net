@@ -88,5 +88,5 @@ public C MyMethod()
 ```
 
 Pour éviter tous ces problèmes, vous devez appliquer la loi de Déméter.
-L'objet de ce chapitre est de vous montrez comment appliquer la loi de Déméter.
+L'objet de ce chapitre est de vous montrez comment appliquer la loi de Déméter (The Law of Demeter).
 
