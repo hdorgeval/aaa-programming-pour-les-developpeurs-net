@@ -8,7 +8,7 @@ var myObject = new MyClass();
 var result = myObject.PropertyA.PropertyB.GiveMeTheObjectINeed(); 
 ```
 
-La propriété ```PropertyA``` est définie de la manière suivante:
+Dans la classe ```MyClass```, la propriété ```PropertyA``` est définie de la manière suivante:
 
 ```Csharp
 public class MyClass
@@ -18,7 +18,7 @@ public class MyClass
 }
 ```
 
-La propriété ```PropertyB``` est définie de la manière suivante:
+Dans la classe ```A```, la propriété ```PropertyB``` est définie de la manière suivante:
 
 ```Csharp
 public class A
@@ -28,13 +28,9 @@ public class A
 }
 ```
 
-La méthode ```GiveMeTheObjectINeed``` est définie de la manière suivante:
+Dans la classe ```B```, La méthode ```GiveMeTheObjectINeed``` est définie de la manière suivante:
 
 ```Csharp
- public class C
-{
-  // code omitted for brevity
-}
 public class B
 {
     public C GiveMeTheObjectINeed()
@@ -42,6 +38,10 @@ public class B
         return new C();
     }
     // code omitted for brevity
+}
+public class C
+{
+  // code omitted for brevity
 }
 ```
 
@@ -51,9 +51,22 @@ Dans l'exemple ci-dessus, la hiérarchie d'objet est définie par l'ensemble des
   * A
     * B
 
+Obtenir un objet par une succession d'appels en utilisant la notation ```.```, comme dans l'exemple montré initialement:
 
-Le code ci-dessus ne compile pas parce que cette méthode n'existe pas directement sur la classe ```MyClass```
+```Csharp
+var myObject = new MyClass();
+var result = myObject.PropertyA.PropertyB.GiveMeTheObjectINeed(); 
+```
 
+est une technique courante chez la plupart des développeurs : pourquoi écrire plusieurs lignes de code quand on peut tout faire en une seule ligne?
+Pour certains développeurs le but ultime est d'écrire l'application entière en une seule ligne de code.
 
-Par contre le code code ci-dessous compile
-L'usage de cet opérateur paraît anodin tant il est la base de la programmation orientée objet.
+Le syndrome typique de cette approche (faire un maximum de choses en une seule ligne de code) se manifeste souvent au niveau de l'instruction ```return``` d'une méthode comme dans l'exemple suivant:
+
+```Csharp
+public C MyMethod()
+{
+    var myObject = new MyClass();
+    return myObject.PropertyA.PropertyB.GiveMeTheObjectINeed();
+} 
+```
