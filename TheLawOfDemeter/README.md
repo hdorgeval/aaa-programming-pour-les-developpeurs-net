@@ -59,7 +59,7 @@ var result = myObject.PropertyA.PropertyB.GiveMeTheObjectINeed();
 ```
 
 est une technique courante chez la plupart des développeurs : pourquoi écrire plusieurs lignes de code quand on peut tout faire en une seule ligne?
-Pour certains développeurs le but ultime est d'écrire l'application entière en une seule ligne de code.
+Pour certains développeurs le but ultime serait de pouvoir écrire l'application entière en une seule ligne de code.
 
 Le syndrome typique de cette approche (faire un maximum de choses en une seule ligne de code) se manifeste souvent au niveau de l'instruction ```return``` d'une méthode comme dans l'exemple suivant:
 
@@ -70,3 +70,4 @@ public C MyMethod()
     return myObject.PropertyA.PropertyB.GiveMeTheObjectINeed();
 } 
 ```
+
