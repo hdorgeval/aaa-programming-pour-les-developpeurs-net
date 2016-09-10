@@ -28,6 +28,8 @@
   * [Références](TheNewOperator/References.md)
 
 
-5. [Synthèse des règles spécifiques au AAAProgramming](RulesIndex/README.md)
+5. [La Loi de Déméter](TheLawOfDemeter/README.md)
+
+6. [Synthèse des règles spécifiques au AAAProgramming](RulesIndex/README.md)
 
 
