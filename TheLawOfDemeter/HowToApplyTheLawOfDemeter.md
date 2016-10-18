@@ -59,5 +59,5 @@ L'intelliSense vous indique désormais que la méthode dont vous avez besoin est
 
 La méthode d'extension mise en place permet de gérer les états possibles des objets intermédiaires et notamment le cas où ils sont nuls. Vous avez ainsi augmenté la maintenabilité de l'application.
 
-Le code mis en place dans la méthode d'extension permet aussi de mettre en évidence si les objets intermédiaires sont susceptibles d'ouvrir des ressources sur le système d'exploitation. En effet si vous détectez la présence d'une méthode Dispose() ou Close() sur ces objets, vous devez impérativement appeler l'une ou l'autre avant de sortir de la méthode.
+Le code mis en place dans la méthode d'extension permet aussi de mettre en évidence si les objets intermédiaires sont susceptibles d'ouvrir des ressources sur le système d'exploitation. En effet si vous détectez la présence d'une méthode ```Dispose()``` ou ```Close()``` sur ces objets, vous devez impérativement appeler l'une ou l'autre avant de sortir de la méthode.
 
