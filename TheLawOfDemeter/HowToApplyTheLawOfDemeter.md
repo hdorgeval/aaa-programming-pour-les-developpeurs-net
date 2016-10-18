@@ -1,6 +1,6 @@
 # Comment appliquer la loi de Déméter
 
-Ce que dit la loi de Déméter est très simple : soyez toujours courtois avec vos interlocuteurs. Si vous avez besoin d'une information ou d'une action qui ne peut être fournie que par une connaissance directe ou indirecte de votre interlocuteur, demander à ce dernier de jouer les intermédiaires; ne court-circuitez jamais votre interlocuteur en communiquant directement avec ses relations.
+Ce que dit la loi de Déméter est simple : soyez toujours courtois avec vos interlocuteurs. Si vous avez besoin d'une information ou d'une action qui ne peut être fournie que par une connaissance directe ou indirecte de votre interlocuteur, demander à ce dernier de jouer les intermédiaires; ne court-circuitez jamais votre interlocuteur en communiquant directement avec ses relations.
 
 Autrement dit, la loi de Déméter consiste à ne parler qu'avec ses voisins directs.
 
