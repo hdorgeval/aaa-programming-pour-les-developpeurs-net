@@ -53,7 +53,7 @@ public static class MyClassExtensions
 } 
 ```
 
-L'intelliSense vous indique désormais que la méthode dont vous avez besoin est maintenant disponible directement sur votre "voisin":
+L'IntelliSense vous indique désormais que la méthode dont vous avez besoin est maintenant disponible directement sur votre "voisin":
 
 ![](LawOfDemeter01.PNG)
 
