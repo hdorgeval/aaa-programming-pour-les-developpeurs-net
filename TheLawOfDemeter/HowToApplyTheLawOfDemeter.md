@@ -23,4 +23,4 @@ var result = myObject.GiveMeTheObjectINeed();
 ```
 
 Bien évidemment cette méthode ou cette propriété n'est pas disponible car sinon vous l'auriez utilisée.
-En utilisant le principe des méthodes d'extension, vous pouvez créer cette méthode directement dans votre code:
+En utilisant le principe des méthodes d'extension, vous pouvez créer cette méthode qui vous manque directement dans votre code:
