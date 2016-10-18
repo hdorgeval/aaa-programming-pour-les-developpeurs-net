@@ -23,4 +23,39 @@ var result = myObject.GiveMeTheObjectINeed();
 ```
 
 Bien évidemment cette méthode ou cette propriété n'est pas disponible car sinon vous l'auriez utilisée.
-En utilisant le principe des méthodes d'extension, vous pouvez créer cette méthode qui vous manque directement dans votre code:
+En utilisant le principe des méthodes d'extension, vous pouvez créer cette méthode qui vous manque de la façon suivante:
+
+```Csharp
+public static class MyClassExtensions
+{
+    public static C GiveMeTheObjectINeed(this MyClass input)
+    {
+        if (input == null)
+        {
+            return null;
+        }
+
+        var firstObject = input.PropertyA;
+        if (firstObject == null)
+        {
+            return null;
+        }
+
+        var secondObject = firstObject.PropertyB;
+        if (secondObject == null)
+        {
+            return null;
+        }
+
+        var result = secondObject.GiveMeTheObjectINeed();
+        return result;
+    }
+} 
+```
+
+L'intelliSense vous indique désormais que la méthode dont vous avez besoin est maintenant disponible directement sur votre "voisin":
+
+![](LawOfDemeter01.PNG)
+
+La méthode d'extension mise en place permet de gérer les états possibles des objets intermédiaires et notamment le cas où ils sont nuls. Vous avez ainsi augmenté la maintenabilité de l'application.
+
