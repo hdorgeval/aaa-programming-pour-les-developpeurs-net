@@ -75,7 +75,7 @@ Ce type de code pose plusieurs problèmes:
 * Vous introduisez un couplage fort entre votre classe et toutes les classes qui sont utilisées dans les appels successifs. Par exemple la méthode ci-dessus ```MyMethod``` introduit outre un couplage avec la classe MyClass, un couplage avec les classes ```A``` et ```B```;
 * Vous supposez que tous les objets obtenus ainsi au fil des appels sont valides et non nuls;
 * Vous pouvez faire, sans le savoir, de la fuite de mémoire ou de la fuite de handle si les objets intermédiaires ouvrent des ressources sur le système d'exploitation, ou bien instancient en interne un objet COM;
-* Quand un problème survient à l'exécution et que vous mettez un point d'arrêt sur la ligne pour analyser l'origine du problème, il est souvent difficile de démêler la séquence des appels, obligeant ainsi a ré-écrire temporairement le code comme ci-dessous:
+* Quand un problème survient à l'exécution et que vous mettez un point d'arrêt sur la ligne pour l'analyser, il est souvent difficile de démêler la séquence des appels, obligeant ainsi a ré-écrire temporairement le code comme ci-dessous:
 ```Csharp
 public C MyMethod()
 {
