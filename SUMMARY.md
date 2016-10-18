@@ -29,6 +29,7 @@
 
 
 5. [La Loi de Déméter](TheLawOfDemeter/README.md)
+  * [Comment appliquer la loi de Déméter](TheLawOfDemeter/HowToApplyTheLawOfDemeter.md)
 
 6. [Synthèse des règles spécifiques au AAAProgramming](RulesIndex/README.md)
 
