@@ -47,5 +47,8 @@ Si vous souhaitez expérimenter vous mêmes les techniques montrées dans ce liv
 
 Ce livre est en cours d'écriture. J'ai besoin de votre feedback pour l'améliorer : n'hésitez pas à [commenter](https://www.gitbook.com/book/aaaprogramming/aaa-programming-pour-les-developpeurs-net/discussions). 
 
+# Code Companion
 
+Vous pouvez voir en action les techniques du aaaProgramming en allant sur le  [projet GitHub](https://github.com/hdorgeval/aaaProgramming) associé à cet ouvrage.
+[Un package NuGet](https://www.nuget.org/packages/aaaProgramming.Framework3.5Extensions) est également disponible pour exploiter ces techniques directement dans Visual Studio. 
 
