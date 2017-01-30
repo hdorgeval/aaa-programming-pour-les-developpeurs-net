@@ -2,7 +2,7 @@
 
 Pendant plusieurs années j'ai été éditeur de logiciels pour les industries graphiques et plus particulièrement pour les éditeurs de magazines et les imprimeurs. J'ai développé en .Net une solution logicielle pour automatiser l'impression depuis l'éditeur de magazine jusqu'à l'imprimeur. Cette solution logicielle ne devait en aucun cas être à l'origine de l'arrêt de l'outil industriel de l'éditeur ou de l'imprimeur. Sachant que l'outil industriel d'un imprimeur se chiffre en moyenne à quelques dizaines de millions d'euros, la solution devait fonctionner 7j/7, 24h/24 sans aucun support compte tenu du fait que l'impression d'un magazine ou d'un quotidien se fait le plus souvent en dehors des heures ouvrées traditionnelles.
 
-Pour satisfaire ce très haut niveau d'exigence, j'ai dû changer ma façon de coder. 
+Pour satisfaire ce niveau d'exigence, j'ai dû changer ma façon de coder. 
 
 Au fil des années j'ai mis au point un ensemble de techniques de programmation permettant de livrer rapidement une application sans bug et ne nécessitant aucun support une fois mise en production.
 
@@ -26,7 +26,7 @@ Ce livre est destiné à un double public:
  * Faire en sorte qu'un développeur puisse enrichir, modifier, maintenir le code d'un autre sans qu'on puisse distinguer qui à écrit quoi; 
  * Faire en sorte qu'une équipe de N développeurs agisse comme un seul développeur à la puissance N;
  * Maintenir la maintenabilité;
- * Répondre dans les plus brefs délais aux évolutions du métier ou du marché.
+ * Répondre rapidement aux évolutions du métier ou du marché.
 
 
 # A propos des exemples de code montrés dans ce livre
