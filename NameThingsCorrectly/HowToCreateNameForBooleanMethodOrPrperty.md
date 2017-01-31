@@ -1,19 +1,20 @@
 ## Comment nommer une méthode ou une propriété qui renvoie un booléen
 
-
 Une méthode ou une propriété qui renvoie un booléen doit être nommée en utilisant l'une des quatre options ci-dessous:
+
 * le préfixe :
-  * *Is*; 
-  * *Has*; 
-  * *Can*.
+  * _Is_; 
+  * _Has_; 
+  * _Can_.
 * Un verbe à la troisième personne du singulier comme :
-  * *Exists*;
+  * _Exists_;
 * Une séquence de mots qui représente une phrase en langage naturel dont on a supprimé les espaces entre les mots.
-* *ToBooleanOrDefault()* dans le cas d'une méthode qui projette un objet vers un booléen.
+* _ToBooleanOrDefault\(\)_ dans le cas d'une méthode qui projette un objet vers un booléen.
 
 Voici ci-après quelques exemples d'application.
 
 #### Propriété automatique
+
 ```Csharp
 public class Myclass
 {
@@ -24,6 +25,7 @@ public class Myclass
 ```
 
 #### Propriété avec membre privé associé
+
 ```Csharp
 #region IsReadOnly
 
@@ -46,8 +48,8 @@ public class Myclass
 #endregion
 ```
 
-
 #### Méthode d'instance développée sous la forme d'une méthode d'extension
+
 ```Csharp
 public static class MyclassExtenions
 {
@@ -61,10 +63,10 @@ public class Myclass
 {
   //code omitted for brevity
 }
-
-
 ```
+
 Plutôt que de développer les méthodes publiques d'instance sous la forme:
+
 ```Csharp
 public class Myclass
 {
@@ -75,20 +77,21 @@ public class Myclass
 }
 ```
 
-Il est souvent plus intéressant de coder toutes les méthodes publiques d’instance en utilisant la technique des méthodes d'extension. 
+Il est souvent plus intéressant de coder toutes les méthodes publiques d’instance en utilisant la technique des méthodes d'extension.
 
 En effet, les méthodes d'extension permettent d'étendre le code d'une classe sans avoir accès au code source de cette classe. Il est donc possible d'enrichir n'importe quelle classe du Framework .Net avec ses propres méthodes. Par conséquent il est également possible d’enrichir ses propres classes sans avoir à modifier leur code source.
 
-La méthode *ToBooleanOrDefault()* décrite ci-dessous permet par exemple d'étendre la classe System.String en lui ajoutant la méthode *ToBooleanOrDefault()*, d'où le terme méthode d’extension. L'extension se fait en effet sous la forme d'une méthode et non d'une propriété.
+La méthode _ToBooleanOrDefault\(\)_ décrite ci-dessous permet par exemple d'étendre la classe System.String en lui ajoutant la méthode _ToBooleanOrDefault\(\)_, d'où le terme méthode d’extension. L'extension se fait en effet sous la forme d'une méthode et non d'une propriété.
 
-L'avantage apporté par la méthode d’extension vient du fait que : 
+L'avantage apporté par la méthode d’extension vient du fait que :
+
 * il est parfaitement valide d'invoquer cette méthode sur un objet nul : le traitement du cas nul peut ainsi être complètement encapsulé à l'intérieur de la méthode d'extension;
-* La classe qui est étendue contient principalement des propriétés qui décrivent l'état de l’objet; Ce type de classe peut ainsi être utilisée pour transférer un objet d'une couche à une autre de l'application (de la couche business à la couche de présentation, ou bien de la couche data à la couche business). Ce type d'objet est appelé un DTO object (Data Transfer Object);
+* La classe qui est étendue contient principalement des propriétés qui décrivent l'état de l’objet; Ce type de classe peut ainsi être utilisée pour transférer un objet d'une couche à une autre de l'application \(de la couche business à la couche de présentation, ou bien de la couche data à la couche business\). Ce type d'objet est appelé un DTO object \(Data Transfer Object\);
 * Les méthodes d'extension décrivent séparément toutes les actions qu'il est possible de réaliser sur un objet issu de cette classe;
 * Une méthode d'extension est testable unitairement.
 
-
 #### Projection développée sous la forme d'une méthode d'extension
+
 ```Csharp
 public static class StringExtensions
 {
@@ -105,8 +108,6 @@ public static class StringExtensions
         //code omitted for brevity
     }
 }
-
-
 ```
 
 #### Séquence de mots qui représente une phrase
@@ -134,7 +135,7 @@ namespace UnitTestProject1
 }
 ```
 
-L'écriture du code dans une méthode de test se fait en trois phases nommées *Arrange*, *Act*, *Assert*. 
+L'écriture du code dans une méthode de test se fait en trois phases nommées _Arrange_, _Act_, _Assert_.
 
 Mettez en évidence ces trois phases de la façon suivante à l'intérieure de la méthode de test:
 
@@ -150,13 +151,13 @@ public void TestMethod1()
 }
 ```
 
-La phase *Arrange* est la phase dans laquelle vous allez préparer tous les objets nécessaires pour exécuter votre future méthode.
+La phase _Arrange_ est la phase dans laquelle vous allez préparer tous les objets nécessaires pour exécuter votre future méthode.
 
-La phase *Act* est la phase pendant laquelle vous allez exécuter votre méthode et en récupérer le résultat.
+La phase _Act_ est la phase pendant laquelle vous allez exécuter votre méthode et en récupérer le résultat.
 
-La phase *Assert* est la phase pendant laquelle vous allez comparer le résultat obtenu dans la phase *Act* avec le résultat attendu; en cas de différence vous signalez l'échec du test.
+La phase _Assert_ est la phase pendant laquelle vous allez comparer le résultat obtenu dans la phase _Act_ avec le résultat attendu; en cas de différence vous signalez l'échec du test.
 
-En appliquant ces principes pour créer un test de la méthode d'extension *ToBooleanOrDefault()* décrite ci-dessus, vous devriez obtenir un code de test semblable au code ci-dessous:
+En appliquant ces principes pour créer un test de la méthode d'extension _ToBooleanOrDefault\(\)_ décrite ci-dessus, vous devriez obtenir un code de test semblable au code ci-dessous:
 
 ```Csharp
 [TestMethod]
@@ -177,22 +178,21 @@ public void TestMethod1()
 }
 ```
 
-Pour créer le premier test unitaire de votre future méthode, il faut mettre en œuvre les étapes ci-dessous dans l'ordre indiqué: 
-1. Décrire brièvement ce que doit faire cette méthode sous la forme d'une seule phrase la plus synthétique possible; cette phrase doit être si possible en anglais;
-2. Transformer cette phrase en une ligne de code (typiquement la ligne de code que vous seriez amené à écrire dans la partie *ACT* du test unitaire) en supprimant les mots inutiles et en concaténant les mots restants pour former un nom conforme à la convention Pascal Casing;
-3. Définir le nom obtenu sous la forme d'une méthode d'extension à l'extérieur du projet de test (c'est à dire dans le projet de votre application);
-4. Commenter la méthode sous la forme de [commentaires XML](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx);
-5. Écrire les spécifications de cette nouvelle méthode sous la forme d'exemples en commençant par les cas les plus simples;
-6. Prendre le premier exemple de la spécification pour écrire la partie *Arrange* du premier test unitaire;
-7. Mettre en place le code d'exécution de la nouvelle méthode dans la partie *Act* de la méthode de test en vérifiant que :
-  * l'IntelliSense ramène bien le commentaire XML
-  * Le commentaire affiché est cohérent avec le nom choisi
-  * L'IntelliSense permet de découvrir et de manipuler rapidement cette nouvelle méthode
-8. Valider le résultat dans la partie *Assert* de la méthode de test;
+Pour créer le premier test unitaire de votre future méthode, il faut mettre en œuvre les étapes ci-dessous dans l'ordre indiqué:  
+>1. Décrire brièvement ce que doit faire cette méthode sous la forme d'une seule phrase la plus synthétique possible; cette phrase doit être si possible en anglais;  
+2. Transformer cette phrase en une ligne de code \(typiquement la ligne de code que vous seriez amené à écrire dans la partie _ACT_ du test unitaire\) en supprimant les mots inutiles et en concaténant les mots restants pour former un nom conforme à la convention Pascal Casing;  
+3. Définir le nom obtenu sous la forme d'une méthode d'extension à l'extérieur du projet de test \(c'est à dire dans le projet de votre application\);  
+4. Commenter la méthode sous la forme de [commentaires XML](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx);  
+5. Écrire les spécifications de cette nouvelle méthode sous la forme d'exemples en commençant par les cas les plus simples;  
+6. Prendre le premier exemple de la spécification pour écrire la partie _Arrange_ du premier test unitaire;  
+7. Mettre en place le code d'exécution de la nouvelle méthode dans la partie _Act_ de la méthode de test en vérifiant que:
+ >   * l'IntelliSense ramène bien le commentaire XML;
+ >   * Le commentaire affiché est cohérent avec le nom choisi;
+ >   * L'IntelliSense permet de découvrir et de manipuler rapidement cette nouvelle méthode.
+>8. Valider le résultat dans la partie _Assert_ de la méthode de test;
 9. Vérifier que le test échoue;
 10. Montrer l'intégralité de ce premier test unitaire aux autres membres de l' équipe pour vérifier qu'ils comprennent le code;
 11. Vérifier que le nom choisi fait l'unanimité au sein de l'équipe.
-
 
 Je vous propose d'appliquer ces 11 étapes pour développer une méthode qui consiste à déterminer si une chaîne de caractères est présente dans un tableau de chaînes de caractères.
 
@@ -200,16 +200,19 @@ Je vous propose d'appliquer ces 11 étapes pour développer une méthode qui con
 
 Vous pouvez construire cette phrase en la structurant de la manière suivante:
 
->L'objectif est de ... (verbe à l'infinitif) ... (sur ce quoi porte l'action définie par le verbe précédent) est dans une situation donnée (description de la situation) ou possède un attribut spécifique (description de l'attribut); 
+> L'objectif est de ... \(verbe à l'infinitif\) ... \(sur ce quoi porte l'action définie par le verbe précédent\) est dans une situation donnée \(description de la situation\) ou possède un attribut spécifique \(description de l'attribut\);
 
 Dans le cas d'une projection d'un objet vers un booléen, la phrase est structurée de la manière suivante:
->L'objectif est de ```...``` (verbe à l'infinitif) ```...``` (sur ce quoi porte l'action définie par le verbe précédent) en ```...``` (résultat de la projection) ou bien de récupérer ```...``` (valeur par défaut) en cas d'impossibilité.
+
+> L'objectif est de `...` \(verbe à l'infinitif\) `...` \(sur ce quoi porte l'action définie par le verbe précédent\) en `...` \(résultat de la projection\) ou bien de récupérer `...` \(valeur par défaut\) en cas d'impossibilité.
 
 Par exemple:
-* L'objectif est de ```déterminer``` ```que le mot saisi par l'utilisateur est présent dans un tableau de valeurs prédéfinies```.
+
+* L'objectif est de `déterminer` `que le mot saisi par l'utilisateur est présent dans un tableau de valeurs prédéfinies`.
 
 Autre exemple:
-* L'objectif est de ```convertir``` ```le texte présent dans une cellule d'un tableau``` en un ```booléen``` ou bien de récupérer la valeur ```false``` en cas d'échec de la conversion. 
+
+* L'objectif est de `convertir` `le texte présent dans une cellule d'un tableau` en un `booléen` ou bien de récupérer la valeur `false` en cas d'échec de la conversion. 
 
 Écrivez ensuite la phrase en anglais. Les deux exemples ci-dessus pourraient ainsi être traduits de la manière suivante:
 
@@ -217,21 +220,23 @@ Autre exemple:
 
 * Convert input string into a boolean or get false value when conversion fails.
 
-
 #### Étape 2 : Transformer cette description en une ligne de code
 
 Cette transformation peut se faire en plusieurs étapes.
 
 Partez d'abord de l'étape précédente comme par exemple:
->Checks if input string is present in a given array of values.
+
+> Checks if input string is present in a given array of values.
 
 Supprimez ensuite les espaces inutiles, concaténez les mots entre eux en respectant la convention PasCal Casing pour le nom de la méthode et la convention Camel Casing pour le nom des paramètres, séparez le sujet et le verbe par un point:
->Checks if inputString.IsPresentIn( givenArrayOfValues )
+
+> Checks if inputString.IsPresentIn\( givenArrayOfValues \)
 
 Supprimez tous les mots qui vous semblent inutiles pour obtenir une écriture la plus ramassée possible:
->Checks if input.IsIn(values)
 
-Vérifiez qu'en remplaçant le début de la phrase par *var result =*, vous pouvez former une ligne de code valide pour la partie *ACT* de votre premier test unitaire:
+> Checks if input.IsIn\(values\)
+
+Vérifiez qu'en remplaçant le début de la phrase par _var result =_, vous pouvez former une ligne de code valide pour la partie _ACT_ de votre premier test unitaire:
 
 ```Csharp
 //ACT
@@ -249,7 +254,7 @@ if (input.IsIn(values) )
 
 Vous allez certainement constater un écart entre la description de départ et la description reconstruite d'après la simple lecture du code.
 
-Dans l'exemple ci-dessus la phrase reconstruite laisse penser que le paramètre *values* représente une liste de valeurs (```List<string>```) et non pas un tableau de valeurs (```string[]```).
+Dans l'exemple ci-dessus la phrase reconstruite laisse penser que le paramètre _values_ représente une liste de valeurs \(`List<string>`\) et non pas un tableau de valeurs \(`string[]`\).
 
 Constater un écart signifie que l'usage de cette future méthode va poser un problème tôt ou tard soit pour vous même soit pour les autres développeurs de votre équipe, soit pour les personnes qui seront en charge de la maintenance future de l'application.
 
@@ -278,10 +283,9 @@ public static class StringExtensions
         //code omitted for brevity
     }
 }
-
 ```
 
-Notez que le nom du premier paramètre est nommé *input*, et que le nom du deuxième paramètre est *values* quand celui-ci désigne un ensemble d'objets, c'est à dire soit une liste ```List<T>``` soit un tableau ```T[]``` d'objet du même type, soit un nombre indéterminé d'ensembles d'objets ```params Object[]```.
+Notez que le nom du premier paramètre est nommé _input_, et que le nom du deuxième paramètre est _values_ quand celui-ci désigne un ensemble d'objets, c'est à dire soit une liste `List<T>` soit un tableau `T[]` d'objet du même type, soit un nombre indéterminé d'ensembles d'objets `params Object[]`.
 
 Ainsi la méthode d'extension ci-dessus pourrait aussi supporter les signatures suivantes:
 
@@ -293,7 +297,6 @@ public static class StringExtensions
         //code omitted for brevity
     }
 }
-
 ```
 
 ```Csharp
@@ -304,34 +307,36 @@ public static class StringExtensions
         //code omitted for brevity
     }
 }
-
 ```
 
-Dans la méthode d'extension ci-dessus, le mot clé *params* permet de passer un nombre quelconque de listes ou de tableaux.
+Dans la méthode d'extension ci-dessus, le mot clé _params_ permet de passer un nombre quelconque de listes ou de tableaux.
 
 De manière générale je vous recommande de respecter la convention de nommage ci-dessous pour définir la signature d'une méthode d'extension:
 
->Le nom donné au premier paramètre d'une méthode d'extension est ```input```
->>Si cette méthode d'extension nécessite d'accéder à un ensemble d'objets du même type: 
->>>le nom de ce paramètre est ```values```
+> Le nom donné au premier paramètre d'une méthode d'extension est `input`
+>
+> > Si cette méthode d'extension nécessite d'accéder à un ensemble d'objets du même type:
+> >
+> > > le nom de ce paramètre est `values`
+> >
+> > Si cette méthode d'extension nécessite d'accéder à un ensemble d'objets de type différents, vous devez créer une classe qui regroupe tous ces objets sous la forme de propriétés, puis passer tous ces objets sous la forme d'une instance de cette classe:
+> >
+> > > le nom de ce paramètre est alors `context` quand les objets correspondants définissent un contexte d’exécution, ou bien `args` quand au moins un des objets est utilisé pour transférer une information entre l'appelant et l'appelé,
+>
+> et le nom de la méthode d'extension est postfixé par l'un des termes suivants:
+>
+> > In
+> >
+> > From
+> >
+> > Of
+> >
+> > With
 
-
->>Si cette méthode d'extension nécessite d'accéder à un ensemble d'objets de type différents, vous devez créer une classe qui regroupe tous ces objets sous la forme de propriétés, puis passer tous ces objets sous la forme d'une instance de cette classe: 
->>>le nom de ce paramètre est alors ```context``` quand les objets correspondants définissent un contexte d’exécution, ou bien ```args``` quand au moins un des objets est utilisé pour transférer une information entre l'appelant et l'appelé,
-
->et le nom de la méthode d'extension est postfixé par l'un des termes suivants:
->>In
->>
->>From
->>
->>Of
->>
->>With
->>
-
-#### Étape 4 : Commenter la méthode sous la forme de [commentaires XML](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx) 
+#### Étape 4 : Commenter la méthode sous la forme de [commentaires XML](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx)
 
 Une fois que vous avez défini la signature de la méthode d'extension comme dans l'exemple ci-dessous:
+
 ```Csharp
 public static class StringExtensions
 {
@@ -340,10 +345,9 @@ public static class StringExtensions
         //code omitted for brevity
     }
 }
-
 ```
 
-Insérez trois fois le caractère / au dessus de la déclaration de la méthode. 
+Insérez trois fois le caractère / au dessus de la déclaration de la méthode.
 
 Ce raccourci permet de générer automatiquement les commentaires dits XML de la méthode d'extension:
 
@@ -361,10 +365,9 @@ public static class StringExtensions
         //code omitted for brevity
     }
 }
-
 ```
 
-Dans la balise ```<summary> ...</summary``` insérez la description de la méthode que vous avez réalisée à la fin de l'étape 1:
+Dans la balise `<summary> ...</summary` insérez la description de la méthode que vous avez réalisée à la fin de l'étape 1:
 
 ```Csharp
 public static class StringExtensions
@@ -380,10 +383,9 @@ public static class StringExtensions
         //code omitted for brevity
     }
 }
-
 ```
 
-Renseignez le plus précisément possible la ou les balises ```<param> ...</param>```:
+Renseignez le plus précisément possible la ou les balises `<param> ...</param>`:
 
 ```Csharp
 public static class StringExtensions
@@ -399,10 +401,9 @@ public static class StringExtensions
         //code omitted for brevity
     }
 }
-
 ```
 
-Renseignez ensuite la balise ```<returns>...</returns>``` en vous aidant de ce que vous avez produit à l'étape 2:
+Renseignez ensuite la balise `<returns>...</returns>` en vous aidant de ce que vous avez produit à l'étape 2:
 
 ```Csharp
 if (input.IsIn(values) )
@@ -427,66 +428,66 @@ public static class StringExtensions
         //code omitted for brevity
     }
 }
-
 ```
 
-En résumé, tout le contenu des commentaires XML provient directement du travail effectué à l'étape 1 (Décrire brièvement ce que doit faire la méthode) et à l'étape 2 (Transformer cette description en une ligne de code) décrites ci-dessus.
+En résumé, tout le contenu des commentaires XML provient directement du travail effectué à l'étape 1 \(Décrire brièvement ce que doit faire la méthode\) et à l'étape 2 \(Transformer cette description en une ligne de code\) décrites ci-dessus.
 
-Notez que la balise ```<returns>...</returns>``` décrit uniquement le cas où la méthode renvoie vrai. 
+Notez que la balise `<returns>...</returns>` décrit uniquement le cas où la méthode renvoie vrai.
 
-Le contenu de la balise ```<returns>...</returns>``` doit suivre la règle suivante:
+Le contenu de la balise `<returns>...</returns>` doit suivre la règle suivante:
 
->Dans un commentaire XML, la balise ```<returns>...</returns>``` commence toujours par ```Returns true if ...```
+> Dans un commentaire XML, la balise `<returns>...</returns>` commence toujours par `Returns true if ...`
 
-Autrement dit la balise ```<returns>...</returns>``` doit toujours décrire le cas positif. Si vous décrivez directement le cas négatif car cela vous semble plus direct ou plus naturel, cela signifie que le nom choisi nécessite de penser négativement ce qu'il faut à tout prix éviter: je vous expliquerai pourquoi dans le chapitre suivant.
+Autrement dit la balise `<returns>...</returns>` doit toujours décrire le cas positif. Si vous décrivez directement le cas négatif car cela vous semble plus direct ou plus naturel, cela signifie que le nom choisi nécessite de penser négativement ce qu'il faut à tout prix éviter: je vous expliquerai pourquoi dans le chapitre suivant.
 
 #### Étape 5 : Écrire les spécifications
 
-Cette étape est à mes yeux l'étape pivot, celle qui va permettre de dérouler naturellement les tests unitaires dans une approche TDD (Test Driven Development ) s'il s'agit d'une action technique ou les tests fonctionnels dans une approche BDD (Behavior Driven Development ) s'il s'agit d'une action métier.
+Cette étape est à mes yeux l'étape pivot, celle qui va permettre de dérouler naturellement les tests unitaires dans une approche TDD \(Test Driven Development \) s'il s'agit d'une action technique ou les tests fonctionnels dans une approche BDD \(Behavior Driven Development \) s'il s'agit d'une action métier.
 
-Ecrivez les spécifications sous forme d'exemples. 
+Ecrivez les spécifications sous forme d'exemples.
 
-Commencez d'abord par décrire les exemples les plus simples. 
+Commencez d'abord par décrire les exemples les plus simples.
 
-Un exemple simple est un exemple qui permet un traitement immédiat nécessitant très peu de lignes de code pour être implémenté.
+Un exemple simple est un exemple qui permet un traitement immédiat nécessitant très peu de lignes de code pour être implémenté.  
 Vous constaterez que les exemples les plus simples sont souvent les moins probables.
 
 Ecrivez ensuite des exemples de plus en plus complexe.
 
 Finissez ensuite avec des exemples qui décrivent des exigences en terme de performance, c'est à dire en terme de vistesse d'exécution, en terme d'allocation mémoire ou en terme de pourcentage d'occupation de la CPU. J'appelle ces exigences des spécifications orientées performance.
 
->En résumé, l'écriture des spécifications se fait en trois étapes:
-
->* Commencer par les exemples les plus simples;
->* Continuer avec des exemples de moins en moins simples;
->* Finissez avec des exemples orientés performance.
-
-Voici comment pourraient êtres écrites les spécifications de la méthode d'extension ```IsIn()```:
-
-######Exemples simples
->Quand le tableau de valeurs est null, la méthode renvoie toujours faux.
+> En résumé, l'écriture des spécifications se fait en trois étapes:
 >
->Quand le tableau de valeurs est vide, la méthode renvoie toujours faux.
+> * Commencer par les exemples les plus simples;
+> * Continuer avec des exemples de moins en moins simples;
+> * Finissez avec des exemples orientés performance.
+
+Voici comment pourraient êtres écrites les spécifications de la méthode d'extension `IsIn()`:
+
+###### Exemples simples
+
+> Quand le tableau de valeurs est null, la méthode renvoie toujours faux.
 >
->Quand la chaîne de caractères en entrée est nulle et que le tableau de valeurs contient un élement null, la méthode renvoie vrai.
+> Quand le tableau de valeurs est vide, la méthode renvoie toujours faux.
 >
->Quand la chaîne de caractères en entrée est vide et que le tableau de valeurs contient un élement vide, la méthode renvoie vrai.
+> Quand la chaîne de caractères en entrée est nulle et que le tableau de valeurs contient un élement null, la méthode renvoie vrai.
 >
->Quand la chaîne de caractères en entrée est présente à l'identique dans le tableau, la méthode renvoie vrai.
+> Quand la chaîne de caractères en entrée est vide et que le tableau de valeurs contient un élement vide, la méthode renvoie vrai.
+>
+> Quand la chaîne de caractères en entrée est présente à l'identique dans le tableau, la méthode renvoie vrai.
 
-######Exemples moins simples
->Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec une différence uniquement sur la casse, la méthode renvoi vrai.
+###### Exemples moins simples
 
->Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec des espaces en plus après la chaîne, la méthode renvoi vrai.
+> Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec une différence uniquement sur la casse, la méthode renvoi vrai.
+>
+> Quand la chaîne de caractères est présente dans le tableau non pas à l'identique mais avec des espaces en plus après la chaîne, la méthode renvoi vrai.
 
-######Exemples orientés performance
->Quand la chaîne de caractères n'est pas présente dans un tableau de valeurs contenant 100 élements, le temps d'éxécution de la méthode ne doit pas dépasser 0,5 millisecondes.
+###### Exemples orientés performance
 
+> Quand la chaîne de caractères n'est pas présente dans un tableau de valeurs contenant 100 élements, le temps d'éxécution de la méthode ne doit pas dépasser 0,5 millisecondes.
 
-#### Étape 6 : Prendre le premier exemple de la spécification pour écrire la partie *Arrange* du premier test unitaire
+#### Étape 6 : Prendre le premier exemple de la spécification pour écrire la partie _Arrange_ du premier test unitaire
 
-
-Revenez sur votre projet de test. 
+Revenez sur votre projet de test.  
 Mettez en place le premier test unitaire sous la forme:
 
 ```Csharp
@@ -502,12 +503,14 @@ public void TestMethod1()
 ```
 
 Partez du premier exemple de la spécification:
->Quand le tableau de valeurs est null, la méthode renvoie toujours faux.
+
+> Quand le tableau de valeurs est null, la méthode renvoie toujours faux.
 
 Eventuellement traduisez en anglais l'exemple:
->Should return false when the array of values is null
 
-Pour donnez un nom suffisament évocateur à la méthode de test (et oui, même les méthodes de test doivent avoir un nom suffisament évocateur et donc nommer correctement une méthode de test est aussi important que nommer correctement la méthode ou la propriété qui est visée par la méthode de test), il suffit de concaténer tous les mots de la phrase:
+> Should return false when the array of values is null
+
+Pour donnez un nom suffisament évocateur à la méthode de test \(et oui, même les méthodes de test doivent avoir un nom suffisament évocateur et donc nommer correctement une méthode de test est aussi important que nommer correctement la méthode ou la propriété qui est visée par la méthode de test\), il suffit de concaténer tous les mots de la phrase:
 
 ```Csharp
 [TestMethod]
@@ -522,6 +525,7 @@ public void QuandLeTableauDeValeursEstNullLaMéthodeRenvoieToujoursFaux()
 ```
 
 ou bien en anglais:
+
 ```Csharp
 [TestMethod]
 public void ShouldReturnFalseWhenTheArrayOfValuesIsNull()
@@ -534,7 +538,7 @@ public void ShouldReturnFalseWhenTheArrayOfValuesIsNull()
 }
 ```
 
-Il reste à définir dans un premier temps la partie *Arrange* du test:
+Il reste à définir dans un premier temps la partie _Arrange_ du test:
 
 ```Csharp
 [TestMethod]
@@ -550,15 +554,14 @@ public void ShouldReturnFalseWhenTheArrayOfValuesIsNull()
 }
 ```
 
-Dans la partie *Arrange* vous préparez tous les objets nécessaires pour exécuter la méthode.
-Pour la méthode d'extension ```IsIn()```, il suffit de définir la chaîne de caractères en entrée ainsi que le tableau de valeurs.
+Dans la partie _Arrange_ vous préparez tous les objets nécessaires pour exécuter la méthode.  
+Pour la méthode d'extension `IsIn()`, il suffit de définir la chaîne de caractères en entrée ainsi que le tableau de valeurs.
 
-L'exemple ci-dessus est un exemple simple. Dans le cas d'un test unitaire fonctionnel, la partie *Arrange* peut contenir tout type de code permettant de créer des objets métiers dans un état spécifique. Cependant le nombre de lignes de code dans la partie *Arrange* ne doit jamais excéder cinq lignes.
+L'exemple ci-dessus est un exemple simple. Dans le cas d'un test unitaire fonctionnel, la partie _Arrange_ peut contenir tout type de code permettant de créer des objets métiers dans un état spécifique. Cependant le nombre de lignes de code dans la partie _Arrange_ ne doit jamais excéder cinq lignes.
 
+#### Étape 7 : Mettre en place le code d'exécution de la nouvelle méthode dans la partie _Act_ de la méthode de test
 
-#### Étape 7 : Mettre en place le code d'exécution de la nouvelle méthode dans la partie *Act* de la méthode de test
-
-La phase *Act* est la phase pendant laquelle vous allez exécuter votre méthode et en récupérer le résultat:
+La phase _Act_ est la phase pendant laquelle vous allez exécuter votre méthode et en récupérer le résultat:
 
 ```Csharp
 [TestMethod]
@@ -576,20 +579,19 @@ public void ShouldReturnFalseWhenTheArrayOfValuesIsNull()
 ```
 
 Cette phase est l'une des plus importantes car vous allez vérifier que :
-  * l'IntelliSense ramène bien le commentaire XML;
-  * Le commentaire affiché est cohérent avec le nom choisi;
-  * L'IntelliSense permet de découvrir et de manipuler rapidement cette nouvelle méthode.
 
+* l'IntelliSense ramène bien le commentaire XML;
+* Le commentaire affiché est cohérent avec le nom choisi;
+* L'IntelliSense permet de découvrir et de manipuler rapidement cette nouvelle méthode.
 
-Vous devriez obtenir quelque chose de similaire aux copies d'écran ci-dessous:
+Vous devriez obtenir quelque chose de similaire aux copies d'écran ci-dessous:  
 ![](Act.PNG)
 
 ![](Act2.PNG)
 
+#### Étape 8 : Valider le résultat dans la partie _Assert_ de la méthode de test
 
-#### Étape 8 : Valider le résultat dans la partie *Assert* de la méthode de test
-
-La phase *Assert* est la phase pendant laquelle vous allez comparer le résultat obtenu dans la phase *Act* avec le résultat attendu; en cas de différence vous signalez l'échec du test:
+La phase _Assert_ est la phase pendant laquelle vous allez comparer le résultat obtenu dans la phase _Act_ avec le résultat attendu; en cas de différence vous signalez l'échec du test:
 
 ```Csharp
 [TestMethod]
@@ -611,7 +613,7 @@ public void ShouldReturnFalseWhenTheArrayOfValuesIsNull()
 }
 ```
 
-L'objet ```Assert``` expose bien d'autres méthodes que la méthode ```Fail()``` utilisée ci-dessus, comme par exemple: 
+L'objet `Assert` expose bien d'autres méthodes que la méthode `Fail()` utilisée ci-dessus, comme par exemple:
 
 ```Csharp
 Assert.AreSame(result, expected);
@@ -619,15 +621,16 @@ Assert.Equals(result, expected);
 Assert.IsFalse(result);
 ```
 
-  N'employez aucune de ces méthodes car elles peuvent introduire ce qu'on appelle un false positive, c'est à dire que le teste unitaire passe au vert alors qu'il devrait rester au rouge.
-  
-  Définissez explicitement le résultat attendu:
-  
+N'employez aucune de ces méthodes car elles peuvent introduire ce qu'on appelle un false positive, c'est à dire que le teste unitaire passe au vert alors qu'il devrait rester au rouge.
+
+Définissez explicitement le résultat attendu:
+
 ```Csharp
 var expected = true;
 ```
 
 Signalez l'échec du test sous la forme la plus basique qui soit:
+
 ```Csharp
 Assert.Fail();
 ```
@@ -640,7 +643,6 @@ if (result != expected)
     Assert.Fail();
 }
 ```
-
 
 #### Étape 9 : Vérifier que le test échoue
 
@@ -663,10 +665,9 @@ public static bool IsIn(this string input, string[] values)
 
 #### Étape 10 : Montrer l'intégralité de ce premier test unitaire aux autres membres de l'équipe pour vérifier qu'ils comprennent le code
 
-
 A compléter
 
 #### Étape 11 : Vérifier que le nom choisi fait l'unanimité au sein de l'équipe
 
-
 A compléter
+
