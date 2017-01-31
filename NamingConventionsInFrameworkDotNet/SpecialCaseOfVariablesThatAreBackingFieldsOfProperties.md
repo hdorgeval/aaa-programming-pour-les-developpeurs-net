@@ -15,7 +15,7 @@ public int MyProperty
 }
 ```
 
-Un code snippet est un mot clé qui permet d’insérer un bloc de code prédéfini.   
+Un code snippet est un mot clé qui permet d’insérer un bloc de code prédéfini.  
 Pour mettre en action un code snippet, il suffit de cliquer à l'endroit où on souhaite ajouter le bloc de code prédéfini, de taper ensuite le mot clé associé au code snippet, comme par exemple _propfull_, puis de cliquer deux fois sur la touche TAB.
 
 L'objectif du code snippet est de favoriser l'insertion rapide de code. Il s'agit donc d'un outil de productivité.  
@@ -30,7 +30,7 @@ La propriété fournie par le code snippet _propfull_ déclare une variable loca
 Le nom de la variable locale, _myVar_, est conforme à la convention de nom Camel Casing.  
 Le nom de la propriété, _MyProperty_, est conforme à la convention de nom Pascal Casing.
 
-Le nom myVar pose cependant un problème. En effet le nom myVar est très éloigné sémantiquement du nom MyProperty laissant ainsi penser que l'un peut être modifié indépendamment de l'autre.   
+Le nom myVar pose cependant un problème. En effet le nom myVar est très éloigné sémantiquement du nom MyProperty laissant ainsi penser que l'un peut être modifié indépendamment de l'autre.  
 Un autre développeur, qui serait amené à modifier ou à faire évoluer votre code, pourrait parfaitement modifier la variable myVar au lieu de la propriété MyProperty \(et vice versa\) entraînant ainsi un comportement erroné de l'objet modifié. Cela peut avoir pour conséquence un dysfonctionnement de l'interface graphique de l'application notamment quand les objets doivent être observables comme par exemple dans une application WPF.
 
 Pour résoudre ce problème une première approche consiste à réécrire la propriété ci-dessus de la façon suivante:
