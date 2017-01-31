@@ -216,7 +216,7 @@ Autre exemple:
 
 Écrivez ensuite la phrase en anglais. Les deux exemples ci-dessus pourraient ainsi être traduits de la manière suivante:
 
-* Checks if input string is present in a given array of values.
+* Check if input string is present in a given array of values.
 
 * Convert input string into a boolean or get false value when conversion fails.
 
@@ -226,15 +226,15 @@ Cette transformation peut se faire en plusieurs étapes.
 
 Partez d'abord de l'étape précédente comme par exemple:
 
-> Checks if input string is present in a given array of values.
+> Check if input string is present in a given array of values.
 
 Supprimez ensuite les espaces inutiles, concaténez les mots entre eux en respectant la convention PasCal Casing pour le nom de la méthode et la convention Camel Casing pour le nom des paramètres, séparez le sujet et le verbe par un point:
 
-> Checks if inputString.IsPresentIn\( givenArrayOfValues \)
+> Check if inputString.IsPresentIn\( givenArrayOfValues \)
 
 Supprimez tous les mots qui vous semblent inutiles pour obtenir une écriture la plus ramassée possible:
 
-> Checks if input.IsIn\(values\)
+> Check if input.IsIn\(values\)
 
 Vérifiez qu'en remplaçant le début de la phrase par _var result =_, vous pouvez former une ligne de code valide pour la partie _ACT_ de votre premier test unitaire:
 
