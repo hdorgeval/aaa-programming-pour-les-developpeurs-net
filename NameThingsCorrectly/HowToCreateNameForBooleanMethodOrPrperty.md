@@ -355,17 +355,17 @@ Dans la méthode d'extension ci-dessus, le mot clé _params_ permet de passer un
 
 De manière générale je vous recommande de respecter la convention de nommage ci-dessous pour définir la signature d'une méthode d'extension:
 
-> Le nom donné au premier paramètre d'une méthode d'extension est `input`
+> Le nom donné au premier paramètre d'une méthode d'extension est toujours `input`.
 >
 > > Si cette méthode d'extension nécessite d'accéder à un ensemble d'objets du même type:
 > >
-> > > le nom de ce paramètre est `values`
+> > > le nom de ce (deuxième) paramètre est `values`.
 > >
-> > Si cette méthode d'extension nécessite d'accéder à un ensemble d'objets de type différents, vous devez créer une classe qui regroupe tous ces objets sous la forme de propriétés, puis passer tous ces objets sous la forme d'une instance de cette classe:
+> > Si cette méthode d'extension nécessite d'accéder à un ensemble d'objets de type différents, vous devez créer une classe qui regroupe tous ces objets sous la forme de propriétés, puis passer tous ces objets sous la forme d'une instance de cette classe (principe de composition):
 > >
-> > > le nom de ce paramètre est alors `context` quand les objets correspondants définissent un contexte d’exécution, ou bien `args` quand au moins un des objets est utilisé pour transférer une information entre l'appelant et l'appelé,
+> > > le nom de ce paramètre est alors `context` quand les objets correspondants définissent un contexte d’exécution,`state` quand les objets sous jacents représentent un état immutable , ou bien `args` quand au moins un des objets sous jacent est utilisé pour transférer une information entre l'appelant et l'appelé.
 >
-> et le nom de la méthode d'extension est postfixé par l'un des termes suivants:
+> Et le nom de la méthode d'extension est postfixé par l'un des termes suivants:
 >
 > > In
 > >
