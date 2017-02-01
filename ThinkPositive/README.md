@@ -31,7 +31,7 @@ if ( ! A )
 
 ```
 
-Il va falloir mettre en place autant de tests unitaires que de cas où l'expression A est fausse. Il est vraisemblable que ces cas forment un ensemble ouvert, c'est à dire un ensemble non exhaustif des cas possibles.
+Il va falloir mettre en place autant de tests unitaires que de cas où l'expression A est fausse. Il est vraisemblable que ces cas forment un ensemble ouvert, c'est à dire un ensemble non exhaustif de cas possibles.
 
 J'aime bien comparer le pattern ci-dessus à un tireur à l'arc qui doit atteindre le centre d'une cible située à 100 mètres. L'expression  ```A``` dans le pattern ci-dessus représente le centre de la cible , ```! A``` représente toutes les positions possibles de la flèche quand elle n'atteint pas le centre, soit une infinité de positions.
 
