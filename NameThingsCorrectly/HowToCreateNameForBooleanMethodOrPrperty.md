@@ -1,6 +1,6 @@
 ## Comment nommer une méthode ou une propriété qui renvoie un booléen
 
-Une méthode ou une propriété qui renvoie un booléen doit être nommée en utilisant l'une des quatre options ci-dessous:
+Une méthode ou une propriété qui renvoie un booléen est nommée en utilisant l'une des quatre options ci-dessous:
 
 * le préfixe :
   * _Is_; 
