@@ -480,7 +480,7 @@ Le contenu de la balise `<returns>...</returns>` doit suivre la règle suivante:
 
 > Dans un commentaire XML, la balise `<returns>...</returns>` commence toujours par `Returns true if ...`
 
-Autrement dit la balise `<returns>...</returns>` doit toujours décrire le cas positif. Si vous décrivez directement le cas négatif car cela vous semble plus direct ou plus naturel, cela signifie que le nom choisi nécessite de penser négativement ce qu'il faut à tout prix éviter: je vous expliquerai pourquoi dans le chapitre suivant.
+Autrement dit la balise `<returns>...</returns>` doit toujours décrire le cas positif. Si vous décrivez directement le cas négatif (parce que cela vous semble plus direct ou plus naturel), cela signifie que le nom choisi nécessite de penser négativement ce qu'il faut à tout prix éviter: je vous expliquerai pourquoi dans le chapitre suivant.
 
 #### Étape 5 : Écrire les spécifications
 
