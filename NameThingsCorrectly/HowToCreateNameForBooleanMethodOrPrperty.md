@@ -182,7 +182,7 @@ public void TestMethod1()
     }
 }
 ```
-Ou bien :
+Ou bien en utilisant l'approche _Given_/_When_/_Then_:
 ```Csharp
 [TestMethod]
 public void TestMethod1()
