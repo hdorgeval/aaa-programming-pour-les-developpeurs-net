@@ -1,6 +1,6 @@
 ## Comment nommer une méthode ou une propriété qui renvoie un booléen
 
-Ce chapitre a pour objectif de vous montrer les techniques permettant de trouver le nom le plus évocateur possible pour créer une  ouvelle méthode et en particulier une méthode qui renvoie un booléen.
+Ce chapitre a pour objectif de vous montrer les techniques permettant de trouver le nom le plus évocateur possible pour créer une nouvelle méthode et en particulier une méthode qui renvoie un booléen.
 Vous allez découvrir que l'approche TDD (Test Development Driven) est essentielle dans cette démarche.
 
 Une méthode ou une propriété qui renvoie un booléen est nommée en utilisant l'une des quatre options ci-dessous:
