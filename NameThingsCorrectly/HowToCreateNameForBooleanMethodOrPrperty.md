@@ -151,11 +151,11 @@ public void TestMethod1()
 }
 ```
 
-La phase _Arrange_ est la phase dans laquelle vous allez préparer tous les objets nécessaires pour exécuter votre future méthode.
+La phase _Arrange_ est la phase dans laquelle vous allez préparer tous les objets nécessaires pour exécuter votre future méthode. La phase _Arrange_ permet aussi de décrire une situation initiale à partir de laquelle sera executée la phase suivante. Pour cette raison la phase _Arrange_ est aussi appelée _Given_.
 
-La phase _Act_ est la phase pendant laquelle vous allez exécuter votre méthode et en récupérer le résultat.
+La phase _Act_ est la phase pendant laquelle vous allez exécuter votre méthode et en récupérer le résultat. la phase _Act_ est aussi appelée _When_.
 
-La phase _Assert_ est la phase pendant laquelle vous allez comparer le résultat obtenu dans la phase _Act_ avec le résultat attendu; en cas de différence vous signalez l'échec du test.
+La phase _Assert_ est la phase pendant laquelle vous allez comparer le résultat obtenu dans la phase _Act_ avec le résultat attendu; en cas de différence vous signalez l'échec du test.La phase _Assert_ est aussi appelée _Then_
 
 En appliquant ces principes pour créer un test de la méthode d'extension _ToBooleanOrDefault\(\)_ décrite ci-dessus, vous devriez obtenir un code de test semblable au code ci-dessous:
 
@@ -175,6 +175,43 @@ public void TestMethod1()
     {
         Assert.Fail();
     }
+}
+```
+Ou bien :
+```Csharp
+[TestMethod]
+public void TestMethod1()
+{
+    //Given
+    var input = "1";
+
+    //When
+    var result = input.ToBooleanOrDefault();
+
+    //Then
+    var expected = true;
+    if (result != expected)
+    {
+        Assert.Fail();
+    }
+}
+```
+
+En utilisant la librairie [NFluent](http://n-fluent.net/), vous pouvez écrire la phase _Then_/_Assert_ en utilisant une syntaxe proche du langage naturel:
+
+```Csharp
+[Test]
+public void TestMethod1()
+{
+    //Given
+    var input = "1";
+
+    //When
+    var result = input.ToBooleanOrDefault();
+
+    //Then
+    var expected = true;
+    Check.That(result).IsEqualTo(expected);
 }
 ```
 
