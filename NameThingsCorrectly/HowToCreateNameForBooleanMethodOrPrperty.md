@@ -1,5 +1,8 @@
 ## Comment nommer une méthode ou une propriété qui renvoie un booléen
 
+Ce chapitre a pour objectif de vous montrer les techniques permettant de trouver le nom le plus évocateur possible pour créer une  ouvelle méthode et en particulier une méthode qui renvoie un booléen.
+Vous allez découvrir que l'approche TDD (Test Development Driven) est essentielle dans cette démarche.
+
 Une méthode ou une propriété qui renvoie un booléen est nommée en utilisant l'une des quatre options ci-dessous:
 
 * le préfixe :
@@ -113,6 +116,8 @@ public static class StringExtensions
 #### Séquence de mots qui représente une phrase
 
 Pour déterminer le nom d’une méthode sous la forme d’une séquence de mots qui représente une phrase, commencez par créer un projet de test.
+
+#### L'approche TDD au service du nommage
 
 Ce projet de test va vous permettre d'utiliser en situation réelle le nom que vous allez choisir. Il va vous permettre de vérifier que le nom choisi est suffisamment intuitif et que le code induit est suffisamment expressif.
 
